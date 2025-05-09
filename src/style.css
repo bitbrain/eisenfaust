@@ -1,0 +1,130 @@
+:root {
+  --ember-900: #f78e08;
+  --ember-800: #d95f0f;
+  --ember-700: #c42314;
+  --ember-500: #780e02;
+  --ember-200: #550000;
+
+  --granite-900: #8caca3;
+  --granite-700: #385050;
+  --granite-300: #0e1318;
+}
+
+@font-face {
+  font-family: 'Amarante';
+  src: url('./assets/fonts/amarante/Amarante-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #000;
+  color: var(--ember-800);
+  font-family: 'Amarante', sans-serif;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--ember-700);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--ember-800);
+  }
+}
+
+img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+li {
+  list-style-type: square;
+  padding: 0.5rem 0;
+}
+
+hr {
+  border: none;
+  border-top: 5px solid var(--granite-300);
+  width: 50%;
+  margin: 5rem 0;
+}
+
+/* SECTION STYLING */
+
+
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  height: 100%;
+  padding: 0 5rem;
+}
+
+.section-content {
+  color: var(--granite-900);
+  max-width: 800px;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.section-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.block {
+  height: 32rem;
+}
+
+@layer reset {
+    body, p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* PrimeVue component overrides */
+.p-component {
+  font-family: 'Amarante', sans-serif;
+}
+
+.p-button {
+ font-size: 2rem;
+ border-radius: 0.5rem;
+ transition: box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.p-button:focus {
+  background: inherit;
+}
+
+.p-button:not(.p-button-outlined) {
+  background: linear-gradient(to bottom, var(--ember-800), var(--ember-700));
+  color: black;
+  font-weight: bold;
+  border-color: var(--ember-700);
+}
+
+.p-button-outlined {
+  border-color: var(--ember-700);
+  color: var(--ember-700);
+}
+
+.p-button-outlined:hover {
+  border-color: var(--ember-800);
+  color: var(--ember-800);
+}
+
+.p-button:hover:not(.p-button-outlined) {
+  color: var(--ember-200);
+  box-shadow: 0 0 1rem var(--ember-200);
+}
+
+/* Add more component-specific overrides as needed */
