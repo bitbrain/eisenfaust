@@ -81,7 +81,7 @@ function formatDate(dateString: string) {
   <div class="news-container">
     <!-- Single post view -->
     <div v-if="currentPost" class="post-detail">
-      <RouterLink to="/news" class="back-link">← Back to all posts</RouterLink>
+      <RouterLink to="/news" class="back-link">← Zurück zur Übersicht</RouterLink>
       <h1>{{ currentPost.title }}</h1>
       <div class="post-date">{{ formatDate(currentPost.date) }}</div>
       <div class="post-content" v-html="currentPost.content"></div>
@@ -94,7 +94,7 @@ function formatDate(dateString: string) {
           <h2>{{ post.title }}</h2>
           <div class="post-date">{{ formatDate(post.date) }}</div>
           <div class="post-excerpt" v-html="post.content.split('</p>')[0] + '</p>'"></div>
-          <div class="read-more">Read more →</div>
+          <div class="read-more">Weiterlesen →</div>
         </div>
       </div>
     </div>
