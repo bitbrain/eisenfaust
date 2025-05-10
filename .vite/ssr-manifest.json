@@ -1245,7 +1245,7 @@
     "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
-  "src/views/MediaView.vue?vue&type=style&index=0&scoped=712e4526&lang.css": [
+  "src/views/MediaView.vue?vue&type=style&index=0&scoped=944815e2&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
@@ -1254,15 +1254,15 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/NewsView.vue": [
-    "/eisenfaust/assets/NewsView-BC4CAF1q.js",
+    "/eisenfaust/assets/NewsView-CxjJFpB4.js",
     "/eisenfaust/assets/NewsView-UJO9bR80.css"
   ],
   "src/views/NewsView.vue?vue&type=script&setup=true&lang.ts": [
-    "/eisenfaust/assets/NewsView-BC4CAF1q.js",
+    "/eisenfaust/assets/NewsView-CxjJFpB4.js",
     "/eisenfaust/assets/NewsView-UJO9bR80.css"
   ],
   "src/views/NewsView.vue?vue&type=style&index=0&scoped=9d4d51aa&lang.css": [
-    "/eisenfaust/assets/NewsView-BC4CAF1q.js",
+    "/eisenfaust/assets/NewsView-CxjJFpB4.js",
     "/eisenfaust/assets/NewsView-UJO9bR80.css"
   ]
 }
