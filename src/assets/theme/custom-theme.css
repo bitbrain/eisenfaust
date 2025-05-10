@@ -1,0 +1,15 @@
+:root {
+    /* Override PrimeVue variables with your ember and granite colors */
+    --primary-color: var(--ember-800);
+    --primary-color-text: white;
+    --font-family: 'Amarante', sans-serif;
+    
+    /* Other PrimeVue variables you might want to override */
+    --surface-a: var(--granite-700);
+    --surface-b: black;
+    --surface-c: rgba(43, 56, 59, 0.3);
+    --surface-d: var(--granite-700);
+    --surface-e: black;
+    --text-color: var(--ember-800);
+    --text-color-secondary: var(--ember-500);
+} 

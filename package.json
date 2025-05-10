@@ -1,0 +1,26 @@
+{
+  "name": "aoc-eisenfaust.de",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "primeicons": "^7.0.0",
+    "primevue": "^3.52.0",
+    "vite-ssg": "^0.23.7",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "unplugin-vue-components": "^0.27.0",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
