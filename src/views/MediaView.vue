@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, computed, onUnmounted } from 'vue';
 import ProgressSpinner from 'primevue/progressspinner';
 
 interface GalleryImage {
@@ -11,21 +11,13 @@ interface GalleryImage {
 
 // State
 const images = ref<GalleryImage[]>([]);
+const displayedImages = ref<GalleryImage[]>([]);
 const isLoading = ref(true);
-const currentPage = ref(1);
-const imagesPerPage = 12;
+const isLoadingMore = ref(false);
 const selectedImage = ref<GalleryImage | null>(null);
 const showLightbox = ref(false);
 const error = ref<string | null>(null);
-const isPageLoading = ref(false);
-
-// Pagination
-const totalPages = computed(() => Math.ceil(images.value.length / imagesPerPage));
-const paginatedImages = computed(() => {
-  const start = (currentPage.value - 1) * imagesPerPage;
-  const end = start + imagesPerPage;
-  return images.value.slice(start, end);
-});
+const batchSize = 12; // Number of images to load at once
 
 // Load images from thumbnails.json
 const loadImages = async () => {
@@ -58,6 +50,9 @@ const loadImages = async () => {
     console.log('Processed images:', processedImages); // Debug log
     
     images.value = processedImages;
+    
+    // Initialize with first batch of images
+    loadMoreImages();
   } catch (error) {
     console.error('Error loading images:', error);
     error.value = `Failed to load images: ${error instanceof Error ? error.message : String(error)}`;
@@ -66,24 +61,36 @@ const loadImages = async () => {
   }
 };
 
-// Navigation
-const goToPage = async (page: number) => {
-  isPageLoading.value = true;
-  currentPage.value = page;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  await new Promise(resolve => setTimeout(resolve, 300));
-  isPageLoading.value = false;
+// Load more images as user scrolls
+const loadMoreImages = () => {
+  if (isLoadingMore.value) return;
+  
+  const currentLength = displayedImages.value.length;
+  if (currentLength >= images.value.length) return;
+  
+  isLoadingMore.value = true;
+  
+  const nextBatch = images.value.slice(
+    currentLength,
+    currentLength + batchSize
+  );
+  
+  displayedImages.value = [...displayedImages.value, ...nextBatch];
+  
+  setTimeout(() => {
+    isLoadingMore.value = false;
+  }, 300);
 };
 
-const nextPage = async () => {
-  if (currentPage.value < totalPages.value) {
-    await goToPage(currentPage.value + 1);
-  }
-};
-
-const prevPage = async () => {
-  if (currentPage.value > 1) {
-    await goToPage(currentPage.value - 1);
+// Scroll event handler for infinite scroll
+const handleScroll = () => {
+  // Check if we're near the bottom of the page
+  const scrollPosition = window.innerHeight + window.scrollY;
+  const pageHeight = document.body.offsetHeight;
+  const scrollThreshold = 200; // px from bottom to trigger load
+  
+  if (pageHeight - scrollPosition < scrollThreshold) {
+    loadMoreImages();
   }
 };
 
@@ -144,6 +151,12 @@ const onImageLoad = (event: Event) => {
 onMounted(() => {
   loadImages();
   window.addEventListener('keydown', handleKeyDown);
+  window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleKeyDown);
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -162,9 +175,9 @@ onMounted(() => {
     
     <!-- Gallery grid -->
     <div v-else-if="images.length > 0" class="gallery-container">
-      <div class="gallery-grid" :class="{ 'loading-state': isPageLoading }">
+      <div class="gallery-grid">
         <div 
-          v-for="image in paginatedImages" 
+          v-for="image in displayedImages" 
           :key="image.id" 
           class="gallery-item"
           @click="openLightbox(image)"
@@ -179,35 +192,9 @@ onMounted(() => {
         </div>
       </div>
       
-      <!-- Pagination -->
-      <div v-if="totalPages > 1" class="pagination">
-        <button 
-          @click="prevPage" 
-          :disabled="currentPage === 1 || isPageLoading"
-          class="pagination-btn"
-        >
-          Previous
-        </button>
-        
-        <div class="page-numbers">
-          <button 
-            v-for="page in totalPages" 
-            :key="page"
-            @click="goToPage(page)"
-            :class="['page-btn', { active: page === currentPage }]"
-            :disabled="isPageLoading"
-          >
-            {{ page }}
-          </button>
-        </div>
-        
-        <button 
-          @click="nextPage" 
-          :disabled="currentPage === totalPages || isPageLoading"
-          class="pagination-btn"
-        >
-          Next
-        </button>
+      <!-- Loading more indicator -->
+      <div v-if="isLoadingMore && displayedImages.length < images.length" class="loading-more">
+        <ProgressSpinner />
       </div>
     </div>
     
@@ -276,6 +263,12 @@ h1 {
   justify-content: center;
   min-height: 300px;
   gap: 1rem;
+}
+
+.loading-more {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
 .spinner {
@@ -347,63 +340,6 @@ h1 {
   font-size: 0.9rem;
   color: var(--granite-900);
   margin-top: 1rem;
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.pagination-btn {
-  padding: 0.5rem 1rem;
-  background-color: var(--granite-300);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  color: var(--granite-900);
-}
-
-.pagination-btn:hover:not(:disabled) {
-  background-color: var(--granite-700);
-  color: var(--granite-900);
-}
-
-.pagination-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.page-numbers {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.page-btn {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 50%;
-  background-color: var(--granite-300);
-  color: var(--granite-900);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.page-btn.active {
-  background-color: var(--ember-700);
-  color: white;
-}
-
-.page-btn:hover:not(.active) {
-  background-color: var(--granite-700);
 }
 
 /* Lightbox */
@@ -527,11 +463,6 @@ h1 {
     height: 40px;
     font-size: 1.5rem;
   }
-}
-
-.loading-state {
-  opacity: 0.7;
-  pointer-events: none;
 }
 
 .lightbox-loading {
