@@ -41,8 +41,8 @@ function imageProcessingPlugin() {
 
         console.log(`Found ${imageFiles.length} images in ${srcDir}`);
         
-        // Process each image (thumbnails and full-size WebP)
-        for (const file of imageFiles) {
+        // Process thumbnails in parallel
+        const processingPromises = imageFiles.map(async (file) => {
           const srcPath = resolve(srcDir, file);
           const srcStat = fs.statSync(srcPath);
           
@@ -62,7 +62,10 @@ function imageProcessingPlugin() {
             
             console.log(`Generated WebP thumbnail for ${file}`);
           }
-        }
+        });
+        
+        // Wait for all thumbnails to be processed
+        await Promise.all(processingPromises);
         
         // Generate JSON file with list of thumbnails
         const thumbnailFiles = fs.readdirSync(thumbDir);
@@ -73,7 +76,7 @@ function imageProcessingPlugin() {
         );
         console.log(`Generated thumbnails list at ${thumbnailsJsonPath}`);
       } catch (error) {
-        console.error('Error processing images:', error);
+        console.error('Error processing thumbnail images:', error);
       }
     },
     closeBundle: async () => {
@@ -83,29 +86,21 @@ function imageProcessingPlugin() {
       }
 
       try {
-        // Get all image files
-        const files = fs.readdirSync(srcDir);
-        const imageFiles = files.filter(file => 
-          /\.(jpg|jpeg|png|webp)$/i.test(file)
-        );
-
-        // Process each image for full-size WebP in dist folder
-        for (const file of imageFiles) {
-          const srcPath = resolve(srcDir, file);
+        // Copy WebP files from thumbnails directory to dist/screenshots-webp
+        const files = fs.readdirSync(thumbDir);
+        const webpFiles = files.filter(file => file.endsWith('.webp'));
+        
+        for (const file of webpFiles) {
+          const srcPath = resolve(thumbDir, file);
+          const destPath = resolve(webpDir, file);
           
-          // Create full-size WebP version
-          const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
-          const webpPath = resolve(webpDir, webpFilename);
-          
-          // Generate full-size WebP
-          await sharp(srcPath)
-            .webp({ quality: 90 }) // Convert to WebP with 90% quality
-            .toFile(webpPath);
-          
-          console.log(`Generated full-size WebP in dist for ${file}`);
+          fs.copyFileSync(srcPath, destPath);
+          console.log(`Copied ${file} to dist/screenshots-webp`);
         }
+        
+        console.log('All WebP files copied to dist/screenshots-webp');
       } catch (error) {
-        console.error('Error processing WebP images for dist:', error);
+        console.error('Error copying WebP files to dist:', error);
       }
     }
   };
@@ -178,22 +173,17 @@ export default defineConfig({
   server: {
     headers: {
       // Add cache headers for image files in development
-      '*.jpg': [
-        ['Cache-Control', 'max-age=31536000']
-      ],
-      '*.jpeg': [
-        ['Cache-Control', 'max-age=31536000']
-      ],
-      '*.png': [
-        ['Cache-Control', 'max-age=31536000']
-      ],
-      '*.webp': [
-        ['Cache-Control', 'max-age=31536000']
-      ],
-      '*.svg': [
-        ['Cache-Control', 'max-age=31536000']
-      ]
-    }
+      '*.jpg': 'Cache-Control: max-age=31536000',
+      '*.jpeg': 'Cache-Control: max-age=31536000',
+      '*.png': 'Cache-Control: max-age=31536000',
+      '*.webp': 'Cache-Control: max-age=31536000',
+      '*.svg': 'Cache-Control: max-age=31536000',
+      // Add proper MIME types for JavaScript files
+      '*.js': 'Content-Type: application/javascript; charset=utf-8',
+      '*.mjs': 'Content-Type: application/javascript; charset=utf-8'
+    },
+    // Ensure proper handling of base path
+    base: '/eisenfaust/'
   },
   
   // Add build configuration for production
