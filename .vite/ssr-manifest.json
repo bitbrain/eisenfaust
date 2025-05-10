@@ -4,7 +4,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "\u0000vite/modulepreload-polyfill.js": [
@@ -12,7 +12,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "\u0000vite/preload-helper.js": [
@@ -20,7 +20,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "\u0000vite:asset:public/dwarf-exploring.webp": [
@@ -28,7 +28,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "\u0000vite:asset:public/dwarven-friends.webp": [
@@ -36,7 +36,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "\u0000vite:asset:public/rind.webp": [
@@ -44,7 +44,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "index.html": [
@@ -52,7 +52,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styled/index.mjs": [
@@ -60,7 +60,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styles/badge/index.mjs": [
@@ -68,7 +68,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styles/base/index.mjs": [
@@ -76,7 +76,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styles/button/index.mjs": [
@@ -84,7 +84,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styles/progressspinner/index.mjs": [
@@ -92,7 +92,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/styles/ripple/index.mjs": [
@@ -100,7 +100,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/accordion/index.mjs": [
@@ -108,7 +108,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/autocomplete/index.mjs": [
@@ -116,7 +116,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/avatar/index.mjs": [
@@ -124,7 +124,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/badge/index.mjs": [
@@ -132,7 +132,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/base/index.mjs": [
@@ -140,7 +140,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/blockui/index.mjs": [
@@ -148,7 +148,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/breadcrumb/index.mjs": [
@@ -156,7 +156,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/button/index.mjs": [
@@ -164,7 +164,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/card/index.mjs": [
@@ -172,7 +172,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/carousel/index.mjs": [
@@ -180,7 +180,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/cascadeselect/index.mjs": [
@@ -188,7 +188,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/checkbox/index.mjs": [
@@ -196,7 +196,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/chip/index.mjs": [
@@ -204,7 +204,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/colorpicker/index.mjs": [
@@ -212,7 +212,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/confirmdialog/index.mjs": [
@@ -220,7 +220,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/confirmpopup/index.mjs": [
@@ -228,7 +228,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/contextmenu/index.mjs": [
@@ -236,7 +236,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/datatable/index.mjs": [
@@ -244,7 +244,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/dataview/index.mjs": [
@@ -252,7 +252,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/datepicker/index.mjs": [
@@ -260,7 +260,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/dialog/index.mjs": [
@@ -268,7 +268,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/divider/index.mjs": [
@@ -276,7 +276,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/dock/index.mjs": [
@@ -284,7 +284,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/drawer/index.mjs": [
@@ -292,7 +292,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/editor/index.mjs": [
@@ -300,7 +300,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/fieldset/index.mjs": [
@@ -308,7 +308,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/fileupload/index.mjs": [
@@ -316,7 +316,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/floatlabel/index.mjs": [
@@ -324,7 +324,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/galleria/index.mjs": [
@@ -332,7 +332,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/iconfield/index.mjs": [
@@ -340,7 +340,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/iftalabel/index.mjs": [
@@ -348,7 +348,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/image/index.mjs": [
@@ -356,7 +356,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/imagecompare/index.mjs": [
@@ -364,7 +364,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/index.mjs": [
@@ -372,7 +372,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inlinemessage/index.mjs": [
@@ -380,7 +380,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inplace/index.mjs": [
@@ -388,7 +388,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inputchips/index.mjs": [
@@ -396,7 +396,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inputgroup/index.mjs": [
@@ -404,7 +404,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inputnumber/index.mjs": [
@@ -412,7 +412,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inputotp/index.mjs": [
@@ -420,7 +420,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/inputtext/index.mjs": [
@@ -428,7 +428,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/knob/index.mjs": [
@@ -436,7 +436,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/listbox/index.mjs": [
@@ -444,7 +444,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/megamenu/index.mjs": [
@@ -452,7 +452,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/menu/index.mjs": [
@@ -460,7 +460,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/menubar/index.mjs": [
@@ -468,7 +468,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/message/index.mjs": [
@@ -476,7 +476,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/metergroup/index.mjs": [
@@ -484,7 +484,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/multiselect/index.mjs": [
@@ -492,7 +492,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/orderlist/index.mjs": [
@@ -500,7 +500,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/organizationchart/index.mjs": [
@@ -508,7 +508,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/overlaybadge/index.mjs": [
@@ -516,7 +516,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/paginator/index.mjs": [
@@ -524,7 +524,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/panel/index.mjs": [
@@ -532,7 +532,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/panelmenu/index.mjs": [
@@ -540,7 +540,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/password/index.mjs": [
@@ -548,7 +548,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/picklist/index.mjs": [
@@ -556,7 +556,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/popover/index.mjs": [
@@ -564,7 +564,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/progressbar/index.mjs": [
@@ -572,7 +572,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/progressspinner/index.mjs": [
@@ -580,7 +580,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/radiobutton/index.mjs": [
@@ -588,7 +588,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/rating/index.mjs": [
@@ -596,7 +596,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/ripple/index.mjs": [
@@ -604,7 +604,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/scrollpanel/index.mjs": [
@@ -612,7 +612,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/select/index.mjs": [
@@ -620,7 +620,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/selectbutton/index.mjs": [
@@ -628,7 +628,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/skeleton/index.mjs": [
@@ -636,7 +636,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/slider/index.mjs": [
@@ -644,7 +644,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/speeddial/index.mjs": [
@@ -652,7 +652,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/splitbutton/index.mjs": [
@@ -660,7 +660,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/splitter/index.mjs": [
@@ -668,7 +668,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/stepper/index.mjs": [
@@ -676,7 +676,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/steps/index.mjs": [
@@ -684,7 +684,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tabmenu/index.mjs": [
@@ -692,7 +692,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tabs/index.mjs": [
@@ -700,7 +700,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tabview/index.mjs": [
@@ -708,7 +708,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tag/index.mjs": [
@@ -716,7 +716,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/terminal/index.mjs": [
@@ -724,7 +724,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/textarea/index.mjs": [
@@ -732,7 +732,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tieredmenu/index.mjs": [
@@ -740,7 +740,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/timeline/index.mjs": [
@@ -748,7 +748,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/toast/index.mjs": [
@@ -756,7 +756,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/togglebutton/index.mjs": [
@@ -764,7 +764,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/toggleswitch/index.mjs": [
@@ -772,7 +772,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/toolbar/index.mjs": [
@@ -780,7 +780,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tooltip/index.mjs": [
@@ -788,7 +788,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/tree/index.mjs": [
@@ -796,7 +796,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/treeselect/index.mjs": [
@@ -804,7 +804,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/treetable/index.mjs": [
@@ -812,7 +812,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/aura/virtualscroller/index.mjs": [
@@ -820,7 +820,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/themes/index.mjs": [
@@ -828,7 +828,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/utils/classnames/index.mjs": [
@@ -836,7 +836,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/utils/dom/index.mjs": [
@@ -844,7 +844,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/utils/eventbus/index.mjs": [
@@ -852,7 +852,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/utils/object/index.mjs": [
@@ -860,7 +860,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primeuix/utils/uuid/index.mjs": [
@@ -868,7 +868,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/api/index.mjs": [
@@ -876,7 +876,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/base/index.mjs": [
@@ -884,7 +884,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/base/style/index.mjs": [
@@ -892,7 +892,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/basecomponent/index.mjs": [
@@ -900,7 +900,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/basedirective/index.mjs": [
@@ -908,7 +908,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/config/index.mjs": [
@@ -916,7 +916,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/service/index.mjs": [
@@ -924,7 +924,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/useattrselector/index.mjs": [
@@ -932,7 +932,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/core/usestyle/index.mjs": [
@@ -940,7 +940,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/icons/baseicon/index.mjs": [
@@ -948,7 +948,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/icons/baseicon/style/index.mjs": [
@@ -956,7 +956,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@primevue/icons/spinner/index.mjs": [
@@ -964,7 +964,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@unhead/dom/dist/index.mjs": [
@@ -972,7 +972,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@unhead/shared/dist/index.mjs": [
@@ -980,7 +980,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@unhead/vue/dist/shared/vue.cf295fb1.mjs": [
@@ -988,7 +988,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
@@ -996,7 +996,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
@@ -1004,7 +1004,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
@@ -1012,7 +1012,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/@vue/shared/dist/shared.esm-bundler.js": [
@@ -1020,7 +1020,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/hookable/dist/index.mjs": [
@@ -1028,7 +1028,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primeicons/primeicons.css": [
@@ -1036,7 +1036,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/badge/index.mjs": [
@@ -1044,7 +1044,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/badge/style/index.mjs": [
@@ -1052,7 +1052,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/button/index.mjs": [
@@ -1060,7 +1060,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/button/style/index.mjs": [
@@ -1068,7 +1068,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/progressspinner/index.mjs": [
@@ -1076,7 +1076,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/progressspinner/style/index.mjs": [
@@ -1084,7 +1084,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/ripple/index.mjs": [
@@ -1092,7 +1092,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/primevue/ripple/style/index.mjs": [
@@ -1100,7 +1100,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/unhead/dist/index.mjs": [
@@ -1108,7 +1108,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/vite-ssg/dist/index.mjs": [
@@ -1116,7 +1116,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/vite-ssg/dist/shared/vite-ssg.5912142e.mjs": [
@@ -1124,7 +1124,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/vite-ssg/dist/shared/vite-ssg.a009fbf1.mjs": [
@@ -1132,7 +1132,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "node_modules/vue-router/dist/vue-router.mjs": [
@@ -1140,7 +1140,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "posts/2025-05-10-wir-sind-eisenfaust.md": [
@@ -1151,7 +1151,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/App.vue?vue&type=style&index=0&lang.css": [
@@ -1159,7 +1159,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/assets/theme/custom-theme.css": [
@@ -1167,7 +1167,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/components/ParticleCanvas.vue": [
@@ -1175,7 +1175,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/components/ParticleCanvas.vue?vue&type=style&index=0&scoped=d3cf4ab5&lang.css": [
@@ -1183,7 +1183,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/main.ts": [
@@ -1191,7 +1191,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/router/index.ts": [
@@ -1199,7 +1199,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/style.css": [
@@ -1207,7 +1207,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/LandingView.vue": [
@@ -1215,7 +1215,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/LandingView.vue?vue&type=script&setup=true&lang.ts": [
@@ -1223,7 +1223,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/LandingView.vue?vue&type=style&index=0&scoped=88962b10&lang.css": [
@@ -1231,7 +1231,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/MediaView.vue": [
@@ -1239,7 +1239,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/MediaView.vue?vue&type=script&setup=true&lang.ts": [
@@ -1247,7 +1247,7 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/MediaView.vue?vue&type=style&index=0&scoped=37240b10&lang.css": [
@@ -1255,19 +1255,19 @@
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
     "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
-    "/eisenfaust/assets/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf"
   ],
   "src/views/NewsView.vue": [
-    "/eisenfaust/assets/NewsView-B1iSFTvh.js",
+    "/eisenfaust/assets/NewsView-BvNCrb--.js",
     "/eisenfaust/assets/NewsView-B5I0W4-W.css"
   ],
   "src/views/NewsView.vue?vue&type=script&setup=true&lang.ts": [
-    "/eisenfaust/assets/NewsView-B1iSFTvh.js",
+    "/eisenfaust/assets/NewsView-BvNCrb--.js",
     "/eisenfaust/assets/NewsView-B5I0W4-W.css"
   ],
   "src/views/NewsView.vue?vue&type=style&index=0&scoped=bb7004d6&lang.css": [
-    "/eisenfaust/assets/NewsView-B1iSFTvh.js",
+    "/eisenfaust/assets/NewsView-BvNCrb--.js",
     "/eisenfaust/assets/NewsView-B5I0W4-W.css"
   ]
 }
