@@ -15,10 +15,20 @@ const router = useRouter()
       </ul>
     </nav>
     <router-view />
+    <footer>
+      © 2025 Eisenfaust. Alle Rechte vorbehalten.
+    </footer>
   </main>
 </template>
 
 <style>
+footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
 
 nav {
   background: rgba(0, 0, 0, 0.2);
