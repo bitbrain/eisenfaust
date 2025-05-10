@@ -13,7 +13,7 @@ export default {
   props: {
     particles: {
       type: Number,
-      default: 400
+      default: 250
     },
     delay: {
       type: Number,
