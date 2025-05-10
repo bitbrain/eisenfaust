@@ -149,8 +149,6 @@ onMounted(() => {
 
 <template>
   <div class="media-gallery">
-    <h1>Media Gallery</h1>
-    
     <!-- Loading state -->
     <div v-if="isLoading" class="loading">
       <ProgressSpinner />
