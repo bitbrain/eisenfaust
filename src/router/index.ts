@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createMemoryHistory, RouteRecordRaw } from 'vue-router'
 import LandingView from '../views/LandingView.vue'
 import MediaView from '../views/MediaView.vue'
 import NewsView from '../views/NewsView.vue'
@@ -21,7 +21,7 @@ export const routes: RouteRecordRaw[] = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createMemoryHistory(import.meta.env.BASE_URL),
   routes
 })
 

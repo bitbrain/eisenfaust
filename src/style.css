@@ -5,8 +5,8 @@
   --ember-500: #780e02;
   --ember-200: #550000;
 
-  --granite-900: #8caca3;
-  --granite-700: #385050;
+  --granite-900: #87b4ac;
+  --granite-700: #3a5a54;
   --granite-300: #0e1318;
 }
 
@@ -90,41 +90,8 @@ hr {
     }
 }
 
-/* PrimeVue component overrides */
-.p-component {
-  font-family: 'Amarante', sans-serif;
+@layer primevue {
+  :root {
+    --p-button-primary-background: red;
+  }
 }
-
-.p-button {
- font-size: 2rem;
- border-radius: 0.5rem;
- transition: box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.p-button:focus {
-  background: inherit;
-}
-
-.p-button:not(.p-button-outlined) {
-  background: linear-gradient(to bottom, var(--ember-800), var(--ember-700));
-  color: black;
-  font-weight: bold;
-  border-color: var(--ember-700);
-}
-
-.p-button-outlined {
-  border-color: var(--ember-700);
-  color: var(--ember-700);
-}
-
-.p-button-outlined:hover {
-  border-color: var(--ember-800);
-  color: var(--ember-800);
-}
-
-.p-button:hover:not(.p-button-outlined) {
-  color: var(--ember-200);
-  box-shadow: 0 0 1rem var(--ember-200);
-}
-
-/* Add more component-specific overrides as needed */
