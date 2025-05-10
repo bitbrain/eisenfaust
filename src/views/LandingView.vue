@@ -60,14 +60,14 @@ const openDiscord = () => {
       <hr>
       <div class="section-container">
        <div class="section-content">
-        <h2>Wer wir sind</h2>
+        <h3>Wer wir sind</h3>
         <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft von über 50 Dünir-Zwergen erfreut sich eines regen Austauschs, der seit dem Beginn von Alpha 2 stetig zunimmt.</p>
         <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
-        <p>Auf dem Alpha 2 EU-Server Lotharia sind wir mit über 30 Testern vertreten und erkunden gemeinsam die Welt von <a href="https://www.ashesofcreation.com/" target="_blank">Ashes of Creation</a>.</p>
+        <blockquote>Auf dem Alpha 2 EU-Server Lotharia sind wir mit über 30 Testern vertreten und erkunden gemeinsam die Welt von <a href="https://www.ashesofcreation.com/" target="_blank">Ashes of Creation</a>.</blockquote>
        </div>
         
        <div class="section-content">
-        <h2>Unsere Ziele</h2>
+        <h3>Unsere Ziele</h3>
         <ul>
           <li>Aufbau einer Gebirgs-Node im Stil der Dünir-Zwerge</li>
           <li>Aktive Führung innerhalb der Lokalpolitik unserer Node</li>
@@ -75,10 +75,11 @@ const openDiscord = () => {
           <li>Gemeinsame Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik</li>
         </ul>
         <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
+        <blockquote>Gemeinschaftlichkeit ist unsere Grundlage. Wir sind eine Gilde, die zusammen aufbaut und gemeinsam wachsen.</blockquote>
        </div>
         
        <div class="section-content">
-        <h2>Wir bieten</h2>
+        <h3>Wir bieten</h3>
         <ul>
           <li>Ein herzliches Zwergen-Umfeld mit über 20 Jahren MMO-Erfahrung in der Leitung</li>
           <li>Ein Zuhause für alle Dünir-Zwerge mit Raum zur Mitgestaltung</li>
@@ -89,9 +90,10 @@ const openDiscord = () => {
        </div>
        
        <div id="join-section" class="section-content">
-        <h2>Trete uns bei</h2>
+        <h3>Trete uns bei</h3>
         <p>Möchtest du Teil der Eisenfaust werden? Wir freuen uns auf deine Bewerbung!</p>
         <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+        <blockquote>Wir unternehmen gemeinsam Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik.</blockquote>
         <p>Um uns beizutreten, kannst du:</p>
         <ul>
           <li>Uns auf unserem Discord-Server besuchen und dich vorstellen</li>
@@ -123,7 +125,7 @@ const openDiscord = () => {
   margin-top:-7rem;
 }
 
-h1, {
+h1{
   font-size: 8rem;
   font-weight: bold;
   text-align: center;
@@ -139,6 +141,17 @@ h2 {
   font-weight: bold;
   text-align: center;
   color: var(--granite-700);
+  margin: 0;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin: 0;
 }
 
