@@ -152,15 +152,12 @@ onMounted(() => {
     <!-- Loading state -->
     <div v-if="isLoading" class="loading">
       <ProgressSpinner />
-      <p>Loading gallery...</p>
+      <p>Lade Erinnerungen...</p>
     </div>
     
     <!-- Error state -->
     <div v-else-if="error" class="error-gallery">
       <p>{{ error }}</p>
-      <p class="help-text">
-        Make sure you have images in the public/screenshots directory and have run the build process to generate thumbnails.
-      </p>
     </div>
     
     <!-- Gallery grid -->

@@ -33,6 +33,19 @@ onMounted(() => {
     }
   }
 });
+
+// Function to scroll to the join section
+const scrollToJoinSection = () => {
+  const joinSection = document.getElementById('join-section');
+  if (joinSection) {
+    joinSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+// Function to open Discord link
+const openDiscord = () => {
+  window.open('https://discord.gg/cSpdD2v5', '_blank', 'noopener,noreferrer');
+};
 </script>
 
 <template>
@@ -41,15 +54,15 @@ onMounted(() => {
       <h1><ParticleCanvas>Eisenfaust</ParticleCanvas></h1>
       <h2>Dünir Zwergengilde</h2>
       <div class="button-container primary">
-        <Button label="Trete uns bei" class="p-button-raised p-button-lg" />
-        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" />
+        <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
+        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />
       </div>
       <hr>
       <div class="section-container">
        <div class="section-content">
         <h2>Wer wir sind</h2>
         <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft von über 50 Dünir-Zwergen erfreut sich eines regen Austauschs, der seit dem Beginn von Alpha 2 stetig zunimmt.</p>
-        <img src="/dwarf-exploring.webp" alt="Eisenfaust Logo">
+        <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
         <p>Auf dem Alpha 2 EU-Server Lotharia sind wir mit über 30 Testern vertreten und erkunden gemeinsam die Welt von <a href="https://www.ashesofcreation.com/" target="_blank">Ashes of Creation</a>.</p>
        </div>
         
@@ -61,7 +74,7 @@ onMounted(() => {
           <li>Errichtung einer Gildenhalle als Beschützer-Gilde</li>
           <li>Gemeinsame Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik</li>
         </ul>
-        <img src="/dwarven-friends.webp" alt="Eisenfaust Logo">
+        <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
        </div>
         
        <div class="section-content">
@@ -73,19 +86,30 @@ onMounted(() => {
           <li>Offenheit für Allianzen mit ähnlichem Fokus</li>
         </ul>
         <p>Wir suchen freundliche und aktive Teamplayer (18+), die einen Dünir-Zwerg spielen möchten und Interesse haben, Teil unserer wachsenden Gemeinschaft zu werden.</p>
-        
+       </div>
+       
+       <div id="join-section" class="section-content">
+        <h2>Trete uns bei</h2>
+        <p>Möchtest du Teil der Eisenfaust werden? Wir freuen uns auf deine Bewerbung!</p>
+        <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+        <p>Um uns beizutreten, kannst du:</p>
+        <ul>
+          <li>Uns auf unserem Discord-Server besuchen und dich vorstellen</li>
+          <li>Eine Nachricht an unsere Gildenleitung senden</li>
+          <li>An einem unserer wöchentlichen Rekrutierungstreffen teilnehmen</li>
+        </ul>
+        <p>Wir freuen uns darauf, dich kennenzulernen und gemeinsam die Welt von Verra zu erkunden!</p>
        </div>
       </div>
       <hr>
       <div class="button-container">
-        <Button label="Trete uns bei" class="p-button-raised p-button-lg" />
-        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" />
+        <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
+        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />
       </div>
     </div>
 </template>
 
 <style scoped>
-
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -122,6 +146,10 @@ img {
   max-height: 20rem;
   object-fit: cover;
   width: 100%;
+}
+
+img.top {
+  object-position: top;
 }
 
 .button-container {
