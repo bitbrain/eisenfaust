@@ -69,7 +69,7 @@ function viewPost(slug: string) {
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { 
+  return date.toLocaleDateString('de-DE', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
@@ -102,6 +102,9 @@ function formatDate(dateString: string) {
 </template>
 
 <style scoped>
+h1, h2 {
+   margin-bottom: 0.5rem;
+}
 .news-container {
   max-width: 800px;
   margin: 0 auto;
@@ -110,6 +113,16 @@ function formatDate(dateString: string) {
 
 .posts-list {
   margin-top: 20px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-excerpt {
+  line-height: 1.6;
 }
 
 .post-item {
@@ -129,7 +142,7 @@ function formatDate(dateString: string) {
 
 .post-date {
   margin-bottom: 10px;
-  font-size: 0.9em;
+  font-size: 1.2em;
   color: var(--granite-500);
 }
 
