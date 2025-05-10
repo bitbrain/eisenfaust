@@ -111,6 +111,45 @@ function imageProcessingPlugin() {
   };
 }
 
+// Add a plugin to copy markdown posts to dist folder
+function copyPostsPlugin() {
+  return {
+    name: 'vite-plugin-copy-posts',
+    closeBundle: async () => {
+      const postsDir = resolve(process.cwd(), 'posts');
+      const distPostsDir = resolve(process.cwd(), 'dist/posts');
+      
+      if (!fs.existsSync(postsDir)) {
+        console.warn('Posts directory not found');
+        return;
+      }
+      
+      try {
+        // Create posts directory in dist if it doesn't exist
+        if (!fs.existsSync(distPostsDir)) {
+          fs.mkdirSync(distPostsDir, { recursive: true });
+        }
+        
+        // Copy all markdown files to dist/posts
+        const files = fs.readdirSync(postsDir);
+        const mdFiles = files.filter(file => file.endsWith('.md'));
+        
+        for (const file of mdFiles) {
+          const srcPath = resolve(postsDir, file);
+          const destPath = resolve(distPostsDir, file);
+          
+          fs.copyFileSync(srcPath, destPath);
+          console.log(`Copied ${file} to dist/posts`);
+        }
+        
+        console.log('All posts copied to dist/posts');
+      } catch (error) {
+        console.error('Error copying posts:', error);
+      }
+    }
+  };
+}
+
 export default defineConfig({
   base: '/eisenfaust',
   plugins: [
@@ -131,7 +170,8 @@ export default defineConfig({
         }
       }
     },
-    imageProcessingPlugin()
+    imageProcessingPlugin(),
+    copyPostsPlugin()
   ],
   
   // Add server configuration for development
