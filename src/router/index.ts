@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory, RouteRecordRaw, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory, RouteRecordRaw } from 'vue-router'
 import LandingView from '../views/LandingView.vue'
 import MediaView from '../views/MediaView.vue'
 import NewsView from '../views/NewsView.vue'
@@ -17,12 +17,12 @@ export const routes: RouteRecordRaw[] = [
   {
     path: '/news',
     name: 'news',
-    component: () => import('../views/NewsView.vue')
+    component: NewsView
   },
   {
     path: '/news/:slug',
     name: 'post',
-    component: () => import('../views/NewsView.vue')
+    component: NewsView
   }
 ]
 

@@ -123,7 +123,7 @@ const openDiscord = () => {
   margin-top:-7rem;
 }
 
-h1 {
+h1, {
   font-size: 8rem;
   font-weight: bold;
   text-align: center;
