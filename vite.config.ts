@@ -178,21 +178,21 @@ export default defineConfig({
   server: {
     headers: {
       // Add cache headers for image files in development
-      '*.jpg': {
-        'Cache-Control': 'max-age=31536000'
-      },
-      '*.jpeg': {
-        'Cache-Control': 'max-age=31536000'
-      },
-      '*.png': {
-        'Cache-Control': 'max-age=31536000'
-      },
-      '*.webp': {
-        'Cache-Control': 'max-age=31536000'
-      },
-      '*.svg': {
-        'Cache-Control': 'max-age=31536000'
-      }
+      '*.jpg': [
+        ['Cache-Control', 'max-age=31536000']
+      ],
+      '*.jpeg': [
+        ['Cache-Control', 'max-age=31536000']
+      ],
+      '*.png': [
+        ['Cache-Control', 'max-age=31536000']
+      ],
+      '*.webp': [
+        ['Cache-Control', 'max-age=31536000']
+      ],
+      '*.svg': [
+        ['Cache-Control', 'max-age=31536000']
+      ]
     }
   },
   
