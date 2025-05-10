@@ -86,21 +86,51 @@ function imageProcessingPlugin() {
       }
 
       try {
-        // Copy WebP files from thumbnails directory to dist/screenshots-webp
-        const files = fs.readdirSync(thumbDir);
-        const webpFiles = files.filter(file => file.endsWith('.webp'));
+        // Get all image files from the source directory
+        const files = fs.readdirSync(srcDir);
+        const imageFiles = files.filter(file => 
+          /\.(jpg|jpeg|png|webp)$/i.test(file)
+        );
         
-        for (const file of webpFiles) {
-          const srcPath = resolve(thumbDir, file);
-          const destPath = resolve(webpDir, file);
+        // Process full-sized WebP screenshots in parallel
+        const processingPromises = imageFiles.map(async (file) => {
+          const srcPath = resolve(srcDir, file);
+          const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+          const destPath = resolve(webpDir, webpFilename);
           
-          fs.copyFileSync(srcPath, destPath);
-          console.log(`Copied ${file} to dist/screenshots-webp`);
+          // Generate full-sized WebP version
+          await sharp(srcPath)
+            .webp({ quality: 85 })
+            .toFile(destPath);
+            
+          console.log(`Generated full-sized WebP for ${file}`);
+        });
+        
+        // Wait for all WebP conversions to complete
+        await Promise.all(processingPromises);
+        
+        // Also copy the thumbnails to the dist folder
+        const thumbFiles = fs.readdirSync(thumbDir);
+        const thumbDestDir = resolve(process.cwd(), 'dist/thumbnails');
+        
+        if (!fs.existsSync(thumbDestDir)) {
+          fs.mkdirSync(thumbDestDir, { recursive: true });
         }
         
-        console.log('All WebP files copied to dist/screenshots-webp');
+        // Copy thumbnails in parallel
+        const copyPromises = thumbFiles.map(async (file) => {
+          const srcPath = resolve(thumbDir, file);
+          const destPath = resolve(thumbDestDir, file);
+          
+          fs.copyFileSync(srcPath, destPath);
+        });
+        
+        // Wait for all copy operations to complete
+        await Promise.all(copyPromises);
+        
+        console.log('All WebP files processed and copied to dist folders');
       } catch (error) {
-        console.error('Error copying WebP files to dist:', error);
+        console.error('Error processing WebP files for dist:', error);
       }
     }
   };
@@ -181,9 +211,7 @@ export default defineConfig({
       // Add proper MIME types for JavaScript files
       '*.js': 'Content-Type: application/javascript; charset=utf-8',
       '*.mjs': 'Content-Type: application/javascript; charset=utf-8'
-    },
-    // Ensure proper handling of base path
-    base: '/eisenfaust/'
+    }
   },
   
   // Add build configuration for production
