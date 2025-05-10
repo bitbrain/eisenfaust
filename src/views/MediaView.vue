@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue';
+import ProgressSpinner from 'primevue/progressspinner';
 
 interface GalleryImage {
   id: number;
@@ -16,6 +17,7 @@ const imagesPerPage = 12;
 const selectedImage = ref<GalleryImage | null>(null);
 const showLightbox = ref(false);
 const error = ref<string | null>(null);
+const isPageLoading = ref(false);
 
 // Pagination
 const totalPages = computed(() => Math.ceil(images.value.length / imagesPerPage));
@@ -65,26 +67,30 @@ const loadImages = async () => {
 };
 
 // Navigation
-const goToPage = (page: number) => {
+const goToPage = async (page: number) => {
+  isPageLoading.value = true;
   currentPage.value = page;
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  await new Promise(resolve => setTimeout(resolve, 300));
+  isPageLoading.value = false;
 };
 
-const nextPage = () => {
+const nextPage = async () => {
   if (currentPage.value < totalPages.value) {
-    goToPage(currentPage.value + 1);
+    await goToPage(currentPage.value + 1);
   }
 };
 
-const prevPage = () => {
+const prevPage = async () => {
   if (currentPage.value > 1) {
-    goToPage(currentPage.value - 1);
+    await goToPage(currentPage.value - 1);
   }
 };
 
 // Lightbox
 const openLightbox = (image: GalleryImage) => {
   selectedImage.value = image;
+  isFullImageLoading.value = true;
   showLightbox.value = true;
   document.body.style.overflow = 'hidden';
 };
@@ -93,6 +99,9 @@ const closeLightbox = () => {
   showLightbox.value = false;
   document.body.style.overflow = '';
 };
+
+// Track loading state of the full-size image
+const isFullImageLoading = ref(true);
 
 // Keyboard navigation for lightbox
 const handleKeyDown = (e: KeyboardEvent) => {
@@ -111,6 +120,7 @@ const nextImage = () => {
   if (!selectedImage.value) return;
   const currentIndex = images.value.findIndex(img => img.id === selectedImage.value?.id);
   const nextIndex = (currentIndex + 1) % images.value.length;
+  isFullImageLoading.value = true;
   selectedImage.value = images.value[nextIndex];
 };
 
@@ -118,7 +128,17 @@ const prevImage = () => {
   if (!selectedImage.value) return;
   const currentIndex = images.value.findIndex(img => img.id === selectedImage.value?.id);
   const prevIndex = (currentIndex - 1 + images.value.length) % images.value.length;
+  isFullImageLoading.value = true;
   selectedImage.value = images.value[prevIndex];
+};
+
+const onFullImageLoad = () => {
+  isFullImageLoading.value = false;
+};
+
+const onImageLoad = (event: Event) => {
+  const img = event.target as HTMLImageElement;
+  img.classList.add('loaded');
 };
 
 onMounted(() => {
@@ -133,7 +153,7 @@ onMounted(() => {
     
     <!-- Loading state -->
     <div v-if="isLoading" class="loading">
-      <div class="spinner"></div>
+      <ProgressSpinner />
       <p>Loading gallery...</p>
     </div>
     
@@ -147,7 +167,7 @@ onMounted(() => {
     
     <!-- Gallery grid -->
     <div v-else-if="images.length > 0" class="gallery-container">
-      <div class="gallery-grid">
+      <div class="gallery-grid" :class="{ 'loading-state': isPageLoading }">
         <div 
           v-for="image in paginatedImages" 
           :key="image.id" 
@@ -159,6 +179,7 @@ onMounted(() => {
             :alt="image.alt" 
             loading="lazy"
             class="thumbnail"
+            @load="onImageLoad"
           />
         </div>
       </div>
@@ -167,7 +188,7 @@ onMounted(() => {
       <div v-if="totalPages > 1" class="pagination">
         <button 
           @click="prevPage" 
-          :disabled="currentPage === 1"
+          :disabled="currentPage === 1 || isPageLoading"
           class="pagination-btn"
         >
           Previous
@@ -179,6 +200,7 @@ onMounted(() => {
             :key="page"
             @click="goToPage(page)"
             :class="['page-btn', { active: page === currentPage }]"
+            :disabled="isPageLoading"
           >
             {{ page }}
           </button>
@@ -186,7 +208,7 @@ onMounted(() => {
         
         <button 
           @click="nextPage" 
-          :disabled="currentPage === totalPages"
+          :disabled="currentPage === totalPages || isPageLoading"
           class="pagination-btn"
         >
           Next
@@ -210,12 +232,24 @@ onMounted(() => {
         <button class="nav-btn prev-btn" @click.stop="prevImage">‹</button>
         
         <div class="lightbox-image-container">
+          <!-- Show thumbnail immediately -->
           <img 
             v-if="selectedImage" 
-            :src="selectedImage.fullImage" 
+            :src="selectedImage.thumbnail" 
             :alt="selectedImage.alt"
-            class="lightbox-image"
+            class="lightbox-thumbnail"
           />
+          
+          <!-- Full image with fade effect -->
+          <div class="full-image-wrapper" v-if="selectedImage">
+            <img 
+              :src="selectedImage.fullImage" 
+              :alt="selectedImage.alt"
+              class="lightbox-image"
+              @load="onFullImageLoad"
+              :class="{ 'loaded': !isFullImageLoading }"
+            />
+          </div>
         </div>
         
         <button class="nav-btn next-btn" @click.stop="nextImage">›</button>
@@ -242,6 +276,7 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 300px;
+  gap: 1rem;
 }
 
 .spinner {
@@ -249,7 +284,7 @@ h1 {
   height: 50px;
   border: 5px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border-top-color: #3498db;
+  border-top-color: var(--granite-900);
   animation: spin 1s ease-in-out infinite;
   margin-bottom: 1rem;
 }
@@ -277,6 +312,9 @@ h1 {
   cursor: pointer;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .gallery-item:hover {
@@ -287,19 +325,28 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
   transition: opacity 0.3s ease;
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thumbnail.loaded {
+  opacity: 1;
 }
 
 .empty-gallery, .error-gallery {
   text-align: center;
   padding: 3rem;
-  background-color: #f8f9fa;
+  background-color: var(--granite-300);
   border-radius: 8px;
 }
 
 .help-text {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: var(--granite-900);
   margin-top: 1rem;
 }
 
@@ -314,15 +361,17 @@ h1 {
 
 .pagination-btn {
   padding: 0.5rem 1rem;
-  background-color: #f1f1f1;
+  background-color: var(--granite-300);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  color: var(--granite-900);
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: #e0e0e0;
+  background-color: var(--granite-700);
+  color: var(--granite-900);
 }
 
 .pagination-btn:disabled {
@@ -343,18 +392,19 @@ h1 {
   justify-content: center;
   border: none;
   border-radius: 50%;
-  background-color: #f1f1f1;
+  background-color: var(--granite-300);
+  color: var(--granite-900);
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .page-btn.active {
-  background-color: #3498db;
+  background-color: var(--ember-700);
   color: white;
 }
 
 .page-btn:hover:not(.active) {
-  background-color: #e0e0e0;
+  background-color: var(--granite-700);
 }
 
 /* Lightbox */
@@ -394,16 +444,46 @@ h1 {
 
 .lightbox-image-container {
   max-width: 90%;
-  max-height: 90%;
+  max-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.full-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.lightbox-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: blur(2px);
+  opacity: 0.7;
+  z-index: 1;
 }
 
 .lightbox-image {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.lightbox-image.loaded {
+  opacity: 1;
 }
 
 .nav-btn {
@@ -422,6 +502,7 @@ h1 {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  z-index: 1001;
 }
 
 .nav-btn:hover {
@@ -447,5 +528,10 @@ h1 {
     height: 40px;
     font-size: 1.5rem;
   }
+}
+
+.loading-state {
+  opacity: 0.7;
+  pointer-events: none;
 }
 </style>
