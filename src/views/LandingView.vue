@@ -8,7 +8,7 @@ import ParticleCanvas from '../components/ParticleCanvas.vue';
       <div class="block"></div>
       <h1><ParticleCanvas>Eisenfaust</ParticleCanvas></h1>
       <h2>Dünir Zwergengilde</h2>
-      <div class="button-container">
+      <div class="button-container primary">
         <Button label="Trete uns bei" class="p-button-raised p-button-lg" />
         <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" />
       </div>
@@ -43,6 +43,11 @@ import ParticleCanvas from '../components/ParticleCanvas.vue';
         <p>Wir suchen freundliche und aktive Teamplayer (18+), die einen Dünir-Zwerg spielen möchten und Interesse haben, Teil unserer wachsenden Gemeinschaft zu werden.</p>
         
        </div>
+      </div>
+      <hr>
+      <div class="button-container">
+        <Button label="Trete uns bei" class="p-button-raised p-button-lg" />
+        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" />
       </div>
     </div>
 </template>
@@ -89,7 +94,10 @@ img {
 
 .button-container {
   display: flex;
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: 1rem;
+}
+
+.button-container.primary {
+  margin-top: 3rem;
 }
 </style>

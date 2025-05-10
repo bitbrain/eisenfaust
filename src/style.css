@@ -1,12 +1,12 @@
 :root {
-  --ember-900: #f78e08;
-  --ember-800: #d95f0f;
-  --ember-700: #c42314;
-  --ember-500: #780e02;
-  --ember-200: #550000;
+  --ember-900: #ffa229;
+  --ember-800: #eb8a4a;
+  --ember-700: #ea3b2c;
+  --ember-500: #981d10;
+  --ember-200: #6a0606;
 
-  --granite-900: #87b4ac;
-  --granite-700: #3a5a54;
+  --granite-900: #95ada8;
+  --granite-700: #445451;
   --granite-300: #0e1318;
 }
 
@@ -25,12 +25,12 @@ body {
 }
 
 a {
-  color: var(--ember-700);
+  color: var(--ember-800);
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
-    color: var(--ember-800);
+    color: var(--ember-900);
   }
 }
 
@@ -48,7 +48,7 @@ hr {
   border: none;
   border-top: 5px solid var(--granite-300);
   width: 50%;
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

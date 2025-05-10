@@ -232,7 +232,7 @@ onMounted(() => {
         <button class="nav-btn prev-btn" @click.stop="prevImage">‹</button>
         
         <div class="lightbox-image-container">
-          <!-- Show thumbnail immediately -->
+          <!-- Show thumbnail immediately while full image loads -->
           <img 
             v-if="selectedImage" 
             :src="selectedImage.thumbnail" 
@@ -240,15 +240,19 @@ onMounted(() => {
             class="lightbox-thumbnail"
           />
           
-          <!-- Full image with fade effect -->
-          <div class="full-image-wrapper" v-if="selectedImage">
-            <img 
-              :src="selectedImage.fullImage" 
-              :alt="selectedImage.alt"
-              class="lightbox-image"
-              @load="onFullImageLoad"
-              :class="{ 'loaded': !isFullImageLoading }"
-            />
+          <!-- Full image loads in background -->
+          <img 
+            v-if="selectedImage" 
+            :src="selectedImage.fullImage" 
+            :alt="selectedImage.alt"
+            class="lightbox-image"
+            @load="onFullImageLoad"
+            :class="{ 'loaded': !isFullImageLoading }"
+          />
+          
+          <!-- Loading indicator -->
+          <div v-if="isFullImageLoading" class="lightbox-loading">
+            <ProgressSpinner />
           </div>
         </div>
         
@@ -449,7 +453,6 @@ h1 {
   align-items: center;
   justify-content: center;
   position: relative;
-  aspect-ratio: 16/9;
   overflow: hidden;
 }
 
@@ -474,12 +477,13 @@ h1 {
 }
 
 .lightbox-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 2;
+  position: relative;
 }
 
 .lightbox-image.loaded {
@@ -533,5 +537,16 @@ h1 {
 .loading-state {
   opacity: 0.7;
   pointer-events: none;
+}
+
+.lightbox-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
