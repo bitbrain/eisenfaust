@@ -89,7 +89,6 @@ function formatDate(dateString: string) {
     
     <!-- Posts listing -->
     <div v-else>
-      <h1>Latest News</h1>
       <div class="posts-list">
         <div v-for="post in posts" :key="post.slug" class="post-item" @click="viewPost(post.slug)">
           <h2>{{ post.title }}</h2>
@@ -131,12 +130,12 @@ function formatDate(dateString: string) {
 .post-date {
   margin-bottom: 10px;
   font-size: 0.9em;
-  opacity: 0.8;
+  color: var(--granite-500);
 }
 
 .read-more {
   margin-top: 10px;
-  font-weight: bold;
+  color: var(--ember-800);
 }
 
 .post-content {
