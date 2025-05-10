@@ -9,9 +9,9 @@ const router = useRouter()
   <main>
     <nav>
       <ul>
-        <li><RouterLink to="/">Home</RouterLink></li>
-        <li><RouterLink to="/news">Neuigkeiten</RouterLink></li>
-        <li><RouterLink to="/media">Media</RouterLink></li>
+        <li><RouterLink to="/" active-class="active">Home</RouterLink></li>
+        <li><RouterLink to="/news" active-class="active">Neuigkeiten</RouterLink></li>
+        <li><RouterLink to="/media" active-class="active">Media</RouterLink></li>
       </ul>
     </nav>
     <router-view />
@@ -56,7 +56,7 @@ nav > ul > li {
     transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 
-  a:hover {
+  a:hover, a.active {
     color: var(--ember-900);
     text-shadow: 0 0 10px hsla(from var(--ember-700) h s l / 0.6);
   }
