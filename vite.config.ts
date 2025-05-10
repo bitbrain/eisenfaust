@@ -9,15 +9,15 @@ import { resolve } from 'path';
 import fs from 'fs';
 import sharp from 'sharp';
 
-// Thumbnail generation plugin
-function thumbnailPlugin() {
+// Thumbnail and WebP generation plugin
+function imageProcessingPlugin() {
   const thumbnailWidth = 300; // Width of thumbnails
   const thumbnailHeight = 300; // Height of thumbnails
   const srcDir = resolve(process.cwd(), 'public/screenshots');
   const thumbDir = resolve(process.cwd(), 'public/thumbnails');
 
   return {
-    name: 'vite-plugin-thumbnail-generator',
+    name: 'vite-plugin-image-processor',
     buildStart: async () => {
       // Check if source directory exists
       if (!fs.existsSync(srcDir)) {
@@ -39,49 +39,39 @@ function thumbnailPlugin() {
         );
 
         console.log(`Found ${imageFiles.length} images in ${srcDir}`);
-
-        // Generate thumbnails for each image
+        
+        // Process each image (thumbnails in WebP format)
         for (const file of imageFiles) {
           const srcPath = resolve(srcDir, file);
-          const thumbPath = resolve(thumbDir, file);
-
-          // Skip if thumbnail already exists and is newer than source
-          if (fs.existsSync(thumbPath)) {
-            const srcStat = fs.statSync(srcPath);
-            const thumbStat = fs.statSync(thumbPath);
-            if (thumbStat.mtime > srcStat.mtime) {
-              continue;
-            }
-          }
-
-          // Generate thumbnail
-          await sharp(srcPath)
-            .resize(thumbnailWidth, thumbnailHeight, {
-              fit: 'cover',
-              position: 'center'
-            })
-            .toFile(thumbPath);
+          // Create WebP thumbnail with the same base name
+          const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+          const thumbPath = resolve(thumbDir, webpFilename);
           
-          console.log(`Generated thumbnail for ${file}`);
+          // Skip if thumbnail already exists and is newer than source
+          const srcStat = fs.statSync(srcPath);
+          if (!fs.existsSync(thumbPath) || fs.statSync(thumbPath).mtime < srcStat.mtime) {
+            await sharp(srcPath)
+              .resize(thumbnailWidth, thumbnailHeight, {
+                fit: 'cover',
+                position: 'center'
+              })
+              .webp({ quality: 80 }) // Convert to WebP with 80% quality
+              .toFile(thumbPath);
+            
+            console.log(`Generated WebP thumbnail for ${file}`);
+          }
         }
         
-        // Generate JSON file with list of screenshots
-        const screenshotsListPath = resolve(process.cwd(), 'public/screenshots-list.json');
+        // Generate a single JSON file with list of thumbnails (all WebP)
+        const thumbnailFiles = fs.readdirSync(thumbDir);
+        const thumbnailsJsonPath = resolve(process.cwd(), 'public/thumbnails.json');
         fs.writeFileSync(
-          screenshotsListPath,
-          JSON.stringify(imageFiles)
+          thumbnailsJsonPath,
+          JSON.stringify(thumbnailFiles)
         );
-        console.log(`Generated screenshots list at ${screenshotsListPath}`);
-        
-        // Generate JSON file with list of thumbnails
-        const thumbnailsListPath = resolve(process.cwd(), 'public/thumbnails-list.json');
-        fs.writeFileSync(
-          thumbnailsListPath,
-          JSON.stringify(imageFiles) // Use the same list since thumbnails have the same filenames
-        );
-        console.log(`Generated thumbnails list at ${thumbnailsListPath}`);
+        console.log(`Generated thumbnails list at ${thumbnailsJsonPath}`);
       } catch (error) {
-        console.error('Error generating thumbnails:', error);
+        console.error('Error processing images:', error);
       }
     }
   };
@@ -107,6 +97,6 @@ export default defineConfig({
         }
       }
     },
-    thumbnailPlugin()
+    imageProcessingPlugin()
   ]
 });

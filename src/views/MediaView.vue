@@ -25,74 +25,40 @@ const paginatedImages = computed(() => {
   return images.value.slice(start, end);
 });
 
-// Load images from the JSON files
+// Load images from thumbnails.json
 const loadImages = async () => {
   try {
     isLoading.value = true;
     error.value = null;
     
-    // Fetch the JSON files that list our images
-    const baseUrl = import.meta.env.BASE_URL; // This will get '/eisenfaust' from your vite config
+    // Load the thumbnails list - adjust the path based on your base URL
+    const response = await fetch('/eisenfaust/thumbnails.json');
+    const thumbnailFiles = await response.json();
     
-    // During development, the files might be at the root
-    // During production, they should be at the base path
-    let screenshotsUrl = `${baseUrl}/screenshots-list.json`;
-    let thumbnailsUrl = `${baseUrl}/thumbnails-list.json`;
+    console.log('Loaded thumbnails:', thumbnailFiles); // Debug log
     
-    console.log('Attempting to fetch from:', screenshotsUrl);
+    // Filter to only keep WebP files to avoid duplicates
+    const webpFiles = thumbnailFiles.filter(filename => filename.endsWith('.webp'));
     
-    let screenshotsResponse = await fetch(screenshotsUrl);
-    let thumbnailsResponse = await fetch(thumbnailsUrl);
+    console.log('Filtered WebP files:', webpFiles); // Debug log
     
-    // If that fails, try without the base path (for development)
-    if (!screenshotsResponse.ok || !thumbnailsResponse.ok) {
-      console.log('Fetch failed, trying without base path');
-      screenshotsUrl = '/screenshots-list.json';
-      thumbnailsUrl = '/thumbnails-list.json';
-      
-      screenshotsResponse = await fetch(screenshotsUrl);
-      thumbnailsResponse = await fetch(thumbnailsUrl);
-    }
-    
-    if (!screenshotsResponse.ok) {
-      throw new Error(`Failed to fetch screenshots list: ${screenshotsResponse.status}`);
-    }
-    
-    if (!thumbnailsResponse.ok) {
-      throw new Error(`Failed to fetch thumbnails list: ${thumbnailsResponse.status}`);
-    }
-    
-    // Parse the JSON responses
-    const screenshots = await screenshotsResponse.json();
-    const thumbnails = await thumbnailsResponse.json();
-    
-    console.log('Loaded screenshots:', screenshots);
-    
-    // Create image objects from the filenames in the JSON
-    const loadedImages: GalleryImage[] = screenshots.map((filename: string, index: number) => {
-      // Create full URLs for the images
-      const fullImage = `${baseUrl}/screenshots/${filename}`;
-      const thumbnail = `${baseUrl}/thumbnails/${filename}`;
-      
-      // Create alt text from filename (remove extension and replace dashes with spaces)
-      const alt = filename.split('.')[0].replace(/-/g, ' ');
-      
+    // Process the thumbnails
+    const processedImages = webpFiles.map((thumbnail, index) => {
+      // For the full image, use the same WebP file but from screenshots-webp directory
       return {
-        id: index,
-        thumbnail,
-        fullImage,
-        alt
+        id: index + 1,
+        thumbnail: `/eisenfaust/thumbnails/${thumbnail}`,
+        fullImage: `/eisenfaust/screenshots-webp/${thumbnail}`,
+        alt: `Gallery image ${index + 1}`
       };
     });
     
-    images.value = loadedImages;
+    console.log('Processed images:', processedImages); // Debug log
     
-    if (loadedImages.length === 0) {
-      error.value = 'No images found in the screenshots directory.';
-    }
-  } catch (e) {
-    console.error('Error loading images:', e);
-    error.value = `Failed to load images: ${e instanceof Error ? e.message : String(e)}`;
+    images.value = processedImages;
+  } catch (error) {
+    console.error('Error loading images:', error);
+    error.value = `Failed to load images: ${error instanceof Error ? error.message : String(error)}`;
   } finally {
     isLoading.value = false;
   }
