@@ -11,12 +11,14 @@ interface Post {
 
 const posts = ref<Post[]>([]);
 const currentPost = ref<Post | null>(null);
+const loading = ref(true);
 const route = useRoute();
 const router = useRouter();
 
 onMounted(async () => {
   await loadPosts();
   updateCurrentPost();
+  loading.value = false;
 });
 
 // Watch for route changes to update the current post
@@ -27,11 +29,18 @@ watch(() => route.params.slug, async (newSlug) => {
   updateCurrentPost();
 });
 
-function updateCurrentPost() {
+async function updateCurrentPost() {
   if (route.params.slug) {
-    currentPost.value = posts.value.find(post => post.slug === route.params.slug) || null;
+    const slug = route.params.slug as string;
+    
+    // Make sure posts are loaded before trying to find the current post
+    if (posts.value.length === 0) {
+      await loadPosts();
+    }
+    
+    currentPost.value = posts.value.find(post => post.slug === slug) || null;
     if (!currentPost.value) {
-      console.error('Post not found for slug:', route.params.slug);
+      console.error('Post not found for slug:', slug);
     }
   } else {
     currentPost.value = null;
@@ -79,8 +88,12 @@ function formatDate(dateString: string) {
 
 <template>
   <div class="news-container">
+    <div v-if="loading" class="loading">
+      Lade Inhalte...
+    </div>
+    
     <!-- Single post view -->
-    <div v-if="currentPost" class="post-detail">
+    <div v-else-if="currentPost" class="post-detail">
       <RouterLink to="/news" class="back-link">← Zurück zur Übersicht</RouterLink>
       <h1>{{ currentPost.title }}</h1>
       <div class="post-date">{{ formatDate(currentPost.date) }}</div>
@@ -109,6 +122,12 @@ h1, h2 {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
 }
 
 .posts-list {
