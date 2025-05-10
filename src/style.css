@@ -57,8 +57,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* SECTION STYLING */
 
-
-
 .section-container {
   display: flex;
   flex-direction: column;
@@ -72,10 +70,18 @@ h1, h2, h3, h4, h5, h6 {
 .section-content {
   color: var(--granite-900);
   max-width: 800px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 
   h2 {
     margin-bottom: 1rem;
   }
+}
+
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section-content p {

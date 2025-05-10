@@ -1,6 +1,38 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
 import ParticleCanvas from '../components/ParticleCanvas.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // Configure intersection observer with options for better scroll effect
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add a smaller delay for a more subtle effect
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+      }
+    });
+  }, {
+    threshold: 0.1, // Element must be 10% visible before triggering
+    rootMargin: '0px 0px -50px 0px' // Trigger 50px before element enters viewport
+  });
+  
+  // Get all sections and observe them
+  const sections = document.querySelectorAll('.section-content');
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+  
+  // Make first section visible immediately if at top of page
+  if (window.scrollY < 100) {
+    const firstSection = document.querySelector('.section-content');
+    if (firstSection) {
+      firstSection.classList.add('visible');
+    }
+  }
+});
 </script>
 
 <template>
