@@ -106,8 +106,8 @@ export default {
     setupCanvas() {
       const container = this.$refs.container
       // Set CSS dimensions (the visual size)
-      this.cssWidth = container.clientWidth + 200
-      this.cssHeight = container.clientHeight + 200
+      this.cssWidth = container.clientWidth + 400
+      this.cssHeight = container.clientHeight + 400
       
       // Set actual canvas dimensions (multiplied by pixel ratio for high DPI)
       this.width = Math.floor(this.cssWidth * this.pixelRatio)
@@ -118,8 +118,8 @@ export default {
       canvas.height = this.height
       
       // Position the canvas with CSS
-      canvas.style.left = '-100px'
-      canvas.style.top = '-100px'
+      canvas.style.left = '-200px'
+      canvas.style.top = '-200px'
       
       // Get context and scale it
       this.context = canvas.getContext('2d')
@@ -242,11 +242,11 @@ class ParticleBehavior {
   constructor(particle, baseDelay, realignCallback) {
     this.delay = 0
     this.veloX = 0
-    this.startVelocity = 0.1 * Math.random() + 0.01
+    this.startVelocity = 0.15 * Math.random() + 0.05
     this.delayRange = baseDelay + Math.random() * 20000
-    this.opacityFactor = Math.random() * 0.02
+    this.opacityFactor = Math.random() * 0.01
     this.life = 0
-    this.maxLife = 6000
+    this.maxLife = 10000
     this.maxOpacity = 0.15 + 0.7 * Math.random()
     this.particle = particle
     this.baseDelay = baseDelay
@@ -261,7 +261,7 @@ class ParticleBehavior {
       // Update color transition progress
       this.particle.transitionProgress = Math.min(1, this.life / (this.maxLife * 0.5))
       
-      if (this.life < 3000) {
+      if (this.life < 5000) {
         if (this.particle.a < this.maxOpacity) {
           this.particle.a += this.opacityFactor
         }
