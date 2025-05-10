@@ -61,9 +61,9 @@ const openDiscord = () => {
       <div class="section-container">
        <div class="section-content">
         <h3>Wer wir sind</h3>
-        <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft von über 50 Dünir-Zwergen erfreut sich eines regen Austauschs, der seit dem Beginn von Alpha 2 stetig zunimmt.</p>
+        <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft erfreut sich eines regen Austauschs, der seit dem Beginn von Alpha 2 stetig zunimmt.</p>
         <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
-        <blockquote>Auf dem Alpha 2 EU-Server Lotharia sind wir mit über 30 Testern vertreten und erkunden gemeinsam die Welt von <a href="https://www.ashesofcreation.com/" target="_blank">Ashes of Creation</a>.</blockquote>
+        <blockquote>Nicht der Pfad macht den Zwerg groß, sondern der Mut, ihn ins Ungewisse zu schlagen.</blockquote>
        </div>
         
        <div class="section-content">
@@ -75,7 +75,7 @@ const openDiscord = () => {
           <li>Gemeinsame Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik</li>
         </ul>
         <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
-        <blockquote>Gemeinschaftlichkeit ist unsere Grundlage. Wir sind eine Gilde, die zusammen aufbaut und gemeinsam wachsen.</blockquote>
+        <blockquote>Ein Zwerg zeigt Größe nicht in Worten, sondern im Stand gegen Fels, Feuer und Zeit.</blockquote>
        </div>
         
        <div class="section-content">
@@ -93,7 +93,7 @@ const openDiscord = () => {
         <h3>Trete uns bei</h3>
         <p>Möchtest du Teil der Eisenfaust werden? Wir freuen uns auf deine Bewerbung!</p>
         <img src="/dwarven-friends.webp" alt="Dwarven Friends">
-        <blockquote>Wir unternehmen gemeinsam Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik.</blockquote>
+        <blockquote>Gemeinsam schaffen wir, was keiner allein vermag, und lachen dabei wie beim ersten Fass Bier.</blockquote>
         <p>Um uns beizutreten, kannst du:</p>
         <ul>
           <li>Uns auf unserem Discord-Server besuchen und dich vorstellen</li>
@@ -153,6 +153,7 @@ h3 {
   background-clip: text;
   color: transparent;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 img {

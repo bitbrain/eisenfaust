@@ -68,6 +68,10 @@ blockquote {
   font-style: italic;
 }
 
+strong {
+  color: var(--granite-700);
+}
+
 /* SECTION STYLING */
 
 .section-container {
