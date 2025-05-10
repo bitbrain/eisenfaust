@@ -28,6 +28,7 @@ footer {
   padding: 1rem;
   margin-top: 6rem;
   margin-bottom: 2rem;
+  color: var(--granite-700);
 }
 
 nav {

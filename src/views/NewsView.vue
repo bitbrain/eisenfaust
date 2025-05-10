@@ -81,7 +81,7 @@ function formatDate(dateString: string) {
   <div class="news-container">
     <!-- Single post view -->
     <div v-if="currentPost" class="post-detail">
-      <button @click="router.push('/news')" class="back-button">← Back to all posts</button>
+      <RouterLink to="/news" class="back-link">← Back to all posts</RouterLink>
       <h1>{{ currentPost.title }}</h1>
       <div class="post-date">{{ formatDate(currentPost.date) }}</div>
       <div class="post-content" v-html="currentPost.content"></div>
@@ -117,29 +117,26 @@ function formatDate(dateString: string) {
   margin-bottom: 30px;
   padding: 20px;
   border-radius: 5px;
+  background-color: rgba(14, 19, 24, 0.3);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .post-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background-color: rgba(14, 19, 24, 0.5);
 }
 
 .post-date {
-  color: #666;
   margin-bottom: 10px;
   font-size: 0.9em;
+  opacity: 0.8;
 }
 
 .read-more {
   margin-top: 10px;
-  color: #0066cc;
   font-weight: bold;
-}
-
-.post-detail h1 {
-  margin-bottom: 10px;
 }
 
 .post-content {
@@ -147,17 +144,12 @@ function formatDate(dateString: string) {
   margin-top: 20px;
 }
 
-.back-button {
-  background: none;
-  border: none;
-  color: #0066cc;
-  cursor: pointer;
-  padding: 5px 0;
-  font-size: 1em;
+.back-link {
+  display: inline-block;
   margin-bottom: 20px;
 }
 
-.back-button:hover {
-  text-decoration: underline;
+.post-item h2 {
+  transition: color 0.3s ease;
 }
 </style>
