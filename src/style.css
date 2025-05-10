@@ -19,7 +19,7 @@
 
 body {
   background-color: #000;
-  color: var(--ember-800);
+  color: var(--granite-900);
   font-family: 'Amarante', sans-serif;
   font-size: 1.5rem;
 }
@@ -49,6 +49,10 @@ hr {
   border-top: 5px solid var(--granite-300);
   width: 50%;
   margin: 5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--granite-700);
 }
 
 /* SECTION STYLING */
