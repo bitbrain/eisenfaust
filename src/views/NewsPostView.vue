@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, onMounted, watch } from 'vue';
+import { useRoute } from 'vue-router';
 
 interface Post {
   title: string;
@@ -10,17 +10,48 @@ interface Post {
 }
 
 const posts = ref<Post[]>([]);
+const currentPost = ref<Post | null>(null);
 const loading = ref(true);
-const router = useRouter();
+const error = ref<string | null>(null);
+const route = useRoute();
+
+function getSlugFromPath() {
+  const path = window.location.pathname;
+  const match = path.match(/\/news\/([^\/]+)/);
+  return match ? match[1] : null;
+}
 
 onMounted(async () => {
   await loadPosts();
+  await updateCurrentPost();
   loading.value = false;
 });
+
+watch(() => route.params.slug, async (newSlug) => {
+  if (posts.value.length === 0) {
+    await loadPosts();
+  }
+  await updateCurrentPost();
+}, { immediate: true });
+
+async function updateCurrentPost() {
+  const slug = getSlugFromPath();
+  
+  if (slug) {
+    currentPost.value = posts.value.find(post => post.slug === slug) || null;
+    
+    if (!currentPost.value) {
+      error.value = 'Post nicht gefunden';
+    } else {
+      error.value = null;
+    }
+  }
+}
 
 async function loadPosts() {
   try {
     const postModules = import.meta.glob('/posts/*.md', { eager: true });
+    
     const postPromises = Object.entries(postModules).map(async ([path, importPost]) => {
       const content = importPost as { default: string, frontmatter: any };
       const filename = path.split('/').pop() || '';
@@ -37,12 +68,8 @@ async function loadPosts() {
     posts.value = await Promise.all(postPromises);
     posts.value.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   } catch (error) {
-    console.error('Error loading posts:', error);
+    error.value = 'Fehler beim Laden der Posts';
   }
-}
-
-function viewPost(slug: string) {
-  router.push(`/news/${slug}`);
 }
 
 function formatDate(dateString: string) {
@@ -61,21 +88,21 @@ function formatDate(dateString: string) {
       Lade Inhalte...
     </div>
     
-    <div v-else>
-      <div class="posts-list">
-        <div v-for="post in posts" :key="post.slug" class="post-item" @click="viewPost(post.slug)">
-          <h2>{{ post.title }}</h2>
-          <div class="post-date">{{ formatDate(post.date) }}</div>
-          <div class="post-excerpt" v-html="post.content.split('</p>')[0] + '</p>'"></div>
-          <div class="read-more">Weiterlesen →</div>
-        </div>
-      </div>
+    <div v-else-if="error" class="error">
+      {{ error }}
+    </div>
+    
+    <div v-else-if="currentPost" class="post-detail">
+      <RouterLink to="/news" class="back-link">← Zurück zur Übersicht</RouterLink>
+      <h1>{{ currentPost.title }}</h1>
+      <div class="post-date">{{ formatDate(currentPost.date) }}</div>
+      <div class="post-content" v-html="currentPost.content"></div>
     </div>
   </div>
 </template>
 
 <style scoped>
-h2 {
+h1 {
   margin-bottom: 0.5rem;
 }
 
@@ -91,27 +118,21 @@ h2 {
   font-size: 1.2rem;
 }
 
-.posts-list {
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--ember-800);
+}
+
+.post-content {
+  line-height: 1.6;
   margin-top: 20px;
 }
 
-.post-excerpt {
-  line-height: 1.6;
-}
-
-.post-item {
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: rgba(14, 19, 24, 0.3);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.post-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  background-color: rgba(14, 19, 24, 0.5);
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .post-date {
@@ -119,13 +140,4 @@ h2 {
   font-size: 1.2em;
   color: var(--granite-500);
 }
-
-.read-more {
-  margin-top: 10px;
-  color: var(--ember-800);
-}
-
-.post-item h2 {
-  transition: color 0.3s ease;
-}
-</style>
+</style> 
