@@ -61,7 +61,7 @@ const openDiscord = () => {
       <div class="section-container">
        <div class="section-content">
         <h3>Wer wir sind</h3>
-        <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft erfreut sich eines regen Austauschs, der seit dem Beginn von Alpha 2 stetig zunimmt.</p>
+        <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft erfreut sich eines regen Austauschs, der seit dem Beginn der <a href="https://de.wikipedia.org/wiki/Alpha_2" target="_blank" rel="noopener noreferrer">Alpha 2</a> stetig zunimmt.</p>
         <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
         <blockquote>Nicht der Pfad macht den Zwerg groß, sondern der Mut, ihn ins Ungewisse zu schlagen.</blockquote>
        </div>
@@ -69,9 +69,9 @@ const openDiscord = () => {
        <div class="section-content">
         <h3>Unsere Ziele</h3>
         <ul>
-          <li>Aufbau einer Gebirgs-Node im Stil der Dünir-Zwerge</li>
+          <li>Aufbau einer Gebirgs-Node im Stil der <a href="https://de.wikipedia.org/wiki/D%C3%BCnir" target="_blank" rel="noopener noreferrer">Dünir-Zwerge</a></li>
           <li>Aktive Führung innerhalb der Lokalpolitik unserer Node</li>
-          <li>Errichtung einer Gildenhalle als Beschützer-Gilde</li>
+          <li>Errichtung einer <a href="https://de.wikipedia.org/wiki/Gildenhalle" target="_blank" rel="noopener noreferrer">Gildenhalle</a> als Beschützer-Gilde</li>
           <li>Gemeinsame Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik</li>
         </ul>
         <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
@@ -91,7 +91,7 @@ const openDiscord = () => {
        
        <div id="join-section" class="section-content">
         <h3>Trete uns bei</h3>
-        <p>Möchtest du Teil der Eisenfaust werden? Wir freuen uns auf deine Bewerbung!</p>
+        <p>Möchtest du Teil der <strong>Eisenfaust</strong> werden? Wir freuen uns auf deine Bewerbung!</p>
         <img src="/dwarven-friends.webp" alt="Dwarven Friends">
         <blockquote>Gemeinsam schaffen wir, was keiner allein vermag, und lachen dabei wie beim ersten Fass Bier.</blockquote>
         <p>Um uns beizutreten, kannst du:</p>
