@@ -63,9 +63,10 @@ h1, h2, h3, h4, h5, h6 {
 blockquote {
   color: var(--granite-700);
   border-left: 5px solid var(--granite-300);
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   margin: 1rem 0;
   font-style: italic;
+  margin-left: 1rem;
 }
 
 strong {
