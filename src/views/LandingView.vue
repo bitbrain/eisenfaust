@@ -173,5 +173,21 @@ img.top {
 
 .button-container.primary {
   margin-top: 3rem;
+
+  & .p-button-raised {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  & .p-button-raised:not(.p-button-outlined) {
+    background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  & .p-button-raised:not(.p-button-outlined):hover {
+    box-shadow: 0 0 0.75rem 0 var(--ember-500);
+    color: var(--ember-200);
+  }
 }
 </style>
