@@ -13,7 +13,7 @@ Unser Ziel ist klar: Wir werden eine prächtige Gebirgs-Node im traditionellen S
 
 
 
-![rind](/rind.webp)
+![screenshots](/screenshots-webp/gildenabend-alpha1.webp)
 
 Die Eisenfaust steht für Kameradschaft, Tradition und Stärke. Ob im Handel, Handwerk, in der Politik oder auf dem Schlachtfeld – wir Zwerge sind eine Kraft, mit der man rechnen muss. Unsere erfahrene Führung, mit über zwei Jahrzehnten MMO-Erfahrung, leitet uns sicher durch alle Herausforderungen. 
 Neue Rekruten sind stets willkommen, sofern sie das Herz eines wahren Dünir in der Brust tragen und bereit sind, gemeinsam mit uns zu kämpfen, zu feiern und zu triumphieren. Unser Discord-Server steht allen offen, die mehr über die Eisenfaust erfahren möchten.
