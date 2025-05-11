@@ -175,6 +175,56 @@ function copyPostsPlugin() {
   };
 }
 
+// Add a plugin to generate routes for posts
+function generatePostRoutesPlugin() {
+  return {
+    name: 'vite-plugin-generate-post-routes',
+    buildStart: async () => {
+      const postsDir = resolve(process.cwd(), 'posts');
+      const routesDir = resolve(process.cwd(), 'src/routes');
+      
+      if (!fs.existsSync(postsDir)) {
+        console.warn('Posts directory not found');
+        return;
+      }
+      
+      try {
+        // Create routes directory if it doesn't exist
+        if (!fs.existsSync(routesDir)) {
+          fs.mkdirSync(routesDir, { recursive: true });
+        }
+        
+        // Get all markdown files
+        const files = fs.readdirSync(postsDir);
+        const mdFiles = files.filter(file => file.endsWith('.md'));
+        
+        // Generate routes array
+        const routes = mdFiles.map(file => {
+          const slug = file.replace(/\.md$/, '');
+          return {
+            path: `/news/${slug}`,
+            component: 'NewsPostView'
+          };
+        });
+        
+        // Write routes to file
+        const routesContent = `// This file is auto-generated. Do not edit manually.
+import NewsPostView from '../views/NewsPostView.vue'
+export const postRoutes = ${JSON.stringify(routes, null, 2)}.map(route => ({
+  ...route,
+  component: NewsPostView
+}));
+`;
+        
+        fs.writeFileSync(resolve(routesDir, 'post-routes.ts'), routesContent);
+        console.log('Generated post routes configuration');
+      } catch (error) {
+        console.error('Error generating post routes:', error);
+      }
+    }
+  };
+}
+
 export default defineConfig({
   base: '/eisenfaust',
   plugins: [
@@ -196,7 +246,8 @@ export default defineConfig({
       }
     },
     imageProcessingPlugin(),
-    copyPostsPlugin()
+    copyPostsPlugin(),
+    generatePostRoutesPlugin()
   ],
   
   // Add server configuration for development
