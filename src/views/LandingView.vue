@@ -177,6 +177,7 @@ img.top {
   & .p-button-raised {
     font-size: 1.5rem;
     padding: 1rem 2rem;
+    font-weight: bold;
   }
 
   & .p-button-raised:not(.p-button-outlined) {
