@@ -118,6 +118,12 @@ h1 {
   font-size: 1.2rem;
 }
 
+.post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .error {
   text-align: center;
   padding: 2rem;

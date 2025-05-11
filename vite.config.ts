@@ -240,7 +240,16 @@ export default defineConfig({
       transform(code, id) {
         if (id.endsWith('.md')) {
           const { content, data } = matter(code);
-          const html = marked(content);
+          // Transform image URLs to include base URL if it exists
+          const transformedContent = content.replace(/!\[([^\]]*)\]\(\/([^)]+)\)/g, (match, alt, path) => {
+            const base = process.env.VITE_BASE_URL || '/eisenfaust';
+            return `![${alt}](${base}/${path})`;
+          });
+          // Configure marked to handle line breaks
+          marked.setOptions({
+            breaks: true
+          });
+          const html = marked(transformedContent);
           return `export const frontmatter = ${JSON.stringify(data)}; export default ${JSON.stringify(html)};`;
         }
       }
