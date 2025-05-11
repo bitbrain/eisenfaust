@@ -81,9 +81,9 @@ const openDiscord = () => {
        <div class="section-content">
         <h3>Wir bieten</h3>
         <ul>
-          <li>Ein herzliches Zwergen-Umfeld mit über 20 Jahren MMO-Erfahrung in der Leitung</li>
+          <li>Ein herzliches Zwergen-Umfeld mit über <strong>20 Jahren</strong> MMO-Erfahrung in der Leitung</li>
           <li>Ein Zuhause für alle Dünir-Zwerge mit Raum zur Mitgestaltung</li>
-          <li>Einen aktiven Discord-Server und eine optionale DSA Pen & Paper Zwergenrunde</li>
+          <li>Einen aktiven <a href="https://discord.gg/cSpdD2v5" target="_blank" rel="noopener noreferrer">Discord-Server</a> und eine optionale DSA Pen & Paper Zwergenrunde</li>
           <li>Offenheit für Allianzen mit ähnlichem Fokus</li>
         </ul>
         <p>Wir suchen freundliche und aktive Teamplayer (18+), die einen Dünir-Zwerg spielen möchten und Interesse haben, Teil unserer wachsenden Gemeinschaft zu werden.</p>
@@ -96,7 +96,7 @@ const openDiscord = () => {
         <blockquote>Gemeinsam schaffen wir, was keiner allein vermag, und lachen dabei wie beim ersten Fass Bier.</blockquote>
         <p>Um uns beizutreten, kannst du:</p>
         <ul>
-          <li>Uns auf unserem Discord-Server besuchen und dich vorstellen</li>
+          <li>Uns auf unserem <a href="https://discord.gg/cSpdD2v5" target="_blank" rel="noopener noreferrer">Discord-Server</a> besuchen und dich vorstellen</li>
           <li>Eine Nachricht an unsere Gildenleitung senden</li>
           <li>An einem unserer wöchentlichen Rekrutierungstreffen teilnehmen</li>
         </ul>
