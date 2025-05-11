@@ -16,6 +16,7 @@ function imageProcessingPlugin() {
   const srcDir = resolve(process.cwd(), 'public/screenshots');
   const thumbDir = resolve(process.cwd(), 'public/thumbnails');
   const webpDir = resolve(process.cwd(), 'dist/screenshots-webp');
+  const publicWebpDir = resolve(process.cwd(), 'public/screenshots-webp');
 
   return {
     name: 'vite-plugin-image-processor',
@@ -41,7 +42,12 @@ function imageProcessingPlugin() {
 
         console.log(`Found ${imageFiles.length} images in ${srcDir}`);
         
-        // Process thumbnails in parallel
+        // Create public screenshots-webp directory if it doesn't exist
+        if (!fs.existsSync(publicWebpDir)) {
+          fs.mkdirSync(publicWebpDir, { recursive: true });
+        }
+        
+        // Process thumbnails and WebP files in parallel
         const processingPromises = imageFiles.map(async (file) => {
           const srcPath = resolve(srcDir, file);
           const srcStat = fs.statSync(srcPath);
@@ -49,6 +55,7 @@ function imageProcessingPlugin() {
           // Create WebP thumbnail with the same base name
           const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
           const thumbPath = resolve(thumbDir, webpFilename);
+          const publicWebpPath = resolve(publicWebpDir, webpFilename);
           
           // Generate thumbnail if it doesn't exist or is older than source
           if (!fs.existsSync(thumbPath) || fs.statSync(thumbPath).mtime < srcStat.mtime) {
@@ -61,6 +68,15 @@ function imageProcessingPlugin() {
               .toFile(thumbPath);
             
             console.log(`Generated WebP thumbnail for ${file}`);
+          }
+
+          // Generate full-sized WebP for public directory if it doesn't exist or is older than source
+          if (!fs.existsSync(publicWebpPath) || fs.statSync(publicWebpPath).mtime < srcStat.mtime) {
+            await sharp(srcPath)
+              .webp({ quality: 85 })
+              .toFile(publicWebpPath);
+            
+            console.log(`Generated public WebP for ${file}`);
           }
         });
         
