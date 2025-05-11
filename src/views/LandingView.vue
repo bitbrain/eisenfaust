@@ -2,7 +2,7 @@
 import Button from 'primevue/button';
 import ParticleCanvas from '../components/ParticleCanvas.vue';
 import { onMounted } from 'vue';
-
+import Divider from '../components/Divider.vue';
 onMounted(() => {
   // Configure intersection observer with options for better scroll effect
   const observer = new IntersectionObserver((entries) => {
@@ -57,7 +57,7 @@ const openDiscord = () => {
         <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
         <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />
       </div>
-      <hr>
+      <Divider>Ehre</Divider>
       <div class="section-container">
        <div class="section-content">
         <h3>Wer wir sind</h3>
@@ -103,7 +103,7 @@ const openDiscord = () => {
         <p>Wir freuen uns darauf, dich kennenzulernen und gemeinsam die Welt von Verra zu erkunden!</p>
        </div>
       </div>
-      <hr>
+      <Divider>Gemeinschaft</Divider>
       <div class="button-container">
         <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
         <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />

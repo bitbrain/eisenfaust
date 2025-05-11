@@ -18,6 +18,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Runes';
+  src: url('./assets/fonts/runes/RUNE_A.TTF') format('truetype');
+  font-style: normal;
+}
+
 body {
   background-color: #000;
   color: var(--granite-900);
