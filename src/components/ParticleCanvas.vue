@@ -13,7 +13,7 @@ export default {
   props: {
     particles: {
       type: Number,
-      default: 250
+      default: 100
     },
     delay: {
       type: Number,
@@ -294,7 +294,6 @@ class ParticleBehavior {
 <style scoped>
 .particle-container {
   position: relative;
-  width: 100%;
   height: 100%;
   overflow: visible;
 }
@@ -310,7 +309,6 @@ canvas {
 .content {
   position: relative;
   z-index: 2;
-  width: 100%;
   height: 100%;
 }
 </style>
