@@ -57,7 +57,7 @@ nav > ul > li {
   a {
     text-decoration: none;
     color: var(--ember-700);
-    text-shadow: 0 0 0.75rem black;
+    text-shadow: 0 0 0.75rem rgb(108, 31, 14);
     transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 

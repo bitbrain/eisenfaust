@@ -51,7 +51,7 @@ const openDiscord = () => {
 <template>
     <div class="landing-container">
       <div class="block"></div>
-      <h1><ParticleCanvas>Eisenfaust</ParticleCanvas></h1>
+      <ParticleCanvas><h1>Eisenfaust</h1></ParticleCanvas>
       <h2>Dünir Zwergengilde</h2>
       <div class="button-container primary">
         <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
@@ -136,6 +136,13 @@ h1{
   margin: 0;
 }
 
+h1::before {
+  content: "Eisenfaust";
+  position: absolute;
+  z-index: -1;
+  text-shadow: 0 0 0.5rem hsl(from var(--ember-500) h s l / 0.5);
+}
+
 h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -182,13 +189,26 @@ img.top {
 
   & .p-button-raised:not(.p-button-outlined) {
     background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
+    color: black;
     border: none;
     transition: all 0.3s ease;
   }
 
+  & .p-button-raised.p-button-outlined {
+    color: var(--granite-700);
+    border-color: var(--granite-700);
+    border-width: 2.5px;
+  }
+
   & .p-button-raised:not(.p-button-outlined):hover {
-    box-shadow: 0 0 0.75rem 0 var(--ember-500);
+    box-shadow: 0 0 1.75rem 0 hsl(from var(--ember-500) h s l / 0.5);
     color: var(--ember-200);
+    text-shadow: 0 0 0.5rem hsl(from var(--ember-700) h s l / 0.5);
+  }
+  
+  & .p-button-raised.p-button-outlined:hover {
+    color: var(--granite-800);
+    border-color: var(--granite-800);
   }
 }
 </style>
