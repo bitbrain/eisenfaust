@@ -35,6 +35,15 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
+  "\u0000vite:asset:public/logo.png": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
   "\u0000vite:asset:public/rind.webp": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
@@ -1403,7 +1412,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/views/LandingView.vue?vue&type=style&index=0&scoped=fb7a6e0d&lang.css": [
+  "src/views/LandingView.vue?vue&type=style&index=0&scoped=56ce6ef2&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
