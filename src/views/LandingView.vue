@@ -191,6 +191,7 @@ img.top {
     background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
     color: black;
     border: none;
+    text-shadow: 0 1px 1px var(--ember-900);
     transition: all 0.3s ease;
   }
 
@@ -203,12 +204,7 @@ img.top {
   & .p-button-raised:not(.p-button-outlined):hover {
     box-shadow: 0 0 1.75rem 0 hsl(from var(--ember-500) h s l / 0.5);
     color: var(--ember-200);
-    text-shadow: 0 0 0.5rem hsl(from var(--ember-700) h s l / 0.5);
-  }
-  
-  & .p-button-raised.p-button-outlined:hover {
-    color: var(--granite-800);
-    border-color: var(--granite-800);
+    text-shadow: 0 1px 1px var(--ember-800);
   }
 }
 </style>
