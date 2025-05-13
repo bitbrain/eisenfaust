@@ -16,6 +16,7 @@ const router = useRouter()
     </nav>
     <router-view />
     <footer>
+      <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" /></div>
       © 2025 Eisenfaust. Alle Rechte vorbehalten.
     </footer>
   </main>
@@ -29,6 +30,32 @@ footer {
   margin-top: 6rem;
   margin-bottom: 2rem;
   color: var(--granite-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--granite-700); 
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.logo {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  filter: grayscale(100%) brightness(1);
 }
 
 nav {
