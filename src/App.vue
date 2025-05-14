@@ -10,7 +10,7 @@ const router = useRouter()
     <nav>
       <ul>
         <li><RouterLink to="/" active-class="active">Home</RouterLink></li>
-        <li><RouterLink to="/news" active-class="active">Neuigkeiten</RouterLink></li>
+        <li><RouterLink to="/story" active-class="active">Story</RouterLink></li>
         <li><RouterLink to="/media" active-class="active">Media</RouterLink></li>
       </ul>
     </nav>
