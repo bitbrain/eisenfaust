@@ -1,1 +1,1 @@
-Wir tanzen und feiern bevor wir auf Bärenjagd gehen. Uns steht eine lange Reise bevor.
+Wir tanzen und feiern bevor wir auf Bärensuche gehen. Uns steht eine lange Reise bevor.
