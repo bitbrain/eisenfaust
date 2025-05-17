@@ -329,14 +329,13 @@ h1 {
 
 .gallery-item:hover .thumbnail {
   transform: scale(1.1);
-  filter: saturate(1.2);
 }
 
 .thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 1s ease;
+  transition: all 2s ease;
   display: block;
   border: none;
   padding: 0;
