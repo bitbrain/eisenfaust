@@ -69,14 +69,15 @@ const openDiscord = () => {
        <div class="section-content">
         <h3>Wofür wir stehen</h3>
         <p>Unsere Heimat liegt in den Bergen – unser Blick aber ist weit. Eisenfaust ist eine PvX-Gilde, die sich dem Aufbau einer Gebirgs-Node verschrieben hat, ganz im Stil der Dünir: Mit starken Mauern, klugen Köpfen und entschlossenen Händen. Wir engagieren uns in allen Facetten des Spiels – von Handel über Handwerk bis hin zu Krieg und Politik.</p>
+        <img src="/mountain-fortress.webp" alt="Mountain Fortress" class="full">
         <p>Darüber hinaus pflegen wir unsere eigene Zwergenkultur: Pen & Paper-Runden, optionales Rollenspiel und gemeinschaftliche Events gehören für viele von uns dazu – ohne Zwang, aber mit Leidenschaft.</p>
        </div>
         
        <div class="section-content">
         <h3>Teil werden</h3>
         <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann betrete unsere Hallen. Der erste Schritt zu Eisenfaust ist ganz einfach: Unserem Discord-Server beitreten und ein persönliches Gespräch.</p>
-        <p>Was zählt, ist dein Charakter – nicht dein Gear. Wenn du Teamgeist, Respekt und Freude an einer verlässlichen Gemeinschaft mitbringst, bist du bei uns genau richtig.</p>
         <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+        <p>Was zählt, ist dein Charakter – nicht dein Gear. Wenn du Teamgeist, Respekt und Freude an einer verlässlichen Gemeinschaft mitbringst, bist du bei uns genau richtig.</p>
        </div>
        
        <div id="join-section" class="section-content">
@@ -154,6 +155,10 @@ img {
 
 img.top {
   object-position: top;
+}
+
+img.full {
+  max-height: 100%;
 }
 
 .button-container {
