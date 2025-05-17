@@ -209,10 +209,6 @@ onUnmounted(() => {
     
     <!-- Empty state -->
     <div v-else class="empty-gallery">
-      <p>No images found in the gallery.</p>
-      <p class="help-text">
-        Add some images to the public/screenshots directory to get started.
-      </p>
     </div>
     
     <!-- Lightbox -->
@@ -258,6 +254,7 @@ onUnmounted(() => {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 h1 {
