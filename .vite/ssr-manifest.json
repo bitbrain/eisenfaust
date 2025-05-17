@@ -62,6 +62,60 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
+  "\u0000vite:asset:public/story-desolate.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
+  "\u0000vite:asset:public/story-forge.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
+  "\u0000vite:asset:public/story-fortress.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
+  "\u0000vite:asset:public/story-portal.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
+  "\u0000vite:asset:public/story-tavern.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
+  "\u0000vite:asset:public/story-writing-dwarf.webp": [
+    "/eisenfaust/assets/primeicons-DMOk5skT.eot",
+    "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
+    "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
+    "/eisenfaust/assets/primeicons-MpK4pl85.ttf",
+    "/eisenfaust/assets/images/primeicons-Dr5RGzOO.svg",
+    "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
+    "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
+  ],
   "index.html": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
@@ -1358,7 +1412,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/components/ParticleCanvas.vue?vue&type=style&index=0&scoped=faad3a74&lang.css": [
+  "src/components/ParticleCanvas.vue?vue&type=style&index=0&scoped=fd098eb4&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
@@ -1421,7 +1475,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/views/LandingView.vue?vue&type=style&index=0&scoped=a566bb70&lang.css": [
+  "src/views/LandingView.vue?vue&type=style&index=0&scoped=e6670bfa&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
@@ -1448,7 +1502,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/views/MediaView.vue?vue&type=style&index=0&scoped=1e684448&lang.css": [
+  "src/views/MediaView.vue?vue&type=style&index=0&scoped=4ee74d02&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
@@ -1475,7 +1529,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/views/NewsPostView.vue?vue&type=style&index=0&scoped=4fa924ab&lang.css": [
+  "src/views/NewsPostView.vue?vue&type=style&index=0&scoped=af8db427&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
@@ -1529,7 +1583,7 @@
     "/eisenfaust/assets/Amarante-Regular-DUvdExbu.ttf",
     "/eisenfaust/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/views/StoryView.vue?vue&type=style&index=0&scoped=53e79996&lang.css": [
+  "src/views/StoryView.vue?vue&type=style&index=0&scoped=49242f0d&lang.css": [
     "/eisenfaust/assets/primeicons-DMOk5skT.eot",
     "/eisenfaust/assets/primeicons-C6QP2o4f.woff2",
     "/eisenfaust/assets/primeicons-WjwUDZjB.woff",
