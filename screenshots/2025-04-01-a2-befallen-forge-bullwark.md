@@ -1,0 +1,1 @@
+Gemeinsam mit unserer Allianz **The Bulwark** haben wir ein mächtiges Feuer-Elementar besiegt, welches in der befallenden Schmiede auf uns lauerte.

@@ -1,1 +1,0 @@
-Unsere Reittiere sind auch auf Land glücklich!

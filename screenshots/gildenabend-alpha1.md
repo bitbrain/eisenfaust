@@ -1,1 +1,1 @@
-Wir haben **gemeinsam** die Flusslande unsicher gemacht und haben unsere Gegner verjagt.
+Gemeinsam verteidigen wir die Flusslande.
