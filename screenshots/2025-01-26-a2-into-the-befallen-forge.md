@@ -1,0 +1,1 @@
+Unsere Vorahnen bauten diese Schmiede tief unter dem Berg. Mittlerweile ist sie von Eindringlingen befallen. Wir müssen unsere Vorfahren rächen!

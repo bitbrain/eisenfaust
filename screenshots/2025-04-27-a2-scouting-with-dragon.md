@@ -1,0 +1,1 @@
+Unser Gildenleiter **Sier** fliegt mit seinem Drachen voraus, um Feinde zu erspähen.
