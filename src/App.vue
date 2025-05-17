@@ -1,8 +1,55 @@
 <script setup lang="ts">
 import { RouterLink, useRouter } from 'vue-router'
-import { onMounted } from 'vue'
+import { onMounted, nextTick, watch } from 'vue'
 
 const router = useRouter()
+
+const initializeObserver = async () => {
+  // Wait for the next tick to ensure router view is mounted
+  await nextTick()
+  
+  // Small delay to ensure all components are fully rendered
+  setTimeout(() => {
+    // Configure intersection observer with options for better scroll effect
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add a smaller delay for a more subtle effect
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80);
+        }
+      });
+    }, {
+      threshold: 0.1, // Element must be 10% visible before triggering
+      rootMargin: '0px 0px -50px 0px' // Trigger 50px before element enters viewport
+    });
+    
+    // Get all sections and observe them
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Make first section visible immediately if at top of page
+    if (window.scrollY < 100) {
+      const firstSection = document.querySelector('.section-content');
+      if (firstSection) {
+        firstSection.classList.add('visible');
+      }
+    }
+  }, 100);
+};
+
+// Initialize on mount
+onMounted(() => {
+  initializeObserver();
+});
+
+// Watch for route changes
+watch(() => router.currentRoute.value, () => {
+  initializeObserver();
+}, { immediate: true });
 </script>
 
 <template>
@@ -23,6 +70,26 @@ const router = useRouter()
 </template>
 
 <style>
+.section-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-content img {
+  filter: blur(8px) saturate(0%);
+  transition: filter 1s ease;
+}
+
+.section-content.visible img {
+  filter: blur(0) saturate(100%);
+}
+
 footer {
   font-size: 1rem;
   text-align: center;

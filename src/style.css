@@ -115,6 +115,33 @@ strong {
   line-height: 1.6;
 }
 
+
+
+.section-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-content img {
+  max-height: 20rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+img.top {
+  object-position: top;
+}
+
+img.full {
+  max-height: 100%;
+}
+
 .block {
   height: 32rem;
 }
