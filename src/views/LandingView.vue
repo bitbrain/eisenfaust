@@ -61,46 +61,29 @@ const openDiscord = () => {
       <div class="section-container">
        <div class="section-content">
         <h3>Wer wir sind</h3>
-        <p>Wir sind der Clan <strong>Eisenfaust</strong>, eine eingeschworene Gemeinschaft von Zwergen, die Sanctus hinter sich gelassen haben, um auf Verra eine neue Heimat zu errichten. Unsere wachsende Gemeinschaft erfreut sich eines regen Austauschs, der seit dem Beginn der <a href="https://de.wikipedia.org/wiki/Alpha_2" target="_blank" rel="noopener noreferrer">Alpha 2</a> stetig zunimmt.</p>
+        <p>Wir sind ein eingeschworener Clan von <a href="https://ashesofcreation.wiki/D%C3%BCnir" target="_blank" rel="noopener noreferrer">Dünir-Zwergen</a>, die mehr suchen als Loot: Bei <strong>Eisenfaust</strong> stehen Gemeinschaft, Verlässlichkeit und Mitgestaltung im Vordergrund. Unsere Tore stehen jenen offen, die Wert auf respektvolles Miteinander und langlebige Bande legen – egal ob bei Abenteuern, im Handwerk oder bei einem geselligen Abend am Feuer.</p>
         <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
-        <blockquote>Nicht der Pfad macht den Zwerg groß, sondern der Mut, ihn ins Ungewisse zu schlagen.</blockquote>
+        <p>Als Gründungsmitglied der Zwergen-Allianz <strong>The Bulwark</strong> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
        </div>
         
        <div class="section-content">
-        <h3>Unsere Ziele</h3>
-        <ul>
-          <li>Aufbau einer Gebirgs-Node im Stil der <a href="https://de.wikipedia.org/wiki/D%C3%BCnir" target="_blank" rel="noopener noreferrer">Dünir-Zwerge</a></li>
-          <li>Aktive Führung innerhalb der Lokalpolitik unserer Node</li>
-          <li>Errichtung einer <a href="https://de.wikipedia.org/wiki/Gildenhalle" target="_blank" rel="noopener noreferrer">Gildenhalle</a> als Beschützer-Gilde</li>
-          <li>Gemeinsame Abenteuer in allen Spielbereichen: Handel, Handwerk, Krieg und Politik</li>
-        </ul>
-        <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
-        <blockquote>Ein Zwerg zeigt Größe nicht in Worten, sondern im Stand gegen Fels, Feuer und Zeit.</blockquote>
+        <h3>Wofür wir stehen</h3>
+        <p>Unsere Heimat liegt in den Bergen – unser Blick aber ist weit. Eisenfaust ist eine PvX-Gilde, die sich dem Aufbau einer Gebirgs-Node verschrieben hat, ganz im Stil der Dünir: Mit starken Mauern, klugen Köpfen und entschlossenen Händen. Wir engagieren uns in allen Facetten des Spiels – von Handel über Handwerk bis hin zu Krieg und Politik.</p>
+        <p>Darüber hinaus pflegen wir unsere eigene Zwergenkultur: Pen & Paper-Runden, optionales Rollenspiel und gemeinschaftliche Events gehören für viele von uns dazu – ohne Zwang, aber mit Leidenschaft.</p>
        </div>
         
        <div class="section-content">
-        <h3>Wir bieten</h3>
-        <ul>
-          <li>Ein herzliches Zwergen-Umfeld mit über <strong>20 Jahren</strong> MMO-Erfahrung in der Leitung</li>
-          <li>Ein Zuhause für alle Dünir-Zwerge mit Raum zur Mitgestaltung</li>
-          <li>Einen aktiven <a href="https://discord.gg/cSpdD2v5" target="_blank" rel="noopener noreferrer">Discord-Server</a> und eine optionale DSA Pen & Paper Zwergenrunde</li>
-          <li>Offenheit für Allianzen mit ähnlichem Fokus</li>
-        </ul>
-        <p>Wir suchen freundliche und aktive Teamplayer (18+), die einen Dünir-Zwerg spielen möchten und Interesse haben, Teil unserer wachsenden Gemeinschaft zu werden.</p>
+        <h3>Teil werden</h3>
+        <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann betrete unsere Hallen. Der erste Schritt zu Eisenfaust ist ganz einfach: Unserem Discord-Server beitreten und ein persönliches Gespräch.</p>
+        <p>Was zählt, ist dein Charakter – nicht dein Gear. Wenn du Teamgeist, Respekt und Freude an einer verlässlichen Gemeinschaft mitbringst, bist du bei uns genau richtig.</p>
+        <img src="/dwarven-friends.webp" alt="Dwarven Friends">
        </div>
        
        <div id="join-section" class="section-content">
-        <h3>Trete uns bei</h3>
-        <p>Möchtest du Teil der <strong>Eisenfaust</strong> werden? Wir freuen uns auf deine Bewerbung!</p>
-        <img src="/dwarven-friends.webp" alt="Dwarven Friends">
-        <blockquote>Gemeinsam schaffen wir, was keiner allein vermag, und lachen dabei wie beim ersten Fass Bier.</blockquote>
-        <p>Um uns beizutreten, kannst du:</p>
-        <ul>
-          <li>Uns auf unserem <a href="https://discord.gg/cSpdD2v5" target="_blank" rel="noopener noreferrer">Discord-Server</a> besuchen und dich vorstellen</li>
-          <li>Eine Nachricht an unsere Gildenleitung senden</li>
-          <li>An einem unserer wöchentlichen Rekrutierungstreffen teilnehmen</li>
-        </ul>
-        <p>Wir freuen uns darauf, dich kennenzulernen und gemeinsam die Welt von Verra zu erkunden!</p>
+        <h3>Für die Zukunft geschmiedet</h3>
+        <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark – und wir suchen keine Masse, sondern Mitstreiter mit Haltung.</p>
+        <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
+        <blockquote>Wenn du Teil von etwas Echtem werden willst, bist du bei uns richtig.</blockquote>
        </div>
       </div>
       <Divider>Gemeinschaft</Divider>
@@ -126,7 +109,7 @@ const openDiscord = () => {
 }
 
 h1{
-  font-size: 8rem;
+  font-size: 8rem;  
   font-weight: bold;
   text-align: center;
   background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
@@ -199,6 +182,10 @@ img.top {
     color: var(--granite-700);
     border-color: var(--granite-700);
     border-width: 2.5px;
+  }
+
+  & .p-button-raised.p-button-outlined:hover {
+    background-color: var(--granite-300);
   }
 
   & .p-button-raised:not(.p-button-outlined):hover {

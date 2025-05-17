@@ -9,9 +9,9 @@ const router = useRouter()
   <main>
     <nav>
       <ul>
-        <li><RouterLink to="/" active-class="active">Home</RouterLink></li>
-        <li><RouterLink to="/story" active-class="active">Story</RouterLink></li>
-        <li><RouterLink to="/media" active-class="active">Media</RouterLink></li>
+        <li><RouterLink to="/" active-class="active">Willkommen</RouterLink></li>
+        <li><RouterLink to="/story" active-class="active">Geschichte</RouterLink></li>
+        <li><RouterLink to="/media" active-class="active">Erinnerungen</RouterLink></li>
       </ul>
     </nav>
     <router-view />
