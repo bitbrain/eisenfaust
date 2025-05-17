@@ -1,0 +1,1 @@
+Ein neuer Morgen in Verra beginnt für die junge Zwergin.

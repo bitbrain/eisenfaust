@@ -1,0 +1,1 @@
+Gleißendes Sonnenlicht beißt uns in den Augen, während wir durch die heißen Dünen der Wüste reiten.

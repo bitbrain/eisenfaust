@@ -1,0 +1,1 @@
+Die Wüste wurde ausgekundschaftet und wir haben einige Schätze mitnehmen können.

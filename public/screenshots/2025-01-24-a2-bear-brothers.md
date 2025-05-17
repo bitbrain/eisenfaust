@@ -1,0 +1,1 @@
+Bären sind unsere treuen Begleiter. Jeder Zwerg in der Eisenfaust kümmert sich gut um seinen Bärenfreund.

@@ -1,0 +1,1 @@
+Zwar sind wir in den Bergen zuhause, allerdings finden wir uns auf hoher See gut zurecht! 

@@ -1,0 +1,1 @@
+Eine kurze Besprechung steht an, und dann geht es schon los auf die Jagd nach Abenteuer.

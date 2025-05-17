@@ -11,12 +11,40 @@ import sharp from 'sharp';
 
 // Thumbnail and WebP generation plugin
 function imageProcessingPlugin() {
-  const thumbnailWidth = 300; // Width of thumbnails
-  const thumbnailHeight = 300; // Height of thumbnails
+  const thumbnailWidth = 1280;
+  const thumbnailHeight = 720;
   const srcDir = resolve(process.cwd(), 'public/screenshots');
   const thumbDir = resolve(process.cwd(), 'public/thumbnails');
   const webpDir = resolve(process.cwd(), 'dist/screenshots-webp');
   const publicWebpDir = resolve(process.cwd(), 'public/screenshots-webp');
+
+  // Function to get WebP filename
+  const getWebpFilename = (originalFilename: string) => {
+    return originalFilename.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+  };
+
+  // Function to clean directory
+  const cleanDirectory = (dir: string) => {
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir);
+      for (const file of files) {
+        fs.unlinkSync(resolve(dir, file));
+      }
+    } else {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  };
+
+  // Function to read and parse markdown file
+  const getMarkdownContent = (imagePath: string) => {
+    const mdPath = imagePath.replace(/\.(jpg|jpeg|png|webp)$/i, '.md');
+    if (fs.existsSync(mdPath)) {
+      const content = fs.readFileSync(mdPath, 'utf-8');
+      const { content: mdContent } = matter(content);
+      return marked(mdContent);
+    }
+    return null;
+  };
 
   return {
     name: 'vite-plugin-image-processor',
@@ -28,10 +56,9 @@ function imageProcessingPlugin() {
         return;
       }
 
-      // Create thumbnails directory if it doesn't exist
-      if (!fs.existsSync(thumbDir)) {
-        fs.mkdirSync(thumbDir, { recursive: true });
-      }
+      // Clean directories before processing
+      cleanDirectory(thumbDir);
+      cleanDirectory(publicWebpDir);
 
       try {
         // Get all image files
@@ -42,53 +69,51 @@ function imageProcessingPlugin() {
 
         console.log(`Found ${imageFiles.length} images in ${srcDir}`);
         
-        // Create public screenshots-webp directory if it doesn't exist
-        if (!fs.existsSync(publicWebpDir)) {
-          fs.mkdirSync(publicWebpDir, { recursive: true });
-        }
-        
         // Process thumbnails and WebP files in parallel
         const processingPromises = imageFiles.map(async (file) => {
           const srcPath = resolve(srcDir, file);
           const srcStat = fs.statSync(srcPath);
           
-          // Create WebP thumbnail with the same base name
-          const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+          // Generate WebP filenames
+          const webpFilename = getWebpFilename(file);
           const thumbPath = resolve(thumbDir, webpFilename);
           const publicWebpPath = resolve(publicWebpDir, webpFilename);
           
-          // Generate thumbnail if it doesn't exist or is older than source
-          if (!fs.existsSync(thumbPath) || fs.statSync(thumbPath).mtime < srcStat.mtime) {
-            await sharp(srcPath)
-              .resize(thumbnailWidth, thumbnailHeight, {
-                fit: 'cover',
-                position: 'center'
-              })
-              .webp({ quality: 80 }) // Convert to WebP with 80% quality
-              .toFile(thumbPath);
-            
-            console.log(`Generated WebP thumbnail for ${file}`);
-          }
+          // Generate thumbnail
+          await sharp(srcPath)
+            .resize(thumbnailWidth, thumbnailHeight, {
+              fit: 'cover',
+              position: 'center'
+            })
+            .webp({ quality: 80 })
+            .toFile(thumbPath);
+          
+          console.log(`Generated WebP thumbnail for ${file}`);
 
-          // Generate full-sized WebP for public directory if it doesn't exist or is older than source
-          if (!fs.existsSync(publicWebpPath) || fs.statSync(publicWebpPath).mtime < srcStat.mtime) {
-            await sharp(srcPath)
-              .webp({ quality: 85 })
-              .toFile(publicWebpPath);
-            
-            console.log(`Generated public WebP for ${file}`);
-          }
+          // Generate full-sized WebP
+          await sharp(srcPath)
+            .webp({ quality: 85 })
+            .toFile(publicWebpPath);
+          
+          console.log(`Generated public WebP for ${file}`);
+
+          // Get markdown content if exists
+          const markdownContent = getMarkdownContent(srcPath);
+          
+          return {
+            filename: webpFilename,
+            description: markdownContent
+          };
         });
         
         // Wait for all thumbnails to be processed
-        await Promise.all(processingPromises);
+        const processedFiles = await Promise.all(processingPromises);
         
-        // Generate JSON file with list of thumbnails
-        const thumbnailFiles = fs.readdirSync(thumbDir);
+        // Generate JSON file with list of thumbnails and descriptions
         const thumbnailsJsonPath = resolve(process.cwd(), 'public/thumbnails.json');
         fs.writeFileSync(
           thumbnailsJsonPath,
-          JSON.stringify(thumbnailFiles)
+          JSON.stringify(processedFiles)
         );
         console.log(`Generated thumbnails list at ${thumbnailsJsonPath}`);
       } catch (error) {
@@ -96,10 +121,10 @@ function imageProcessingPlugin() {
       }
     },
     closeBundle: async () => {
-      // Create screenshots-webp directory in dist if it doesn't exist
-      if (!fs.existsSync(webpDir)) {
-        fs.mkdirSync(webpDir, { recursive: true });
-      }
+      // Clean dist directories before processing
+      cleanDirectory(webpDir);
+      const thumbDestDir = resolve(process.cwd(), 'dist/thumbnails');
+      cleanDirectory(thumbDestDir);
 
       try {
         // Get all image files from the source directory
@@ -111,7 +136,7 @@ function imageProcessingPlugin() {
         // Process full-sized WebP screenshots in parallel
         const processingPromises = imageFiles.map(async (file) => {
           const srcPath = resolve(srcDir, file);
-          const webpFilename = file.replace(/\.(jpg|jpeg|png|webp)$/i, '.webp');
+          const webpFilename = getWebpFilename(file);
           const destPath = resolve(webpDir, webpFilename);
           
           // Generate full-sized WebP version
@@ -125,13 +150,8 @@ function imageProcessingPlugin() {
         // Wait for all WebP conversions to complete
         await Promise.all(processingPromises);
         
-        // Also copy the thumbnails to the dist folder
+        // Copy thumbnails to the dist folder
         const thumbFiles = fs.readdirSync(thumbDir);
-        const thumbDestDir = resolve(process.cwd(), 'dist/thumbnails');
-        
-        if (!fs.existsSync(thumbDestDir)) {
-          fs.mkdirSync(thumbDestDir, { recursive: true });
-        }
         
         // Copy thumbnails in parallel
         const copyPromises = thumbFiles.map(async (file) => {

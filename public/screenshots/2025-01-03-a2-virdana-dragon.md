@@ -1,0 +1,1 @@
+Der Drachen des Bürgermeisters bewacht die Festung.

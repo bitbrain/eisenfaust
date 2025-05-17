@@ -7,6 +7,7 @@ interface GalleryImage {
   thumbnail: string;
   fullImage: string;
   alt: string;
+  description?: string;
 }
 
 // State
@@ -27,27 +28,20 @@ const loadImages = async () => {
     
     // Load the thumbnails list - adjust the path based on your base URL
     const response = await fetch('/eisenfaust/thumbnails.json');
-    const thumbnailFiles = await response.json();
+    const thumbnailData = await response.json();
     
-    console.log('Loaded thumbnails:', thumbnailFiles); // Debug log
-    
-    // Filter to only keep WebP files to avoid duplicates
-    const webpFiles = thumbnailFiles.filter(filename => filename.endsWith('.webp'));
-    
-    console.log('Filtered WebP files:', webpFiles); // Debug log
-    
-    // Process the thumbnails
-    const processedImages = webpFiles.map((thumbnail, index) => {
-      // For the full image, use the same WebP file but from screenshots-webp directory
-      return {
-        id: index + 1,
-        thumbnail: `/eisenfaust/thumbnails/${thumbnail}`,
-        fullImage: `/eisenfaust/screenshots-webp/${thumbnail}`,
-        alt: `Gallery image ${index + 1}`
-      };
-    });
-    
-    console.log('Processed images:', processedImages); // Debug log
+    // Process the thumbnails and reverse the order
+    const processedImages = thumbnailData
+      .map((item: { filename: string, description: string | null }, index: number) => {
+        return {
+          id: index + 1,
+          thumbnail: `/eisenfaust/thumbnails/${item.filename}`,
+          fullImage: `/eisenfaust/screenshots-webp/${item.filename}`,
+          alt: `Gallery image ${index + 1}`,
+          description: item.description
+        };
+      })
+      .reverse(); // Reverse the array to show newest images first
     
     images.value = processedImages;
     
@@ -179,16 +173,25 @@ onUnmounted(() => {
         <div 
           v-for="image in displayedImages" 
           :key="image.id" 
-          class="gallery-item"
-          @click="openLightbox(image)"
+          class="gallery-item-wrapper"
         >
-          <img 
-            :src="image.thumbnail" 
-            :alt="image.alt" 
-            loading="lazy"
-            class="thumbnail"
-            @load="onImageLoad"
-          />
+          <div 
+            class="gallery-item"
+            @click="openLightbox(image)"
+          >
+            <img 
+              :src="image.thumbnail" 
+              :alt="image.alt" 
+              loading="lazy"
+              class="thumbnail"
+              @load="onImageLoad"
+            />
+          </div>
+          <div 
+            v-if="image.description" 
+            class="image-description"
+            v-html="image.description"
+          ></div>
         </div>
       </div>
       
@@ -289,28 +292,38 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.gallery-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .gallery-item {
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 2px;
   cursor: pointer;
-  transition: transform 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
-.gallery-item:hover {
-  transform: scale(1.03);
+.gallery-item:hover .thumbnail {
+  transform: scale(1.1);
+  filter: blur(0) saturate(1.2);
 }
 
 .thumbnail {
@@ -318,15 +331,18 @@ h1 {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 2s ease, filter 1.2s ease;
   display: block;
   border: none;
   padding: 0;
   margin: 0;
+  transform-origin: center;
+  filter: blur(8px) saturate(0.2);
 }
 
 .thumbnail.loaded {
   opacity: 1;
+  filter: blur(0) saturate(1);
 }
 
 .empty-gallery, .error-gallery {
@@ -454,8 +470,8 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  .gallery-container {
+    padding: 0 1rem;
   }
   
   .nav-btn {
@@ -474,5 +490,48 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.image-description {
+  font-size: 1.5rem;
+  color: var(--granite-700);
+  line-height: 1.5;
+  padding: 0 0.5rem;
+  text-align: center;
+  transition: all 2s ease;
+}
+
+.gallery-item-wrapper .gallery-item {
+  transition: all 2s ease;
+}
+
+.gallery-item-wrapper:hover .gallery-item {
+  box-shadow: 0 0 10rem color-mix(in srgb, var(--ember-200) 50%, transparent);
+}
+
+.gallery-item-wrapper:hover .image-description {
+  color: var(--ember-800);
+  text-shadow: 0 0 0.5rem var(--ember-200);
+}
+
+.image-description :deep(strong) {
+  color: var(--ember-700);
+  font-size: 1.4rem;
+  transition: color 2s ease;
+}
+
+.image-description :deep(p) {
+  margin: 0;
+}
+
+.image-description :deep(a) {
+  color: var(--granite-900);
+  text-decoration: underline;
+}
+
+.image-description :deep(ul), 
+.image-description :deep(ol) {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
 }
 </style>
