@@ -16,9 +16,7 @@ const error = ref<string | null>(null);
 const route = useRoute();
 
 function getSlugFromPath() {
-  const path = window.location.pathname;
-  const match = path.match(/\/news\/([^\/]+)/);
-  return match ? match[1] : null;
+  return route.params.slug as string;
 }
 
 onMounted(async () => {

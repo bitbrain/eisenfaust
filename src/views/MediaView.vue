@@ -138,6 +138,9 @@ const onFullImageLoad = () => {
 };
 
 const onImageLoad = (event: Event) => {
+  // Only run on client side
+  if (typeof window === 'undefined') return;
+
   const img = event.target as HTMLImageElement;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

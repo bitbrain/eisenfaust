@@ -5,6 +5,9 @@ import { onMounted, nextTick, watch } from 'vue'
 const router = useRouter()
 
 const initializeObserver = async () => {
+  // Only run on client side
+  if (typeof window === 'undefined') return;
+
   // Wait for the next tick to ensure router view is mounted
   await nextTick()
   
