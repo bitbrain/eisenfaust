@@ -495,7 +495,7 @@ h1 {
 }
 
 .image-description {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--granite-700);
   line-height: 1.5;
   padding: 0 0.5rem;
@@ -523,7 +523,7 @@ h1 {
 
 .image-description :deep(strong) {
   color: var(--ember-700);
-  font-size: 1.4rem;
+  font-size: 2rem;
   transition: color 2s ease;
 }
 
