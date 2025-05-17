@@ -139,7 +139,23 @@ const onFullImageLoad = () => {
 
 const onImageLoad = (event: Event) => {
   const img = event.target as HTMLImageElement;
-  img.classList.add('loaded');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Find and fade in the description
+        const wrapper = entry.target.closest('.gallery-item-wrapper');
+        if (wrapper) {
+          const description = wrapper.querySelector('.image-description');
+          if (description) {
+            description.classList.add('visible');
+          }
+        }
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  observer.observe(img);
 };
 
 onMounted(() => {
@@ -156,19 +172,9 @@ onUnmounted(() => {
 
 <template>
   <div class="media-gallery">
-    <!-- Loading state -->
-    <div v-if="isLoading" class="loading">
-      <ProgressSpinner />
-      <p>Lade Erinnerungen...</p>
-    </div>
-    
-    <!-- Error state -->
-    <div v-else-if="error" class="error-gallery">
-      <p>{{ error }}</p>
-    </div>
     
     <!-- Gallery grid -->
-    <div v-else-if="images.length > 0" class="gallery-container">
+    <div v-if="images.length > 0" class="gallery-container">
       <div class="gallery-grid">
         <div 
           v-for="image in displayedImages" 
@@ -323,26 +329,26 @@ h1 {
 
 .gallery-item:hover .thumbnail {
   transform: scale(1.1);
-  filter: blur(0) saturate(1.2);
+  filter: saturate(1.2);
 }
 
 .thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 2s ease, filter 1.2s ease;
+  transition: all 1s ease;
   display: block;
   border: none;
   padding: 0;
   margin: 0;
   transform-origin: center;
   filter: blur(8px) saturate(0.2);
+  opacity: 0;
 }
 
-.thumbnail.loaded {
-  opacity: 1;
+.thumbnail.visible {
   filter: blur(0) saturate(1);
+  opacity: 1;
 }
 
 .empty-gallery, .error-gallery {
@@ -499,6 +505,11 @@ h1 {
   padding: 0 0.5rem;
   text-align: center;
   transition: all 2s ease;
+  opacity: 0;
+}
+
+.image-description.visible {
+  opacity: 1;
 }
 
 .gallery-item-wrapper .gallery-item {
