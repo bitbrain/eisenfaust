@@ -172,7 +172,8 @@ onUnmounted(() => {
 
 <template>
   <div class="media-gallery">
-    
+    <div class="block"></div>
+    <Divider>Unser Erbe</Divider>
     <!-- Gallery grid -->
     <div v-if="images.length > 0" class="gallery-container">
       <div class="gallery-grid">
@@ -256,6 +257,16 @@ onUnmounted(() => {
   padding: 2rem;
   min-height: 100vh;
   margin-top: 5rem;
+  
+  background-image: url('/granite-wall.webp');
+  background-size: min(100%, 100%);
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-top:-6rem;
+}
+
+.block {
+  height: 18rem;
 }
 
 h1 {
@@ -526,6 +537,7 @@ h1 {
   color: var(--ember-700);
   font-size: 2rem;
   transition: color 2s ease;
+  text-shadow: 0 0 0.25rem var(--ember-200);
 }
 
 .image-description :deep(p) {

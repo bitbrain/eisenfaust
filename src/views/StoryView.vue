@@ -28,21 +28,15 @@ import Divider from '../components/Divider.vue';
       <div class="section-content">
         <h3>Das Schmieden des Bollwerks</h3>
         <p>Die Rückkehr nach Verra ist kein leichter Gang, kein bloßes Betreten alter Pfade. Es ist das erneute Einsetzen des Hammers in den kalten Stein, das Schlagen auf das Eisen der Zukunft – mit Händen, die mehr als nur Werkzeug führen, mit Herzen, die von uralter Sehnsucht brennen.</p>
-        <h3>suggestion</h3>
-        <p>A grand dwarven hall with multiple forges, showing dwarves working together, with the glow of molten metal and the warmth of friendship</p>
+        <img src="/story-forge.webp" alt="Forge" class="full">
         <p>Eisenfaust trägt die LEx Dünir wie einen Eid auf der Zunge. Diese Gesetze sind mehr als Worte – sie sind der Fels, an dem sich jeder Zwerg festhält, wenn die Stürme des Unbekannten toben. Denn so wie das Erz tief in den Bergschlünden verborgen liegt, so liegt die wahre Stärke in der Gemeinschaft.</p>
         <p>Gemeinsam erheben die Zwerge ihre Hallen. Der Klang der Schmiede hallt durch die Täler, Stimmen erheben sich in uralten Liedern und Geschichten, die von Mut und Treue zeugen. Sie bauen eine Node, eine Heimatstadt, deren Mauern aus festem Gestein und unerschütterlicher Verbundenheit errichtet werden.</p>
         <p>Doch der Weg ist nicht frei von Schatten. Alte Feinde lauern, und neue Gefahren zeigen sich im Zwielicht der Nacht. Verra ist ein Land voller Geheimnisse, und nicht jede Höhle birgt nur Erz und Edelsteine – manche bergen Dunkelheit und Konflikt.</p>
-        <h3>suggestion</h3>
-        <p>The Book of Grudges being written by a stern-faced dwarf, with shadows of potential threats lurking in the background, symbolizing the clan's vigilance</p>
+        <img src="/story-writing-dwarf.webp" alt="Writing Dwarf" class="full">
         <p>Eisenfaust aber kämpft nicht für Ruhm oder Macht. Ihr Kampf gilt dem Erhalt der Heimat, der Bewahrung des Friedens und dem Schutz der Schwachen. Wer das Bündnis des Bollwerks stört, dessen Name findet sich im ehrwürdigen "Buch der Grolle" wieder – ein ewiges Mahnmal für jene, die den Frieden bedrohen.</p>
         <p>Doch das Bollwerk ist mehr als ein Schild gegen das Dunkel. Es ist ein Leuchtfeuer der Hoffnung, eine Bruderschaft, die weit über den Steinbruch hinausreicht. Verschiedene Zwergen-Clans, vereint durch den Willen, gemeinsam stark zu sein, ohne sich gegenseitig zu zerstreiten.</p>
         <p>Hier zählt nicht der einzelne Held, sondern das Miteinander. Das Klirren der Äxte im Kampf, das Feuer im Kamin, das Lachen bei einem Krug Zwergenbier – all das ist der wahre Reichtum von Eisenfaust.</p>
         <p>Und so schmiedet Eisenfaust mit jedem neuen Tag nicht nur Gestein und Metall, sondern vor allem Bande – Bande aus Vertrauen, Respekt und dem gemeinsamen Traum: einem Zuhause, das allen Dünir offensteht, einer Heimat in den Bergen, die Bestand hat, solange die Lieder der Zwerge erklingen.</p>
-        <h3>suggestion</h3>
-        <p>A grand dwarven hall with multiple forges, showing dwarves working together, with the glow of molten metal and the warmth of friendship</p>
-        <h3>suggestion</h3>
-        <p>The Book of Grudges being written by a stern-faced dwarf, with shadows of potential threats lurking in the background, symbolizing the clan's vigilance</p>
       </div>
     </div>
 
@@ -51,19 +45,13 @@ import Divider from '../components/Divider.vue';
       <div class="section-content">
         <h3>Das Vermächtnis der Eisenfaust</h3>
         <p>Inmitten der neugeborenen Berge von Verra steht Eisenfaust fest und unbeugsam, ein Bollwerk gegen die Schatten, ein Leuchtfeuer für alle Dünir, die das Herz eines Zuhauses suchen. Doch das Vermächtnis ist niemals vollendet, es wird täglich geschmiedet – von jedem Zwerg, der durch die Hallen schreitet, vom ersten Hammerschlag des Tages bis zum letzten Lied in der Nacht.</p>
-        <h3>suggestion</h3>
-        <p>A panoramic view of the completed Eisenfaust stronghold at sunset, with warm lights glowing from within the mountain halls, symbolizing the enduring spirit of the dwarven community</p>
+        <img src="/story-fortress.webp" alt="Fortress" class="full">
         <p>Hier, wo der Stein uralt und die Luft von Geschichten vergangener Jahrtausende durchzogen ist, lebt der Geist der Gemeinschaft. Nicht in der Pracht eines Thrones, nicht im Glanze eines Königs, sondern im unermüdlichen Streben jedes Einzelnen, das Wohl des Ganzen zu mehren. Denn die Clanfürsten, die Thanen des Bollwerks, tragen keine Kronen – sie tragen die Verantwortung, die Herzen zu einen und den Berg zu schützen.</p>
-        <p>Jeder Abend beginnt gleich – mit dem Klang des ersten Kruges, mit Geschichten von vergangenen Kämpfen und geplanten Abenteuern. Kein Zwerg weiß, welche Prüfungen der neue Tag bringen wird, doch jeder weiß, dass er sie nicht allein bestreiten wird. Gemeinsam sind sie Schmiede des Schicksals, Hüter der Hoffnung und Träger der Zwergen-Ehre.</p>
-        <h3>suggestion</h3>
-        <p>A cozy tavern scene inside the mountain halls, showing dwarves sharing stories, drinking ale, and passing down traditions to younger generations</p>
+        <img src="/story-tavern.webp" alt="Tavern" class="full">
         <p>Im Schatten der Berge, in den tiefen Hallen, klingt das Lied der Eisenfaust: von Mut, von Treue, von Freundschaft und der unerschütterlichen Sehnsucht nach Heimat. Diese Sehnsucht ist mehr als ein Wort – sie ist das Feuer, das selbst in den dunkelsten Nächten die Zwergenherzen wärmt.</p>
         <p>Eisenfaust lädt jeden ein, der diese Sehnsucht teilt, der bereit ist, mit Herz und Hammer zu bauen, zu bewahren und zu kämpfen – nicht für Ruhm, sondern für das Versprechen eines neuen Morgens.</p>
         <p>Denn am Ende, so wissen die Zwerge, ist es das Zuhause, das zählt. Der Berg, der Schutz bietet, die Gemeinschaft, die Halt gibt, und die Geschichten, die von Generation zu Generation weitergegeben werden – so fest wie das Gestein selbst.</p>
-        <h3>suggestion</h3>
-        <p>A panoramic view of the completed Eisenfaust stronghold at sunset, with warm lights glowing from within the mountain halls, symbolizing the enduring spirit of the dwarven community</p>
-        <h3>suggestion</h3>
-        <p>A cozy tavern scene inside the mountain halls, showing dwarves sharing stories, drinking ale, and passing down traditions to younger generations</p>
+       
       </div>
       <Divider>Gemeinschaft</Divider>
       <div class="button-container">
