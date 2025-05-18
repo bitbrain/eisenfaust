@@ -528,7 +528,7 @@ h1 {
 }
 
 .gallery-item-wrapper:hover .gallery-item {
-  box-shadow: 0 0 10rem color-mix(in srgb, var(--ember-200) 50%, transparent);
+  box-shadow: 0 0 3rem color-mix(in srgb, var(--ember-200) 50%, transparent);
 }
 
 .gallery-item-wrapper:hover .image-description {
