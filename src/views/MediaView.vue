@@ -487,14 +487,91 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .media-gallery {
+    padding: 1rem;
+    margin-top: -3rem;
+  }
+  
+  .block {
+    height: 10rem;
+  }
+  
   .gallery-container {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .gallery-grid {
+    gap: 3rem;
   }
   
   .nav-btn {
     width: 40px;
     height: 40px;
     font-size: 1.5rem;
+  }
+  
+  .close-btn {
+    font-size: 1.5rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .lightbox-image-container {
+    max-width: 95%;
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-gallery {
+    padding: 0.5rem;
+    margin-top: -2rem;
+  }
+  
+  .block {
+    height: 6rem;
+  }
+  
+  .gallery-container {
+    padding: 0;
+  }
+  
+  .gallery-grid {
+    gap: 2rem;
+  }
+  
+  .nav-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  
+  .close-btn {
+    font-size: 1.2rem;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .lightbox-image-container {
+    max-width: 98%;
+    max-height: 80vh;
+  }
+  
+  .image-description {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  
+  .image-description :deep(strong) {
+    font-size: 1.4rem;
   }
 }
 

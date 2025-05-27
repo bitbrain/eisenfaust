@@ -80,7 +80,7 @@ const openDiscord = () => {
 }
 
 h1{
-  font-size: 8rem;  
+  font-size: clamp(3rem, 12vw, 8rem);
   font-weight: bold;
   text-align: center;
   background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
@@ -98,7 +98,7 @@ h1::before {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   font-weight: bold;
   text-align: center;
   color: var(--granite-700);
@@ -106,7 +106,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: bold;
   text-align: center;
   background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
@@ -119,15 +119,17 @@ h3 {
 
 .button-container {
   display: flex;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .button-container.primary {
-  margin-top: 3rem;
+  margin-top: clamp(1.5rem, 5vw, 3rem);
 
   & .p-button-raised {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
     font-weight: bold;
   }
 
@@ -153,6 +155,73 @@ h3 {
     box-shadow: 0 0 1.75rem 0 hsl(from var(--ember-500) h s l / 0.5);
     color: var(--ember-200);
     text-shadow: 0 1px 1px var(--ember-800);
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .landing-container {
+    margin-top: -4rem;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
+  .button-container {
+    gap: 0.75rem;
+  }
+  
+  .button-container.primary {
+    margin-top: 2rem;
+    
+    & .p-button-raised {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-container {
+    margin-top: -2rem;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .button-container {
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .button-container.primary {
+    margin-top: 1.5rem;
+    
+    & .p-button-raised {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
   }
 }
 </style>
