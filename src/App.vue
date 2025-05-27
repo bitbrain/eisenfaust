@@ -162,7 +162,7 @@ nav > ul > li {
   width: 100vw;
   height: 100vh;
   background-image: url('/lava-glow.webp');
-  background-size: max(100%, 2080px) auto;
+  background-size: min(100%, 2080px) auto;
   background-repeat: no-repeat;
   background-position: bottom;
   position: absolute;
