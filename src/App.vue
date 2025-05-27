@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, useRouter } from 'vue-router'
 import { onMounted, nextTick, watch } from 'vue'
+import ParticleCanvas from './components/ParticleCanvas.vue'
 
 const router = useRouter()
 
@@ -65,6 +66,9 @@ watch(() => router.currentRoute.value, () => {
       </ul>
     </nav>
     <router-view />
+    <div class="background-image">
+    </div>
+    <ParticleCanvas></ParticleCanvas>
     <footer>
       <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" /></div>
       © 2025 Eisenfaust. Alle Rechte vorbehalten.
@@ -96,10 +100,10 @@ watch(() => router.currentRoute.value, () => {
 footer {
   font-size: 1rem;
   text-align: center;
+  font-weight: 700;
   padding: 1rem;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  color: var(--granite-700);
+  padding-bottom: 4rem;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,25 +111,13 @@ footer {
   gap: 2rem;
 }
 
-.logo-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.logo-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--granite-700); 
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
 .logo {
   display: block;
   width: 5rem;
   height: 5rem;
-  filter: grayscale(100%) brightness(1);
+  opacity: 0.5;
+  filter: brightness(1.0) contrast(2.5) saturate(0.4);
+  margin-top: 4rem;
 }
 
 nav {
@@ -162,5 +154,24 @@ nav > ul > li {
     color: var(--ember-900);
     text-shadow: 0 0 10px hsla(from var(--ember-700) h s l / 0.6);
   }
+}
+
+.background-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/lava-glow.webp');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
 }
 </style>

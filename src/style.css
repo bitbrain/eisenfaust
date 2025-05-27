@@ -31,6 +31,7 @@ body {
   color: var(--granite-900);
   font-family: 'Amarante', sans-serif;
   font-size: 1.5rem;
+  overflow-x: hidden;
 }
 
 a {
