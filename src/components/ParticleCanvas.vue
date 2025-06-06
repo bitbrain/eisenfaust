@@ -34,6 +34,10 @@ export default {
     endColor: {
       type: String,
       default: 'var(--ember-700)'
+    },
+    spawnOffsetY: {
+      type: Number,
+      default: 0
     }
   },
   data() {
@@ -160,7 +164,7 @@ export default {
     realignParticle(particle) {
       // Use CSS dimensions for calculations as context is scaled
       particle.x = Math.random() * this.cssWidth / 1.5 + (((this.cssWidth - this.cssWidth / 1.5) / 2))
-      particle.y = Math.random() * this.cssHeight / 4 + this.cssHeight / 3 * 1.5
+      particle.y = Math.random() * this.cssHeight / 4 + this.cssHeight / 3 * 1.5 + this.spawnOffsetY
       particle.a = 0
       particle.transitionProgress = 0
     },

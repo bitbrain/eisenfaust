@@ -269,7 +269,7 @@ onUnmounted(() => {
 }
 
 .block {
-  height: 18rem;
+  height: 20rem;
 }
 
 h1 {

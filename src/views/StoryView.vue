@@ -77,7 +77,7 @@ import Divider from '../components/Divider.vue';
 }
 
 .block {
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
 }
 
 h1{

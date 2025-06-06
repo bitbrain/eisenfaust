@@ -68,7 +68,7 @@ watch(() => router.currentRoute.value, () => {
     <router-view />
     <div class="background-image">
     </div>
-    <ParticleCanvas></ParticleCanvas>
+    <ParticleCanvas :spawn-offset-y="400" :particles="350" class="particle-canvas"></ParticleCanvas>
     <footer>
       <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" /></div>
       © 2025 Eisenfaust. Alle Rechte vorbehalten.
@@ -104,6 +104,7 @@ footer {
   padding: clamp(0.5rem, 2vw, 1rem);
   padding-bottom: clamp(2rem, 5vw, 4rem);
   color: black;
+  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +163,7 @@ nav > ul > li {
   width: 100vw;
   height: 100vh;
   background-image: url('/lava-glow.webp');
-  background-size: min(100%, 2080px) auto;
+  background-size: min(150%, 2080px) auto;
   background-repeat: no-repeat;
   background-position: bottom;
   position: absolute;
