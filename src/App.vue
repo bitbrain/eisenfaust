@@ -90,7 +90,7 @@ watch(() => router.currentRoute.value, () => {
 
 .section-content img {
   filter: blur(8px) saturate(0%);
-  transition: filter 1s ease;
+  transition: filter 2s ease;
 }
 
 .section-content.visible img {
