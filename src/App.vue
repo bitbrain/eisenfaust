@@ -25,8 +25,8 @@ const initializeObserver = async () => {
         }
       });
     }, {
-      threshold: 0.1, // Element must be 10% visible before triggering
-      rootMargin: '0px 0px -50px 0px' // Trigger 50px before element enters viewport
+      threshold: 0.05, // Element must be 5% visible before triggering
+      rootMargin: '0px 0px -150px 0px' // Trigger 150px before element enters viewport
     });
     
     // Get all sections and observe them

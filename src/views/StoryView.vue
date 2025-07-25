@@ -86,9 +86,6 @@ import Divider from '../components/Divider.vue';
   background-position: center top;
   background-repeat: no-repeat;
   margin-top:-10rem;
-
-  font-size: 2.2rem;
-  text-align: center;
 }
 
 .block {
@@ -131,18 +128,6 @@ h3 {
   color: transparent;
   margin: 0;
   margin-bottom: 1rem;
-}
-
-img {
-  max-height: 20rem;
-  object-fit: cover;
-  width: 100%;
-  position: relative;
-  z-index: 0;
-}
-
-img.top {
-  object-position: top;
 }
 
 .button-container {

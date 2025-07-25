@@ -15,8 +15,6 @@ const images = ref<GalleryImage[]>([]);
 const displayedImages = ref<GalleryImage[]>([]);
 const isLoading = ref(true);
 const isLoadingMore = ref(false);
-const selectedImage = ref<GalleryImage | null>(null);
-const showLightbox = ref(false);
 const error = ref<string | null>(null);
 const batchSize = 12; // Number of images to load at once
 
@@ -76,9 +74,9 @@ const loadMoreImages = () => {
   }, 300);
 };
 
-// Scroll event handler for infinite scroll
+// Scroll event handler for infinite scroll and zoom effect
 const handleScroll = () => {
-  // Check if we're near the bottom of the page
+  // Check if we're near the bottom of the page for infinite scroll
   const scrollPosition = window.innerHeight + window.scrollY;
   const pageHeight = document.body.offsetHeight;
   const scrollThreshold = 200; // px from bottom to trigger load
@@ -86,55 +84,29 @@ const handleScroll = () => {
   if (pageHeight - scrollPosition < scrollThreshold) {
     loadMoreImages();
   }
-};
-
-// Lightbox
-const openLightbox = (image: GalleryImage) => {
-  selectedImage.value = image;
-  isFullImageLoading.value = true;
-  showLightbox.value = true;
-  document.body.style.overflow = 'hidden';
-};
-
-const closeLightbox = () => {
-  showLightbox.value = false;
-  document.body.style.overflow = '';
-};
-
-// Track loading state of the full-size image
-const isFullImageLoading = ref(true);
-
-// Keyboard navigation for lightbox
-const handleKeyDown = (e: KeyboardEvent) => {
-  if (!showLightbox.value) return;
   
-  if (e.key === 'Escape') {
-    closeLightbox();
-  } else if (e.key === 'ArrowRight') {
-    nextImage();
-  } else if (e.key === 'ArrowLeft') {
-    prevImage();
-  }
+  // Update zoom effect for all visible images
+  updateImageZoom();
 };
 
-const nextImage = () => {
-  if (!selectedImage.value) return;
-  const currentIndex = images.value.findIndex(img => img.id === selectedImage.value?.id);
-  const nextIndex = (currentIndex + 1) % images.value.length;
-  isFullImageLoading.value = true;
-  selectedImage.value = images.value[nextIndex];
-};
-
-const prevImage = () => {
-  if (!selectedImage.value) return;
-  const currentIndex = images.value.findIndex(img => img.id === selectedImage.value?.id);
-  const prevIndex = (currentIndex - 1 + images.value.length) % images.value.length;
-  isFullImageLoading.value = true;
-  selectedImage.value = images.value[prevIndex];
-};
-
-const onFullImageLoad = () => {
-  isFullImageLoading.value = false;
+// Update zoom effect based on scroll position
+const updateImageZoom = () => {
+  const images = document.querySelectorAll('.gallery-item img');
+  const viewportHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+  
+  images.forEach((img) => {
+    const rect = img.getBoundingClientRect();
+    const imageCenter = rect.top + rect.height / 2;
+    const distanceFromCenter = Math.abs(imageCenter - viewportHeight / 2);
+    const maxDistance = viewportHeight / 2;
+    
+    // Calculate zoom factor (1.0 to 1.1) based on distance from center
+    const zoomFactor = 1.0 + (0.1 * (1 - Math.min(distanceFromCenter / maxDistance, 1)));
+    
+    // Apply the zoom transform
+    (img as HTMLElement).style.transform = `scale(${zoomFactor})`;
+  });
 };
 
 const onImageLoad = (event: Event) => {
@@ -163,12 +135,12 @@ const onImageLoad = (event: Event) => {
 
 onMounted(() => {
   loadImages();
-  window.addEventListener('keydown', handleKeyDown);
   window.addEventListener('scroll', handleScroll);
+  // Initial zoom update
+  setTimeout(updateImageZoom, 100);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeyDown);
   window.removeEventListener('scroll', handleScroll);
 });
 </script>
@@ -185,17 +157,16 @@ onUnmounted(() => {
           :key="image.id" 
           class="gallery-item-wrapper"
         >
-          <div 
-            class="gallery-item"
-            @click="openLightbox(image)"
-          >
-            <img 
-              :src="image.thumbnail" 
-              :alt="image.alt" 
-              loading="lazy"
-              class="thumbnail"
-              @load="onImageLoad"
-            />
+          <div class="gallery-item">
+            <div class="image-container">
+              <img 
+                :src="image.thumbnail" 
+                :alt="image.alt" 
+                loading="lazy"
+                class="thumbnail"
+                @load="onImageLoad"
+              />
+            </div>
           </div>
           <div 
             v-if="image.description" 
@@ -213,42 +184,6 @@ onUnmounted(() => {
     
     <!-- Empty state -->
     <div v-else class="empty-gallery">
-    </div>
-    
-    <!-- Lightbox -->
-    <div v-if="showLightbox" class="lightbox" @click.self="closeLightbox">
-      <button class="close-btn" @click="closeLightbox">×</button>
-      
-      <div class="lightbox-content">
-        <button class="nav-btn prev-btn" @click.stop="prevImage">‹</button>
-        
-        <div class="lightbox-image-container">
-          <!-- Show thumbnail immediately while full image loads -->
-          <img 
-            v-if="selectedImage" 
-            :src="selectedImage.thumbnail" 
-            :alt="selectedImage.alt"
-            class="lightbox-thumbnail"
-          />
-          
-          <!-- Full image loads in background -->
-          <img 
-            v-if="selectedImage" 
-            :src="selectedImage.fullImage" 
-            :alt="selectedImage.alt"
-            class="lightbox-image"
-            @load="onFullImageLoad"
-            :class="{ 'loaded': !isFullImageLoading }"
-          />
-          
-          <!-- Loading indicator -->
-          <div v-if="isFullImageLoading" class="lightbox-loading">
-            <ProgressSpinner />
-          </div>
-        </div>
-        
-        <button class="nav-btn next-btn" @click.stop="nextImage">›</button>
-      </div>
     </div>
   </div>
 </template>
@@ -314,6 +249,10 @@ h1 {
   margin: 0 auto;
 }
 
+.image-container {
+  height: 100%;
+}
+
 .gallery-grid {
   display: flex;
   flex-direction: column;
@@ -328,26 +267,20 @@ h1 {
 
 .gallery-item {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4.5/3;
   overflow: hidden;
   border-radius: 2px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-.gallery-item:hover .thumbnail {
-  transform: scale(1.1);
-}
-
 .thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 2s ease;
+  transition: transform 5s ease;
   display: block;
   border: none;
   padding: 0;
@@ -375,116 +308,6 @@ h1 {
   margin-top: 1rem;
 }
 
-/* Lightbox */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.lightbox-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lightbox-image-container {
-  max-width: 90%;
-  max-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.full-image-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 16/9;
-}
-
-.lightbox-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  filter: blur(2px);
-  opacity: 0.7;
-  z-index: 1;
-}
-
-.lightbox-image {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-  position: relative;
-}
-
-.lightbox-image.loaded {
-  opacity: 1;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 1001;
-}
-
-.nav-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.prev-btn {
-  left: 20px;
-}
-
-.next-btn {
-  right: 20px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .media-gallery {
@@ -502,23 +325,6 @@ h1 {
   
   .gallery-grid {
     gap: 3rem;
-  }
-  
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-  }
-  
-  .close-btn {
-    font-size: 1.5rem;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .lightbox-image-container {
-    max-width: 95%;
-    max-height: 85vh;
   }
 }
 
@@ -540,31 +346,6 @@ h1 {
     gap: 2rem;
   }
   
-  .nav-btn {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
-  }
-  
-  .prev-btn {
-    left: 10px;
-  }
-  
-  .next-btn {
-    right: 10px;
-  }
-  
-  .close-btn {
-    font-size: 1.2rem;
-    top: 5px;
-    right: 5px;
-  }
-  
-  .lightbox-image-container {
-    max-width: 98%;
-    max-height: 80vh;
-  }
-  
   .image-description {
     font-size: 1.2rem;
     padding: 0;
@@ -573,17 +354,6 @@ h1 {
   .image-description :deep(strong) {
     font-size: 1.4rem;
   }
-}
-
-.lightbox-loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .image-description {
@@ -602,10 +372,6 @@ h1 {
 
 .gallery-item-wrapper .gallery-item {
   transition: all 2s ease;
-}
-
-.gallery-item-wrapper:hover .gallery-item {
-  box-shadow: 0 0 3rem color-mix(in srgb, var(--ember-200) 50%, transparent);
 }
 
 .gallery-item-wrapper:hover .image-description {

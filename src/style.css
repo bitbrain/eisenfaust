@@ -5,7 +5,7 @@
   --ember-500: #981d10;
   --ember-200: #6a0606;
 
-  --granite-900: #82a5ab;
+  --granite-900: #5c8c9b;
   --granite-700: #395656;
   --granite-500: #1b2633;
   --granite-300: #0e1318;
@@ -28,7 +28,7 @@ body {
   background-color: #000;
   color: var(--granite-900);
   font-family: 'Amarante', sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   overflow-x: hidden;
 }
 
@@ -44,7 +44,6 @@ a {
 
 img {
   width: 100%;
-  border-radius: 0.33rem;
 }
 
 ul, ol {
@@ -112,6 +111,7 @@ strong {
 .section-content p {
   margin: 1rem 0;
   line-height: 1.6;
+  text-align: center;
 }
 
 .section-content {
@@ -126,17 +126,8 @@ strong {
 }
 
 .section-content img {
-  max-height: clamp(15rem, 30vw, 20rem);
   object-fit: cover;
   width: 100%;
-}
-
-img.top {
-  object-position: top;
-}
-
-img.full {
-  max-height: 100%;
 }
 
 .block {
@@ -152,10 +143,6 @@ img.full {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-  
   .section-container {
     padding: 0 1rem;
     gap: 2rem;
@@ -176,10 +163,6 @@ img.full {
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 0.9rem;
-  }
-  
   .section-container {
     padding: 0 0.75rem;
     gap: 1.5rem;
@@ -216,4 +199,59 @@ img.full {
   background-repeat: no-repeat;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Semi-randomized overlay variations for organic appearance */
+.gallery-item-wrapper:nth-child(2) .image-container::before {
+  transform: scaleX(-1);
+}
+
+.gallery-item-wrapper:nth-child(3) .image-container::before {
+  transform: scaleY(-1);
+}
+
+.gallery-item-wrapper:nth-child(4) .image-container::before {
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.gallery-item-wrapper:nth-child(5) .image-container::before {
+  transform: scaleX(-1);
+}
+
+.gallery-item-wrapper:nth-child(6) .image-container::before {
+  transform: scaleY(-1);
+}
+
+.gallery-item-wrapper:nth-child(7) .image-container::before {
+  transform: scaleX(-1) scaleY(-1);
+}
+
+.gallery-item-wrapper:nth-child(8) .image-container::before {
+  transform: scaleX(-1);
+}
+
+/* LandingView overlay variations */
+.section-content:nth-child(2) .image-container::before {
+  transform: scaleX(-1);
+}
+
+.section-content:nth-child(3) .image-container::before {
+  transform: scaleY(-1);
+}
+
+.section-content:nth-child(4) .image-container::before {
+  transform: scaleX(-1) scaleY(-1);
+}
+
+/* StoryView overlay variations - target image containers within sections */
+.section-content .image-container:nth-child(2)::before {
+  transform: scaleX(-1);
+}
+
+.section-content .image-container:nth-child(3)::before {
+  transform: scaleY(-1);
+}
+
+.section-content .image-container:nth-child(4)::before {
+  transform: scaleX(-1) scaleY(-1);
 }

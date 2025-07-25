@@ -32,28 +32,36 @@ const openDiscord = () => {
        <div class="section-content">
         <h3>Wer wir sind</h3>
         <p>Wir sind ein eingeschworener Clan von <a href="https://ashesofcreation.wiki/D%C3%BCnir" target="_blank" rel="noopener noreferrer">Dünir-Zwergen</a>, die mehr suchen als Loot: Bei <strong>Eisenfaust</strong> stehen Gemeinschaft, Verlässlichkeit und Mitgestaltung im Vordergrund. Unsere Tore stehen jenen offen, die Wert auf respektvolles Miteinander und langlebige Bande legen – egal ob bei Abenteuern, im Handwerk oder bei einem geselligen Abend am Feuer.</p>
-        <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
+        <div class="image-container">
+          <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
+        </div>
         <p>Als Gründungsmitglied der Zwergen-Allianz <strong>The Bulwark</strong> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
        </div>
         
        <div class="section-content">
         <h3>Wofür wir stehen</h3>
         <p>Unsere Heimat liegt in den Bergen – unser Blick aber ist weit. Eisenfaust ist eine PvX-Gilde, die sich dem Aufbau einer Gebirgs-Node verschrieben hat, ganz im Stil der Dünir: Mit starken Mauern, klugen Köpfen und entschlossenen Händen. Wir engagieren uns in allen Facetten des Spiels – von Handel über Handwerk bis hin zu Krieg und Politik.</p>
-        <img src="/mountain-fortress.webp" alt="Mountain Fortress" class="full">
+        <div class="image-container">
+          <img src="/mountain-fortress.webp" alt="Mountain Fortress" class="full">
+        </div>
         <p>Darüber hinaus pflegen wir unsere eigene Zwergenkultur: Pen & Paper-Runden, optionales Rollenspiel und gemeinschaftliche Events gehören für viele von uns dazu – ohne Zwang, aber mit Leidenschaft.</p>
        </div>
         
        <div class="section-content">
         <h3>Teil werden</h3>
         <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann betrete unsere Hallen. Der erste Schritt zu Eisenfaust ist ganz einfach: Unserem Discord-Server beitreten und ein persönliches Gespräch.</p>
-        <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+        <div class="image-container">
+          <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+        </div>
         <p>Was zählt, ist dein Charakter – nicht dein Gear. Wenn du Teamgeist, Respekt und Freude an einer verlässlichen Gemeinschaft mitbringst, bist du bei uns genau richtig.</p>
        </div>
        
        <div id="join-section" class="section-content">
         <h3>Für die Zukunft geschmiedet</h3>
         <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark – und wir suchen keine Masse, sondern Mitstreiter mit Haltung.</p>
-        <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
+        <div class="image-container">
+          <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
+        </div>
         <blockquote>Wenn du Teil von etwas Echtem werden willst, bist du bei uns richtig.</blockquote>
        </div>
       </div>
