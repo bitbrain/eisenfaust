@@ -92,6 +92,7 @@ const handleScroll = () => {
 // Update zoom effect based on scroll position
 const updateImageZoom = () => {
   const images = document.querySelectorAll('.gallery-item img');
+  const descriptions = document.querySelectorAll('.image-description');
   const viewportHeight = window.innerHeight;
   const scrollY = window.scrollY;
   
@@ -106,6 +107,24 @@ const updateImageZoom = () => {
     
     // Apply the zoom transform
     (img as HTMLElement).style.transform = `scale(${zoomFactor})`;
+  });
+  
+  // Update text activation based on scroll position
+  descriptions.forEach((description) => {
+    const rect = description.getBoundingClientRect();
+    const descriptionCenter = rect.top + rect.height / 2;
+    const distanceFromCenter = Math.abs(descriptionCenter - viewportHeight / 2);
+    const maxDistance = viewportHeight / 2;
+    
+    // Calculate activation factor (0 to 1) based on distance from center
+    const activationFactor = Math.max(0, 1 - Math.min(distanceFromCenter / maxDistance, 1));
+    
+    // Apply the activation effect with the same threshold as images
+    if (activationFactor > 0) {
+      (description as HTMLElement).classList.add('scroll-active');
+    } else {
+      (description as HTMLElement).classList.remove('scroll-active');
+    }
   });
 };
 
@@ -269,7 +288,7 @@ h1 {
 .gallery-item-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .gallery-item {
@@ -352,29 +371,27 @@ h1 {
   .gallery-grid {
     gap: 2rem;
   }
-  
-  .image-description {
-    font-size: 1.2rem;
-    padding: 0;
-  }
-  
-  .image-description :deep(strong) {
-    font-size: 1.4rem;
-  }
 }
 
 .image-description {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--granite-700);
   line-height: 1.5;
   padding: 0 0.5rem;
   text-align: center;
-  transition: all 2s ease;
+  transition: all 5s ease;
   opacity: 0;
+  transform: scale(1);
 }
 
 .image-description.visible {
   opacity: 1;
+}
+
+.image-description.scroll-active {
+  color: var(--ember-800);
+  text-shadow: 0 0 0.5rem var(--ember-200);
+  transform: scale(1.05);
 }
 
 .gallery-item-wrapper .gallery-item {
