@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import Divider from '../components/Divider.vue';
 </script>
 
@@ -89,7 +88,7 @@ import Divider from '../components/Divider.vue';
 }
 
 .block {
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 }
 
 h1{
@@ -150,6 +149,15 @@ h2 {
     box-shadow: 0 0 1.75rem 0 hsl(from var(--ember-500) h s l / 0.5);
     color: var(--ember-200);
     text-shadow: 0 1px 1px var(--ember-800);
+  }
+}
+
+@media (max-width: 480px) {
+  .story-container {
+    margin-top: -5rem;
+  }
+  .block {
+    margin-bottom: 0rem;
   }
 }
 </style>

@@ -35,7 +35,7 @@ const openDiscord = () => {
         <div class="image-container">
           <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
         </div>
-        <p>Als Gründungsmitglied der Zwergen-Allianz <strong>The Bulwark</strong> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
+        <p>Als Gründungsmitglied der Zwergen-Allianz <a href="https://discord.gg/d5j3BZua" target="_blank" rel="noopener noreferrer">The Bulwark</a> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
        </div>
         
        <div class="section-content">
@@ -200,35 +200,31 @@ h3 {
 
 @media (max-width: 480px) {
   .landing-container {
-    margin-top: -2rem;
+    margin-top: -3rem;
   }
   
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
   
   h3 {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
   
   .button-container {
-    gap: 0.5rem;
+    gap: 1rem;
     flex-direction: column;
     width: 100%;
     max-width: 280px;
   }
   
   .button-container.primary {
-    margin-top: 1.5rem;
-    
     & .p-button-raised {
-      font-size: 1rem;
-      padding: 0.75rem 1rem;
-      width: 100%;
+      font-size: 1.5rem;
     }
   }
 }

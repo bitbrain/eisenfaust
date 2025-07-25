@@ -357,7 +357,7 @@ h1 {
 @media (max-width: 480px) {
   .media-gallery {
     padding: 0.5rem;
-    margin-top: -2rem;
+    margin-top: -3rem;
   }
   
   .block {
@@ -369,7 +369,20 @@ h1 {
   }
   
   .gallery-grid {
-    gap: 2rem;
+    gap: 6rem;
+  }
+
+  .gallery-item-wrapper {
+    gap: 0.5rem;
+  }
+
+  .media-gallery .image-description {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+  }
+
+  .media-gallery .image-description :deep(strong) {
+    font-size: 1.8rem;
   }
 }
 
@@ -408,6 +421,7 @@ h1 {
   font-size: 2rem;
   transition: color 2s ease;
   text-shadow: 0 0 0.25rem var(--ember-200);
+  white-space: nowrap;
 }
 
 .image-description :deep(p) {

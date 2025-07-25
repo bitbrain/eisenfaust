@@ -2,16 +2,17 @@
 import { RouterLink, useRouter } from 'vue-router'
 import { onMounted, nextTick, watch, ref } from 'vue'
 import ParticleCanvas from './components/ParticleCanvas.vue'
+import OverlayPanel from 'primevue/overlaypanel'
 
 const router = useRouter()
-const isMobileMenuOpen = ref(false)
+const op = ref()
 
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
+const toggleMobileMenu = (event: Event) => {
+  op.value.toggle(event)
 }
 
 const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false
+  op.value.hide()
 }
 
 // Close mobile menu when route changes
@@ -87,7 +88,7 @@ watch(() => router.currentRoute.value, () => {
           </ul>
         </div>
         
-        <button class="burger-menu" @click="toggleMobileMenu" :class="{ 'active': isMobileMenuOpen }">
+        <button class="burger-menu" @click="toggleMobileMenu" aria-haspopup="true" aria-controls="mobile_menu">
           <span></span>
           <span></span>
           <span></span>
@@ -95,20 +96,20 @@ watch(() => router.currentRoute.value, () => {
       </div>
     </nav>
     
-    <!-- Mobile Sidebar -->
-    <div class="mobile-sidebar" :class="{ 'open': isMobileMenuOpen }" @click="closeMobileMenu">
-      <div class="sidebar-content" @click.stop>
-        <div class="sidebar-header">
-          <img class="sidebar-logo" src="/logo.png" alt="Eisenfaust Logo" />
-          <span class="sidebar-title">Eisenfaust</span>
+    <!-- Mobile Menu OverlayPanel -->
+    <OverlayPanel ref="op" appendTo="body" class="mobile-menu-panel">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <img class="mobile-menu-logo" src="/logo.png" alt="Eisenfaust Logo" />
+          <span class="mobile-menu-title">Eisenfaust</span>
         </div>
-        <ul class="sidebar-menu">
+        <ul class="mobile-menu-list">
           <li><RouterLink to="/" active-class="active" @click="closeMobileMenu">Willkommen</RouterLink></li>
           <li><RouterLink to="/story" active-class="active" @click="closeMobileMenu">Geschichte</RouterLink></li>
           <li><RouterLink to="/media" active-class="active" @click="closeMobileMenu">Erinnerungen</RouterLink></li>
         </ul>
       </div>
-    </div>
+    </OverlayPanel>
     
     <router-view />
     <div class="background-image">
@@ -262,60 +263,31 @@ nav {
   transform-origin: center;
 }
 
-.burger-menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+/* Mobile Menu OverlayPanel Styles */
+.mobile-menu-panel {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 2px solid var(--granite-300) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8) !important;
+  min-width: 280px !important;
+  max-width: 320px !important;
 }
 
-.burger-menu.active span:nth-child(2) {
-  opacity: 0;
+/* Hide the popover arrow */
+.mobile-menu-panel::before,
+.mobile-menu-panel::after {
+  display: none !important;
 }
 
-.burger-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.mobile-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-}
-
-.mobile-sidebar.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.sidebar-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 280px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(16px);
-  padding: 2rem 1.5rem;
-  padding-top: 4rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+.mobile-menu-content {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.mobile-sidebar.open .sidebar-content {
-  transform: translateX(0);
-  padding-top: 4rem;
-}
-
-.sidebar-header {
+.mobile-menu-header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -323,30 +295,29 @@ nav {
   border-bottom: 2px solid var(--granite-300);
 }
 
-.sidebar-logo {
+.mobile-menu-logo {
   width: 3rem;
   height: 3rem;
   opacity: 0.8;
   filter: brightness(1.0) contrast(2.5) saturate(0.4);
 }
 
-.sidebar-title {
+.mobile-menu-title {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--ember-700);
   text-shadow: 0 0 0.75rem rgb(108, 31, 14);
 }
 
-.sidebar-menu {
+.mobile-menu-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
 }
 
-.sidebar-menu > li {
+.mobile-menu-list > li {
   font-size: 1.5rem;
   list-style: none;
 
@@ -356,12 +327,14 @@ nav {
     text-shadow: 0 0 0.75rem rgb(108, 31, 14);
     transition: color 0.3s ease, text-shadow 0.3s ease;
     display: block;
-    padding: 0.25rem 0;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
   }
 
   a:hover, a.active {
     color: var(--ember-900);
     text-shadow: 0 0 10px hsla(from var(--ember-700) h s l / 0.6);
+    background: rgba(255, 162, 41, 0.1);
   }
 }
 
@@ -432,21 +405,25 @@ main {
     height: 1.5rem;
   }
   
-  .sidebar-content {
-    width: 250px;
-    padding: 1.5rem 1rem;
+  .mobile-menu-panel {
+    min-width: 250px !important;
+    max-width: 280px !important;
   }
   
-  .sidebar-logo {
+  .mobile-menu-content {
+    padding: 1rem;
+  }
+  
+  .mobile-menu-logo {
     width: 2.5rem;
     height: 2.5rem;
   }
   
-  .sidebar-title {
+  .mobile-menu-title {
     font-size: 1.3rem;
   }
   
-  .sidebar-menu > li {
+  .mobile-menu-list > li {
     font-size: 1.3rem;
   }
   
