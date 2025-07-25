@@ -11,6 +11,13 @@
   --granite-300: #0e1318;
 }
 
+/* Prevent browser-specific text inflation so font sizes look consistent on Chrome & Firefox */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 @font-face {
   font-family: 'Amarante';
   src: url('./assets/fonts/amarante/Amarante-Regular.ttf') format('truetype');
