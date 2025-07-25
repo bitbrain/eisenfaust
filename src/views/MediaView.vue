@@ -306,18 +306,18 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 5s ease;
+  transition: transform 5s ease, filter 2s ease, opacity 2s ease;
   display: block;
   border: none;
   padding: 0;
   margin: 0;
   transform-origin: center;
-  filter: blur(8px) saturate(0.2);
+  filter: blur(8px) saturate(0%);
   opacity: 0;
 }
 
 .thumbnail.visible {
-  filter: blur(0) saturate(1);
+  filter: blur(0) saturate(100%);
   opacity: 1;
 }
 
