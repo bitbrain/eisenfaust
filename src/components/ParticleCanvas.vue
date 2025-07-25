@@ -299,7 +299,7 @@ class ParticleBehavior {
 .particle-container {
   position: relative;
   height: 100%;
-  overflow: visible;
+  overflow: hidden;
 }
 
 canvas {
