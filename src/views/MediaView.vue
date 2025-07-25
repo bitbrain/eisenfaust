@@ -149,6 +149,13 @@ onUnmounted(() => {
   <div class="media-gallery">
     <div class="block"></div>
     <Divider>Unser Erbe</Divider>
+
+    <div class="section-container">
+      <div class="section-content">
+        <h3>Ein zwergisches Abenteuer</h3>
+        <p>Gemeinsam erkunden wir die Welt von Verra. Auf unserer Reise halten wir viele Erinnerungen fest, die als Zwergen-Legende überliefert werden.</p>
+      </div>
+    </div>
     <!-- Gallery grid -->
     <div v-if="images.length > 0" class="gallery-container">
       <div class="gallery-grid">

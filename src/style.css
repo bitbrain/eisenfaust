@@ -66,6 +66,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--granite-700);
 }
 
+
+
+h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
 blockquote {
   color: var(--granite-700);
   border-left: 5px solid var(--granite-300);
@@ -140,43 +154,6 @@ strong {
         padding: 0;
     }
 }
-
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-  .section-container {
-    padding: 0 1rem;
-    gap: 2rem;
-  }
-  
-  .section-content img {
-    max-height: 12rem;
-  }
-  
-  .block {
-    height: 8rem;
-  }
-  
-  hr {
-    width: 80vw;
-    margin: 1.5rem 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-container {
-    padding: 0 0.75rem;
-    gap: 1.5rem;
-  }
-  
-  .section-content img {
-    max-height: 10rem;
-  }
-  
-  .block {
-    height: 6rem;
-  }
-}
-
 
 
 .image-container {

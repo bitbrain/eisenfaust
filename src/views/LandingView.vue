@@ -171,9 +171,9 @@ h3 {
   .landing-container {
     margin-top: -4rem;
   }
-  
+
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   
   h2 {
@@ -181,7 +181,7 @@ h3 {
   }
   
   h3 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   
   .button-container {
@@ -204,15 +204,15 @@ h3 {
   }
   
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   
   h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
   
   .button-container {

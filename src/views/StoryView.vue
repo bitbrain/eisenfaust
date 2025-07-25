@@ -118,18 +118,6 @@ h2 {
   margin: 0;
 }
 
-h3 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(to bottom, var(--ember-900), var(--ember-700));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
 .button-container {
   display: flex;
   gap: 1rem;
