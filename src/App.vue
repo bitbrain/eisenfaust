@@ -357,7 +357,7 @@ main {
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
   .nav-logo,
   .nav-title {
     display: block;

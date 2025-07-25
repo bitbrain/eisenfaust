@@ -166,7 +166,7 @@ h3 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
   .landing-container {
     margin-top: -3rem;
   }

@@ -334,7 +334,7 @@ h1 {
   margin-top: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
   .media-gallery {
     padding: 0.5rem;
     margin-top: -3rem;

@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import Divider from '../components/Divider.vue';
+// Helper functions for navigation and external link
+const scrollToJoinSection = () => {
+  const joinSection = document.getElementById('join-section');
+  if (joinSection) {
+    joinSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+const openDiscord = () => {
+  window.open('https://discord.gg/cSpdD2v5', '_blank', 'noopener,noreferrer');
+};
 </script>
 
 <template>
@@ -152,7 +163,7 @@ h2 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
   .story-container {
     margin-top: -5rem;
   }
