@@ -166,39 +166,7 @@ h3 {
   }
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  .landing-container {
-    margin-top: -4rem;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 3rem;
-  }
-  
-  .button-container {
-    gap: 0.75rem;
-  }
-  
-  .button-container.primary {
-    margin-top: 2rem;
-    
-    & .p-button-raised {
-      font-size: 1.1rem;
-      padding: 0.75rem 1.25rem;
-    }
-  }
-}
-
-@media (max-width: 480px) {
   .landing-container {
     margin-top: -3rem;
   }

@@ -152,7 +152,7 @@ h2 {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .story-container {
     margin-top: -5rem;
   }

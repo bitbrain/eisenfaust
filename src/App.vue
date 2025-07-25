@@ -357,7 +357,6 @@ main {
   min-height: 100vh;
 }
 
-/* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .nav-logo,
   .nav-title {
@@ -384,9 +383,6 @@ main {
     padding-bottom: 2rem;
     gap: 1rem;
   }
-}
-
-@media (max-width: 480px) {
   nav {
     padding: 0.5rem;
   }

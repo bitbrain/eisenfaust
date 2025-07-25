@@ -334,27 +334,7 @@ h1 {
   margin-top: 1rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .media-gallery {
-    padding: 1rem;
-    margin-top: -3rem;
-  }
-  
-  .block {
-    height: 10rem;
-  }
-  
-  .gallery-container {
-    padding: 0 0.5rem;
-  }
-  
-  .gallery-grid {
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
   .media-gallery {
     padding: 0.5rem;
     margin-top: -3rem;
