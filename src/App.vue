@@ -430,10 +430,14 @@ main {
   }
   
   footer {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     padding: 0.5rem;
     padding-bottom: 1.5rem;
     gap: 0.75rem;
+  }
+
+  .background-image {
+    background-size: min(300%, 400%);
   }
 }
 </style>

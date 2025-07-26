@@ -294,7 +294,6 @@ h1 {
 .gallery-item {
   width: 100%;
   aspect-ratio: 4.5/3;
-  overflow: hidden;
   border-radius: 2px;
   border: none;
   padding: 0;

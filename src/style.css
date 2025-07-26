@@ -167,8 +167,9 @@ strong {
 .image-container {
   position: relative;
   display: inline-block;
-  width: 100%;
   overflow: hidden;
+  width: 120%;
+  margin-left: -10%;
 }
 
 .image-container::before {
