@@ -29,7 +29,12 @@ const EisenfaustPreset = definePreset(Aura, {
 // Export a function for SSG
 export const createApp = ViteSSG(
   App,
-  { routes, base: import.meta.env.BASE_URL },
+  { 
+    routes, 
+    base: import.meta.env.BASE_URL,
+    // Ensure the page scrolls to top-left on each route navigation
+    scrollBehavior: () => ({ left: 0, top: 0 }) 
+  },
   ({ app, isClient }) => {
     // Register PrimeVue with custom theme options
     app.use(PrimeVue, {
