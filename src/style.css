@@ -168,8 +168,8 @@ strong {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  width: 120%;
-  margin-left: -10%;
+  width: 100%;
+  scale: 1.1;
 }
 
 .image-container::before {

@@ -227,6 +227,8 @@ onUnmounted(() => {
   background-position: center top;
   background-repeat: no-repeat;
   margin-top:-6rem;
+
+  overflow: hidden;
 }
 
 .block {
@@ -348,7 +350,7 @@ h1 {
   }
   
   .gallery-grid {
-    gap: 6rem;
+    gap: 4rem;
   }
 
   .gallery-item-wrapper {
@@ -357,7 +359,7 @@ h1 {
 
   .media-gallery .image-description {
     font-size: 1.6rem;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
   }
 
   .media-gallery .image-description :deep(strong) {
