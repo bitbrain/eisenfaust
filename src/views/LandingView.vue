@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Button from 'primevue/button';
 import ParticleCanvas from '../components/ParticleCanvas.vue';
-import { onMounted } from 'vue';
 import Divider from '../components/Divider.vue';
 
 // Function to scroll to the join section
@@ -14,7 +13,7 @@ const scrollToJoinSection = () => {
 
 // Function to open Discord link
 const openDiscord = () => {
-  window.open('https://discord.gg/cSpdD2v5', '_blank', 'noopener,noreferrer');
+  window.open('https://discord.gg/wqmuQrxH2r', '_blank', 'noopener,noreferrer');
 };
 </script>
 
@@ -35,7 +34,7 @@ const openDiscord = () => {
         <div class="image-container">
           <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
         </div>
-        <p>Als Gründungsmitglied der Zwergen-Allianz <a href="https://discord.gg/d5j3BZua" target="_blank" rel="noopener noreferrer">The Bulwark</a> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
+        <p>Als Gründungsmitglied der Zwergen-Allianz <a href="https://discord.gg/xuGtNTjWBm" target="_blank" rel="noopener noreferrer">The Bulwark</a> setzen wir uns aktiv für den Zusammenhalt und die Stärke der europäischen Dünir-Gemeinschaft ein – über Gildengrenzen hinaus. Das Bollwerk erfreut sich großer und aktiver Zwergengilden mit regelmäßigen Events zur Stärkung der Allianz.</p>
        </div>
         
        <div class="section-content">
@@ -49,7 +48,7 @@ const openDiscord = () => {
         
        <div class="section-content">
         <h3>Teil werden</h3>
-        <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann betrete unsere Hallen. Der erste Schritt zu Eisenfaust ist ganz einfach: Unserem Discord-Server beitreten und ein persönliches Gespräch.</p>
+        <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann betrete unsere Hallen. Der erste Schritt zu Eisenfaust ist ganz einfach: Unserem <a href="https://discord.gg/wqmuQrxH2r" target="_blank" rel="noopener noreferrer">Discord-Server</a> beitreten und ein persönliches Gespräch.</p>
         <div class="image-container">
           <img src="/dwarven-friends.webp" alt="Dwarven Friends">
         </div>
@@ -64,11 +63,6 @@ const openDiscord = () => {
         </div>
         <blockquote>Wenn du Teil von etwas Echtem werden willst, bist du bei uns richtig.</blockquote>
        </div>
-      </div>
-      <Divider>Gemeinschaft</Divider>
-      <div class="button-container">
-        <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
-        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />
       </div>
     </div>
 </template>

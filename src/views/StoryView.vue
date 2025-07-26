@@ -9,7 +9,7 @@ const scrollToJoinSection = () => {
 };
 
 const openDiscord = () => {
-  window.open('https://discord.gg/cSpdD2v5', '_blank', 'noopener,noreferrer');
+  window.open('https://discord.gg/wqmuQrxH2r', '_blank', 'noopener,noreferrer');
 };
 </script>
 
@@ -74,11 +74,6 @@ const openDiscord = () => {
         <p>Eisenfaust lädt jeden ein, der diese Sehnsucht teilt, der bereit ist, mit Herz und Hammer zu bauen, zu bewahren und zu kämpfen – nicht für Ruhm, sondern für das Versprechen eines neuen Morgens.</p>
         <p>Denn am Ende, so wissen die Zwerge, ist es das Zuhause, das zählt. Der Berg, der Schutz bietet, die Gemeinschaft, die Halt gibt, und die Geschichten, die von Generation zu Generation weitergegeben werden – so fest wie das Gestein selbst.</p>
        
-      </div>
-      <Divider>Gemeinschaft</Divider>
-      <div class="button-container">
-        <Button label="Trete uns bei" class="p-button-raised p-button-lg" @click="scrollToJoinSection" />
-        <Button label="Discord" class="p-button-raised p-button-lg p-button-outlined" @click="openDiscord" />
       </div>
     </div>
   </div>
