@@ -4,9 +4,6 @@ import { routes } from "./router";
 import { definePreset } from '@primeuix/themes';
 import PrimeVue from "primevue/config";
 import Aura from '@primeuix/themes/aura';
-import "primeicons/primeicons.css"; 
-import "./assets/theme/custom-theme.css"; 
-import "./style.css"; 
 
 const EisenfaustPreset = definePreset(Aura, {
   semantic: {
