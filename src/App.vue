@@ -2,7 +2,7 @@
 import { RouterLink, useRouter } from 'vue-router'
 import { onMounted, nextTick, watch, ref } from 'vue'
 import ParticleCanvas from './components/ParticleCanvas.vue'
-import OverlayPanel from 'primevue/overlaypanel'
+import Popover from 'primevue/popover'
 
 const router = useRouter()
 const op = ref()
@@ -96,8 +96,8 @@ watch(() => router.currentRoute.value, () => {
       </div>
     </nav>
     
-    <!-- Mobile Menu OverlayPanel -->
-    <OverlayPanel ref="op" appendTo="body" class="mobile-menu-panel">
+    <!-- Mobile Menu Popover -->
+    <Popover ref="op" appendTo="body" class="mobile-menu-panel">
       <div class="mobile-menu-content">
         <div class="mobile-menu-header">
           <img class="mobile-menu-logo" src="/logo.png" alt="Eisenfaust Logo" />
@@ -109,7 +109,7 @@ watch(() => router.currentRoute.value, () => {
           <li><RouterLink to="/media" active-class="active" @click="closeMobileMenu">Erinnerungen</RouterLink></li>
         </ul>
       </div>
-    </OverlayPanel>
+    </Popover>
     
     <router-view />
     <div class="background-image">
@@ -263,7 +263,7 @@ nav {
   transform-origin: center;
 }
 
-/* Mobile Menu OverlayPanel Styles */
+/* Mobile Menu Popover Styles */
 .mobile-menu-panel {
   background: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(16px) !important;
