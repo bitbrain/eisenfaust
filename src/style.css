@@ -229,3 +229,9 @@ strong {
 .section-content .image-container:nth-of-type(4n+4)::before {
   transform: scaleX(-1) scaleY(-1);
 }
+
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .image-container {
+    margin: 0;
+  }
+}
