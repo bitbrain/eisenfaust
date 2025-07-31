@@ -354,7 +354,7 @@ h1 {
   }
 
   .gallery-item-wrapper {
-    gap: 0.5rem;
+    gap: 2rem;
   }
 
   .media-gallery .image-description {
