@@ -20,7 +20,7 @@ const scrollToJoinSection = () => {
 
 // Function to open Discord link
 const openDiscord = () => {
-  window.open('https://discord.gg/wqmuQrxH2r', '_blank', 'noopener,noreferrer');
+  window.open('https://discord.gg/eisenfaust', '_blank', 'noopener,noreferrer');
 };
 </script>
 
@@ -55,7 +55,7 @@ const openDiscord = () => {
         
        <div id="join-section" class="section-content">
         <h3>Teil werden</h3>
-        <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann tritt ein. Alles beginnt mit einem Besuch auf unserem <a href="https://discord.gg/wqmuQrxH2r" target="_blank" rel="noopener noreferrer">Discord</a> und einem kurzen Gespräch.</p>
+        <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann tritt ein. Alles beginnt mit einem Besuch auf unserem <a href="https://discord.gg/eisenfaust" target="_blank" rel="noopener noreferrer">Discord</a> und einem kurzen Gespräch.</p>
         <div class="image-container">
           <img src="/dwarven-band.webp" alt="Dwarven Band">
         </div>
