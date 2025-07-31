@@ -50,7 +50,7 @@ const openDiscord = () => {
         <h3>Teil werden</h3>
         <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann tritt ein. Alles beginnt mit einem Besuch auf unserem <a href="https://discord.gg/wqmuQrxH2r" target="_blank" rel="noopener noreferrer">Discord</a> und einem kurzen Gespräch.</p>
         <div class="image-container">
-          <img src="/dwarven-friends.webp" alt="Dwarven Friends">
+          <img src="/dwarven-band.webp" alt="Dwarven Band">
         </div>
         <p>Für uns zählt, wer du bist – nicht was du trägst. Wenn du Teamgeist mitbringst, Respekt lebst und Freude an einer verlässlichen Gemeinschaft hast, findest du bei uns ein Zuhause.</p>
        </div>
@@ -63,7 +63,7 @@ const openDiscord = () => {
         </div>
         <p>Gegründet wurde Eisenfaust 2022 als Zwergenprojekt für Ashes of Creation. Seitdem wächst unsere Truppe aus Zwerginnen und Zwergen beständig – entschlossen, bodenständig und bereit für das, was kommt.</p>
         <blockquote>Wenn du Teil von etwas Echtem werden willst, bist du hier genau richtig.</blockquote>
-       </div>
+      </div>
       </div>
     </div>
 </template>
