@@ -262,7 +262,7 @@ export const postRoutes = ${JSON.stringify(routes, null, 2)}.map(route => ({
 }
 
 export default defineConfig({
-  base: '/eisenfaust',
+  base: '/',
   plugins: [
     vue(),
     tsconfigPaths(),
@@ -278,7 +278,7 @@ export default defineConfig({
           const { content, data } = matter(code);
           // Transform image URLs to include base URL if it exists
           const transformedContent = content.replace(/!\[([^\]]*)\]\(\/([^)]+)\)/g, (match, alt, path) => {
-            const base = process.env.VITE_BASE_URL || '/eisenfaust';
+            const base = process.env.VITE_BASE_URL || '/';
             return `![${alt}](${base}/${path})`;
           });
           // Configure marked to handle line breaks

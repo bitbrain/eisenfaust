@@ -25,7 +25,7 @@ const loadImages = async () => {
     error.value = null;
     
     // Load the thumbnails list - adjust the path based on your base URL
-    const response = await fetch('/eisenfaust/thumbnails.json');
+    const response = await fetch('/thumbnails.json');
     const thumbnailData = await response.json();
     
     // Process the thumbnails and reverse the order
@@ -33,8 +33,8 @@ const loadImages = async () => {
       .map((item: { filename: string, description: string | null }, index: number) => {
         return {
           id: index + 1,
-          thumbnail: `/eisenfaust/thumbnails/${item.filename}`,
-          fullImage: `/eisenfaust/screenshots-webp/${item.filename}`,
+          thumbnail: `/thumbnails/${item.filename}`,
+          fullImage: `/screenshots-webp/${item.filename}`,
           alt: `Gallery image ${index + 1}`,
           description: item.description
         };
