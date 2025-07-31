@@ -7,7 +7,14 @@ import Divider from '../components/Divider.vue';
 const scrollToJoinSection = () => {
   const joinSection = document.getElementById('join-section');
   if (joinSection) {
-    joinSection.scrollIntoView({ behavior: 'smooth' });
+    const offset = 120;
+    const elementPosition = joinSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   }
 };
 
@@ -46,7 +53,7 @@ const openDiscord = () => {
         <p>Neben dem Spiel pflegen wir unsere eigene Zwergenkultur. Pen-&-Paper-Runden, gemeinschaftliche Unternehmungen und gelegentliches Rollenspiel gehören für viele dazu. Nicht verpflichtend, aber mit Begeisterung.</p>
        </div>
         
-       <div class="section-content">
+       <div id="join-section" class="section-content">
         <h3>Teil werden</h3>
         <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann tritt ein. Alles beginnt mit einem Besuch auf unserem <a href="https://discord.gg/wqmuQrxH2r" target="_blank" rel="noopener noreferrer">Discord</a> und einem kurzen Gespräch.</p>
         <div class="image-container">
@@ -55,7 +62,7 @@ const openDiscord = () => {
         <p>Für uns zählt, wer du bist – nicht was du trägst. Wenn du Teamgeist mitbringst, Respekt lebst und Freude an einer verlässlichen Gemeinschaft hast, findest du bei uns ein Zuhause.</p>
        </div>
        
-       <div id="join-section" class="section-content">
+       <div class="section-content">
         <h3>Für die Zukunft geschmiedet</h3>
         <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark, unsere Ziele sind klar. Wir suchen keine Masse, sondern Menschen mit Haltung.</p>
         <div class="image-container">

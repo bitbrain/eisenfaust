@@ -1,16 +1,5 @@
 <script setup lang="ts">
 import Divider from '../components/Divider.vue';
-// Helper functions for navigation and external link
-const scrollToJoinSection = () => {
-  const joinSection = document.getElementById('join-section');
-  if (joinSection) {
-    joinSection.scrollIntoView({ behavior: 'smooth' });
-  }
-};
-
-const openDiscord = () => {
-  window.open('https://discord.gg/wqmuQrxH2r', '_blank', 'noopener,noreferrer');
-};
 </script>
 
 <template>
