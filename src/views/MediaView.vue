@@ -284,13 +284,13 @@ h1 {
 .gallery-grid {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 12rem;
 }
 
 .gallery-item-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 5rem;
 }
 
 .gallery-item {

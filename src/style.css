@@ -170,6 +170,7 @@ strong {
   overflow: hidden;
   width: 100%;
   scale: 1.1;
+  margin: 1.5rem 0;
 }
 
 .image-container::before {
