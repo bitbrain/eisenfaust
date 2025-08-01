@@ -64,7 +64,7 @@ const openDiscord = () => {
        
        <div class="section-content">
         <h3>Für die Zukunft geschmiedet</h3>
-        <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark, unsere Ziele sind klar. Wir suchen keine Masse, sondern Menschen mit Haltung.</p>
+        <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark, unsere Ziele sind klar. Wir suchen keine Masse, sondern Zwerge mit Haltung.</p>
         <div class="image-container">
           <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
         </div>

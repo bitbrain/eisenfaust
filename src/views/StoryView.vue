@@ -14,7 +14,7 @@ import Divider from '../components/Divider.vue';
          <img src="/story-desolate.webp" alt="Desolation" class="full">
        </div>
        <p>Doch das Land veränderte sich. Eine dunkle Verderbnis kroch langsam über die Welt. Flüsse versiegten, Wälder verdorrten, und selbst der Fels verlor seine Wärme. Die Zwergenclans spürten das Unheil. Mit jedem Schlag des Hammers wurde die Gefahr spürbarer.</p>
-       <p>Viele Clans retteten sich durch die uralten Portale nach Sanctus. Auch der Clan Eisenfaust verließ seine Heimat. Nicht aus Schwäche, sondern um das Erbe zu bewahren. Mit sich trugen sie die Lex Dünir – eine Sammlung von Werten, Bräuchen und Gesetzen, tief verwurzelt in der Kultur ihres Volkes. Sie war nicht in der Zeit des Verfalls entstanden, sondern lange zuvor. Ein Band, das sie auch fern der Heimat zusammenhielt.</p>
+       <p>Viele Clans retteten sich durch die uralten Portale nach Sanctus. Auch der Clan Eisenfaust verließ seine Heimat, um das Erbe zu bewahren. Mit sich trugen sie die Lex Dünir, eine Sammlung von Werten, Bräuchen und Gesetzen, tief verwurzelt in der Kultur ihres Volkes. Sie war lange vor der Zeit des Verfalls entstanden und bildete ein Band, das sie auch fern der Heimat zusammenhielt.</p>
        <div class="image-container">
          <img src="/story-portal.webp" alt="Portal" class="full">
        </div>
@@ -26,18 +26,18 @@ import Divider from '../components/Divider.vue';
     <div class="section-container">
       <div class="section-content">
         <h3>Das Schmieden des Bollwerks</h3>
-        <p>Die Rückkehr nach Verra ist kein leichter Weg. Es geht nicht nur darum, bekannte Pfade zu betreten, sondern darum, ein verlorenes Reich neu zu formen. Eine Heimat zurückzubringen, die es so nicht mehr gibt.</p>
+        <p>Die Rückkehr nach Verra ist kein leichter Weg. Es geht um mehr als bekannte Pfade zu betreten. Es geht darum, ein verlorenes Reich neu zu formen und eine Heimat zurückzubringen, die es so nicht mehr gibt.</p>
         <div class="image-container">
           <img src="/story-forge.webp" alt="Forge" class="full">
         </div>
         <p>Die Aufgabe ist gewaltig. Kein Clan kann sie allein stemmen. Deshalb schloss sich Eisenfaust mit anderen starken Dünir-Gilden zusammen. Ein gemeinsames Ziel eint sie: der Aufbau eines festen Ortes, verwurzelt im Stein, getragen von alter Weisheit und neuer Entschlossenheit.</p>
-        <p>Die Lex Dünir lebt weiter. Nicht als starres Regelwerk, sondern als Fundament des Miteinanders. Aus ihr schöpfen die Zwerge Kraft, wenn Verra sich rau und unberechenbar zeigt.</p>
+        <p>Die Lex Dünir lebt weiter als Fundament des Miteinanders. Aus ihr schöpfen die Zwerge Kraft, wenn Verra sich rau und unberechenbar zeigt.</p>
         <p>Gemeinsam errichten sie ihre Hallen. Die Schmiede glühen. Stimmen erheben sich in alten Liedern. Und zwischen den Mauern wächst etwas, das tiefer reicht als Erz oder Stein: Vertrauen.</p>
         <div class="image-container">
           <img src="/story-writing-dwarf.webp" alt="Writing Dwarf" class="full">
         </div>
-        <p>Doch Verra ist nicht leer. In vergessenen Tunneln regt sich Bedrohung. Alte Feinde kehren zurück. Neue sind erwacht. Wer sich dem Bollwerk in den Weg stellt, findet seinen Namen im Buch der Grolle – ein stilles, aber bleibendes Zeugnis jener, die Zwergengemeinschaft bedrohen.</p>
-        <p>Eisenfaust kämpft nicht für Ruhm. Sondern für ein Zuhause. Für den Schutz der Schwachen. Für das Versprechen, dass kein Zwerg mehr allein durch Dunkel schreiten muss.</p>
+        <p>Doch Verra ist nicht leer. In vergessenen Tunneln regt sich Bedrohung. Alte Feinde kehren zurück. Neue sind erwacht. Wer sich dem Bollwerk in den Weg stellt, findet seinen Namen im Buch der Grolle, ein stilles, aber bleibendes Zeugnis jener, die Zwergengemeinschaft bedrohen.</p>
+        <p>Eisenfaust kämpft für ein Zuhause, für den Schutz der Schwachen und für das Versprechen, dass kein Zwerg mehr allein durch Dunkel schreiten muss.</p>
       </div>
     </div>
 
@@ -45,17 +45,17 @@ import Divider from '../components/Divider.vue';
     <div class="section-container">
       <div class="section-content">
         <h3>Das Vermächtnis der Eisenfaust</h3>
-        <p>Inmitten der neu belebten Berge Verras wächst etwas Beständiges. Eisenfaust steht. Nicht als Macht, sondern als Ort. Als Heimstätte für jene, die mehr suchen als Ruhm und Reichtum.</p>
+        <p>Inmitten der neu belebten Berge Verras wächst etwas Beständiges. Eisenfaust steht als Ort und Heimstätte für jene, die mehr suchen als Ruhm und Reichtum.</p>
         <div class="image-container">
           <img src="/story-fortress.webp" alt="Fortress" class="full">
         </div>
-        <p>Das Vermächtnis entsteht nicht durch große Taten, sondern durch tägliche Hingabe. Jeder, der durch die Hallen tritt, trägt dazu bei. Vom ersten Hammerschlag bis zum letzten Lied bei Kerzenlicht.</p>
-        <p>Führung ist hier kein Privileg, sondern Verantwortung. Die Clanfürsten tragen keine Kronen. Sie tragen die Pflicht, zu einen, zu schützen und Haltung zu bewahren.</p>
+        <p>Das Vermächtnis entsteht durch tägliche Hingabe. Jeder, der durch die Hallen tritt, trägt dazu bei, vom ersten Hammerschlag bis zum letzten Lied bei Kerzenlicht.</p>
+        <p>Führung bedeutet hier Verantwortung. Die Clanfürsten tragen die Pflicht, zu einen, zu schützen und Haltung zu bewahren.</p>
         <div class="image-container">
           <img src="/story-tavern.webp" alt="Tavern" class="full">
         </div>
-        <p>In den Tavernen klingt das Lachen. In den Werkstätten das Eisen. Und in den Herzen die Sehnsucht nach einem Ort, der bleibt. Ein Ort, der nicht nur aus Mauern besteht, sondern aus Geschichten, Erinnerungen und Verbundenheit.</p>
-        <p>Denn was bleibt, ist nicht der einzelne Name. Was bleibt, ist das Zuhause, das wir gemeinsam erschaffen.</p>
+        <p>In den Tavernen klingt das Lachen. In den Werkstätten das Eisen. Und in den Herzen die Sehnsucht nach einem Ort, der bleibt. Ein Ort aus Geschichten, Erinnerungen und Verbundenheit.</p>
+        <p>Was bleibt, ist das Zuhause, das wir gemeinsam erschaffen.</p>
        
       </div>
     </div>
