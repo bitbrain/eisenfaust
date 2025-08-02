@@ -149,8 +149,7 @@ footer {
   font-weight: 700;
   padding: clamp(0.5rem, 2vw, 1rem);
   padding-bottom: clamp(2rem, 5vw, 4rem);
-  color: black;
-  opacity: 0.5;
+  color: rgb(167, 128, 106);
   display: flex;
   justify-content: center;
   align-items: center;

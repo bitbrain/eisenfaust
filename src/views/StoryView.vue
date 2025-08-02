@@ -36,7 +36,7 @@ import Divider from '../components/Divider.vue';
         <div class="image-container">
           <img src="/story-writing-dwarf.webp" alt="Writing Dwarf" class="full">
         </div>
-        <p>Doch Verra ist nicht leer. In vergessenen Tunneln regt sich Bedrohung. Alte Feinde kehren zurück. Neue sind erwacht. Wer sich dem Bollwerk in den Weg stellt, findet seinen Namen im Buch der Grolle, ein stilles, aber bleibendes Zeugnis jener, die Zwergengemeinschaft bedrohen.</p>
+        <p>Doch Verra ist nicht leer. In vergessenen Tunneln regt sich Bedrohung. Alte Feinde kehren zurück. Neue sind erwacht. Wer sich dem Bollwerk in den Weg stellt, findet seinen Namen im Buch der Grolle, ein stilles, aber bleibendes Zeugnis jener, die unsere Zwergengemeinschaft bedrohen.</p>
         <p>Eisenfaust kämpft für ein Zuhause, für den Schutz der Schwachen und für das Versprechen, dass kein Zwerg mehr allein durch Dunkel schreiten muss.</p>
       </div>
     </div>

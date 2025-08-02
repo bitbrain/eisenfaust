@@ -59,7 +59,7 @@ const openDiscord = () => {
         <div class="image-container">
           <img src="/dwarven-band.webp" alt="Dwarven Band">
         </div>
-        <p>Für uns zählt, wer du bist – nicht was du trägst. Wenn du Teamgeist mitbringst, Respekt lebst und Freude an einer verlässlichen Gemeinschaft hast, findest du bei uns ein Zuhause.</p>
+        <p>Für uns zählt, wer du bist – nicht, was du trägst. Wenn du Teamgeist mitbringst, Respekt lebst und Freude an einer verlässlichen Gemeinschaft hast, findest du bei uns ein Zuhause.</p>
        </div>
        
        <div class="section-content">
