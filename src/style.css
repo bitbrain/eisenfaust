@@ -5,6 +5,7 @@
   --ember-500: #981d10;
   --ember-200: #6a0606;
 
+  --granite-950: rgb(104, 163, 139);
   --granite-900: #5b7e77;
   --granite-700: #395656;
   --granite-500: #1b2633;
@@ -54,12 +55,56 @@ img {
 }
 
 ul, ol {
-  margin: 0.5rem 0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
-  list-style-type: square;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 0.5rem 0;
+  color: var(--granite-950);
+  text-shadow: 0 0 5px var(--granite-500);
+}
+
+li:nth-of-type(1) {
+  &::before, &::after {
+  content: '1a';
+  }
+}
+
+li:nth-of-type(2) {
+  &::before, &::after {
+    content: '2b';
+  }
+}
+
+li:nth-of-type(3) {
+  &::before, &::after {
+    content: '3c';
+  }
+}
+
+li:nth-of-type(4) {
+  &::before, &::after {
+    content: '4d';
+  }
+}
+
+li:nth-of-type(5) {
+  &::before, &::after {
+    content: '5e';
+  }
+}
+
+li::before,
+li::after {
+  font-family: 'Runes';
+  flex-shrink: 0;
+  color: var(--granite-500);
 }
 
 hr {

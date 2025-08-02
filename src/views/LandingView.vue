@@ -56,6 +56,14 @@ const openDiscord = () => {
        <div id="join-section" class="section-content">
         <h3>Teil werden</h3>
         <p>Du willst nicht nur spielen, sondern etwas mit aufbauen? Dann tritt ein. Alles beginnt mit einem Besuch auf unserem <a href="https://discord.gg/eisenfaust" target="_blank" rel="noopener noreferrer">Discord</a> und einem kurzen Gespräch.</p>
+        <p>Ein paar Bedingungen musst du erfüllen:</p>
+        <ul>
+          <li>einen Dünir-Zwerg spielen</li>
+          <li>mindestens 18 Jahre alt sein</li>
+          <li>auf unserem Discord aktiv sein</li>
+          <li>einen <a href="https://ashesofcreation.com/shop" target="_blank" rel="noopener noreferrer">Alpha-Key</a> besitzen</li>
+        </ul>
+        <p>Wir freuen uns auf deinen Beitritt.</p>
         <div class="image-container">
           <img src="/dwarven-band.webp" alt="Dwarven Band">
         </div>
