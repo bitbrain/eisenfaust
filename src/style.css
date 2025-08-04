@@ -64,10 +64,10 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
   padding: 0.5rem 0;
   color: var(--granite-950);
-  text-shadow: 0 0 5px var(--granite-500);
+  text-shadow: 0 0 5px var(--granite-300);
 }
 
 .section-content li:nth-of-type(1) {
@@ -104,7 +104,8 @@ ul, ol {
 .section-content li::after {
   font-family: 'Runes';
   flex-shrink: 0;
-  color: var(--granite-500);
+  color: var(--granite-300);
+  margin: 0.5rem 0;
 }
 
 hr {
