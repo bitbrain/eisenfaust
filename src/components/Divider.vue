@@ -31,4 +31,11 @@
   white-space: nowrap;
   font-weight: bold;
 }
+
+
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .divider {
+    margin: 1.5rem 0;
+  }
+}
 </style>
