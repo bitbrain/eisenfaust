@@ -1421,15 +1421,6 @@
     "/assets/Amarante-Regular-DUvdExbu.ttf",
     "/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "posts/2025-05-10-wir-sind-eisenfaust.md": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
   "src/App.vue?vue&type=script&setup=true&lang.ts": [
     "/assets/primeicons-DMOk5skT.eot",
     "/assets/primeicons-C6QP2o4f.woff2",
@@ -1511,15 +1502,6 @@
     "/assets/Amarante-Regular-DUvdExbu.ttf",
     "/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
-  "src/routes/post-routes.ts": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
   "src/views/LandingView.vue": [
     "/assets/primeicons-DMOk5skT.eot",
     "/assets/primeicons-C6QP2o4f.woff2",
@@ -1566,60 +1548,6 @@
     "/assets/RUNE_A-Cm6e6rvU.TTF"
   ],
   "src/views/MediaView.vue?vue&type=style&index=0&scoped=46312697&lang.css": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsPostView.vue": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsPostView.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsPostView.vue?vue&type=style&index=0&scoped=af8db427&lang.css": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsView.vue": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsView.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/primeicons-DMOk5skT.eot",
-    "/assets/primeicons-C6QP2o4f.woff2",
-    "/assets/primeicons-WjwUDZjB.woff",
-    "/assets/primeicons-MpK4pl85.ttf",
-    "/assets/images/primeicons-Dr5RGzOO.svg",
-    "/assets/Amarante-Regular-DUvdExbu.ttf",
-    "/assets/RUNE_A-Cm6e6rvU.TTF"
-  ],
-  "src/views/NewsView.vue?vue&type=style&index=0&scoped=bc4e14f7&lang.css": [
     "/assets/primeicons-DMOk5skT.eot",
     "/assets/primeicons-C6QP2o4f.woff2",
     "/assets/primeicons-WjwUDZjB.woff",

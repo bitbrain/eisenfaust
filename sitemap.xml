@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://aoc-eisenfaust.de/</loc>
+    <lastmod>2025-08-13T18:51:44.867Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://aoc-eisenfaust.de/story</loc>
+    <lastmod>2025-08-13T18:51:44.867Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aoc-eisenfaust.de/media</loc>
+    <lastmod>2025-08-13T18:51:44.867Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
