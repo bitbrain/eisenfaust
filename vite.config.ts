@@ -261,6 +261,69 @@ export const postRoutes = ${JSON.stringify(routes, null, 2)}.map(route => ({
   };
 }
 
+// Generate sitemap.xml into public based on static routes and posts
+function generateSitemapPlugin() {
+  const getSiteUrl = (): string => {
+    if (process.env.VITE_SITE_URL) {
+      return process.env.VITE_SITE_URL.replace(/\/$/, '');
+    }
+    const cnamePath = resolve(process.cwd(), 'CNAME');
+    if (fs.existsSync(cnamePath)) {
+      const domain = fs.readFileSync(cnamePath, 'utf-8').trim();
+      if (domain) return `https://${domain}`;
+    }
+    return 'https://aoc-eisenfaust.de';
+  };
+
+  const isoDate = (date: Date) => date.toISOString();
+
+  return {
+    name: 'vite-plugin-generate-sitemap',
+    buildStart: async () => {
+      const siteUrl = getSiteUrl();
+
+      const postsDir = resolve(process.cwd(), 'posts');
+      const publicDir = resolve(process.cwd(), 'public');
+      const sitemapPath = resolve(publicDir, 'sitemap.xml');
+
+      // Ensure public dir exists
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+
+      // Static routes
+      const staticRoutes = [
+        { loc: '/', changefreq: 'weekly', priority: 1.0 },
+        { loc: '/story', changefreq: 'monthly', priority: 0.7 },
+        { loc: '/media', changefreq: 'weekly', priority: 0.8 }
+      ].map(r => ({ ...r, lastmod: isoDate(new Date()) }));
+
+      // Post routes from files
+      let postRoutes: Array<{ loc: string; lastmod: string; changefreq: string; priority: number }> = [];
+      // No news/articles at the moment; skip post routes
+
+      const urls = [...staticRoutes, ...postRoutes];
+
+      const xmlItems = urls.map(u => (
+        `  <url>\n` +
+        `    <loc>${siteUrl}${u.loc}</loc>\n` +
+        `    <lastmod>${u.lastmod}</lastmod>\n` +
+        `    <changefreq>${u.changefreq}</changefreq>\n` +
+        `    <priority>${u.priority.toFixed(1)}</priority>\n` +
+        `  </url>`
+      )).join('\n');
+
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `${xmlItems}\n` +
+        `</urlset>\n`;
+
+      fs.writeFileSync(sitemapPath, xml);
+      console.log(`Generated sitemap at ${sitemapPath}`);
+    }
+  };
+}
+
 export default defineConfig({
   base: '/',
   plugins: [
@@ -292,7 +355,8 @@ export default defineConfig({
     },
     imageProcessingPlugin(),
     copyPostsPlugin(),
-    generatePostRoutesPlugin()
+    generatePostRoutesPlugin(),
+    generateSitemapPlugin()
   ],
   
   // Add server configuration for development
