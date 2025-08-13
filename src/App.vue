@@ -100,7 +100,7 @@ watch(() => router.currentRoute.value, () => {
     <Popover ref="op" appendTo="body" class="mobile-menu-panel">
       <div class="mobile-menu-content">
         <div class="mobile-menu-header">
-          <img class="mobile-menu-logo" src="/logo.png" alt="Eisenfaust Logo" />
+          <img class="mobile-menu-logo" src="/logo.png" alt="Eisenfaust Logo" loading="lazy" decoding="async" />
           <span class="mobile-menu-title">Eisenfaust</span>
         </div>
         <ul class="mobile-menu-list">
@@ -116,7 +116,7 @@ watch(() => router.currentRoute.value, () => {
     </div>
     <ParticleCanvas :spawn-offset-y="400" :particles="350" class="particle-canvas"></ParticleCanvas>
     <footer>
-      <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" /></div>
+      <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" loading="lazy" decoding="async" /></div>
       © 2025 Eisenfaust. Alle Rechte vorbehalten.
     </footer>
   </main>

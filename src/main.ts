@@ -32,7 +32,7 @@ export const createApp = ViteSSG(
     // Ensure the page scrolls to top-left on each route navigation
     scrollBehavior: () => ({ left: 0, top: 0 }) 
   },
-  ({ app, isClient }) => {
+  ({ app, isClient, router }) => {
     // Register PrimeVue with custom theme options
     app.use(PrimeVue, {
       ripple: false,
@@ -40,5 +40,33 @@ export const createApp = ViteSSG(
         preset: EisenfaustPreset
     }
     });
+
+    // Dynamically load Google Analytics (GA4) if measurement ID is provided
+    if (isClient) {
+      const gaId = (import.meta as any).env.VITE_GA_MEASUREMENT_ID;
+      if (gaId) {
+        // Inject gtag script
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+        document.head.appendChild(gtagScript);
+
+        // Initialize gtag
+        const inline = document.createElement('script');
+        inline.text = `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}', { anonymize_ip: true });`;
+        document.head.appendChild(inline);
+
+        // Track page views on route change (for SPA navigation)
+        router.afterEach((to) => {
+          if ((window as any).gtag) {
+            (window as any).gtag('event', 'page_view', {
+              page_title: document.title,
+              page_location: window.location.href,
+              page_path: to.fullPath
+            });
+          }
+        });
+      }
+    }
   }
 );

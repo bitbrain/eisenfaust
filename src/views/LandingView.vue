@@ -39,7 +39,7 @@ const openDiscord = () => {
         <h3>Wer wir sind</h3>
         <p>Wir sind ein deutschsprachiger Clan von <a href="https://ashesofcreation.wiki/D%C3%BCnir" target="_blank" rel="noopener noreferrer">Dünir-Zwergen</a> in Ashes of Creation, die mehr suchen als nur Loot. Bei <strong>Eisenfaust</strong> zählen Gemeinschaft, Verlässlichkeit und Mitgestaltung. Unsere Türen stehen allen offen, die Wert auf ein respektvolles Miteinander und echte Verbindung legen – ob bei Abenteuern, am Amboss oder an einem ruhigen Abend am Feuer.</p>
         <div class="image-container">
-          <img src="/dwarf-exploring.webp" alt="Dwarves Exploring">
+          <img src="/dwarf-exploring.webp" alt="Dwarves Exploring" loading="lazy" decoding="async" width="1280" height="720">
         </div>
         <p>Als Gründungsmitglied der Zwergen-Allianz <a href="https://discord.gg/xuGtNTjWBm" target="_blank" rel="noopener noreferrer">The Bulwark</a> setzen wir uns aktiv für den Zusammenhalt der europäischen Dünir-Gemeinschaft ein. Dieses Bündnis bringt große und engagierte Zwergengilden zusammen. Durch gemeinsame Aktionen, Austausch und regelmäßige Events wächst daraus ein stabiles Netzwerk, das weit über einzelne Gilden hinausreicht.</p>
        </div>
@@ -48,7 +48,7 @@ const openDiscord = () => {
         <h3>Wofür wir stehen</h3>
         <p>Unsere Heimat liegt in den Bergen. Doch unser Blick geht weit darüber hinaus. Eisenfaust ist eine PvX-Gilde mit dem Ziel, eine Gebirgs-Node im Stil der Dünir zu errichten. Felsenfest, mit klarem Geist und tatkräftigen Händen. Ob Handel, Handwerk, Krieg oder Politik – wir gestalten alle Seiten des Spiels aktiv mit.</p>
         <div class="image-container">
-          <img src="/mountain-fortress.webp" alt="Mountain Fortress" class="full">
+          <img src="/mountain-fortress.webp" alt="Mountain Fortress" class="full" loading="lazy" decoding="async" width="1600" height="900">
         </div>
         <p>Neben dem Spiel pflegen wir unsere eigene Zwergenkultur. Pen-&-Paper-Runden, gemeinschaftliche Unternehmungen und gelegentliches Rollenspiel gehören für viele dazu. Nicht verpflichtend, aber mit Begeisterung.</p>
        </div>
@@ -67,7 +67,7 @@ const openDiscord = () => {
         <Divider>Macht</Divider>
         <p>Wir freuen uns auf deinen Beitritt.</p>
         <div class="image-container">
-          <img src="/dwarven-band.webp" alt="Dwarven Band">
+          <img src="/dwarven-band.webp" alt="Dwarven Band" loading="lazy" decoding="async" width="1280" height="720">
         </div>
         <p>Für uns zählt, wer du bist – nicht, was du trägst. Wenn du Teamgeist mitbringst, Respekt lebst und Freude an einer verlässlichen Gemeinschaft hast, findest du bei uns ein Zuhause.</p>
        </div>
@@ -76,7 +76,7 @@ const openDiscord = () => {
         <h3>Für die Zukunft geschmiedet</h3>
         <p>Eisenfaust ist kein kurzfristiges Projekt, sondern eine Gemeinschaft mit Weitblick. Unser Fundament ist stark, unsere Ziele sind klar. Wir suchen keine Masse, sondern Zwerge mit Haltung.</p>
         <div class="image-container">
-          <img src="/rind.webp" alt="The Mighty Rind Tank" class="top">
+          <img src="/rind.webp" alt="The Mighty Rind Tank" class="top" loading="lazy" decoding="async" width="1200" height="800">
         </div>
         <p>Gegründet wurde Eisenfaust 2022 als Zwergenprojekt für Ashes of Creation. Seitdem wächst unsere Truppe aus Zwerginnen und Zwergen beständig – entschlossen, bodenständig und bereit für das, was kommt.</p>
         <blockquote>Wenn du Teil von etwas Echtem werden willst, bist du hier genau richtig.</blockquote>
@@ -136,6 +136,21 @@ h3 {
   margin: 0;
   margin-bottom: 1rem;
 }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  border-radius: 8px;
+}
+
+.image-container img.full { max-width: 1600px; }
+.image-container img.top { max-width: 1200px; }
 
 .button-container {
   display: flex;

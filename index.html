@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <link rel="stylesheet" href="src/global.css">
+    <link rel="preload" as="style" href="src/global.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="src/global.css"></noscript>
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eisenfaust</title>
+    <title>Eisenfaust – Dünir Zwergengilde | Ashes of Creation</title>
     <link rel="canonical" href="https://aoc-eisenfaust.de/" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="alternate" hreflang="de-DE" href="https://aoc-eisenfaust.de/" />
@@ -20,7 +21,7 @@
     <meta name="description" content="Eisenfaust ist eine deutschsprachige Dünir‑Zwergengilde in Ashes of Creation. PvX, Gemeinschaft, Events und Zwergen‑Allianz The Bulwark. Tritt unserem Discord bei." />
     <meta name="keywords" content="Eisenfaust, AoC, Dünir, Gilde, Ashes of Creation" />
     <meta name="author" content="Eisenfaust" />
-    <meta property="og:title" content="Eisenfaust" />
+    <meta property="og:title" content="Eisenfaust – Dünir Zwergengilde | Ashes of Creation" />
     <meta property="og:description" content="Eisenfaust - deutsche Dünir-Gilde (Ashes of Creation)" />
     <meta property="og:image" content="https://aoc-eisenfaust.de/eisenfaust-banner.webp" />
     <meta property="og:image:width" content="1200" />
@@ -31,9 +32,15 @@
     <meta property="og:site_name" content="Eisenfaust" />
     <meta property="og:locale" content="de_DE" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Eisenfaust" />
+    <meta name="twitter:title" content="Eisenfaust – Dünir Zwergengilde | Ashes of Creation" />
     <meta name="twitter:description" content="Eisenfaust - deutsche Dünir-Gilde (Ashes of Creation)" />
     <meta name="twitter:image" content="https://aoc-eisenfaust.de/eisenfaust-banner.webp" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.addtoany.com" crossorigin>
+    <link rel="dns-prefetch" href="https://static.addtoany.com">
+    <link rel="preload" as="image" href="/eisenfaust-banner.webp">
+    <link rel="preload" as="image" href="/lava-glow.webp">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
