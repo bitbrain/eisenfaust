@@ -192,8 +192,6 @@ nav {
 .nav-logo {
   width: 2.5rem;
   height: 2.5rem;
-  opacity: 0.8;
-  filter: brightness(1.0) contrast(2.5) saturate(0.4);
   display: none;
 }
 
