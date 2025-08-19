@@ -198,8 +198,10 @@ nav {
 .nav-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--ember-700);
-  text-shadow: 0 0 0.75rem rgb(108, 31, 14);
+  background: linear-gradient(to bottom, var(--ember-800), var(--ember-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   display: none;
 }
 
@@ -293,15 +295,15 @@ nav {
 .mobile-menu-logo {
   width: 3rem;
   height: 3rem;
-  opacity: 0.8;
-  filter: brightness(1.0) contrast(2.5) saturate(0.4);
 }
 
 .mobile-menu-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--ember-700);
-  text-shadow: 0 0 0.75rem rgb(108, 31, 14);
+  background: linear-gradient(to bottom, var(--ember-800), var(--ember-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .mobile-menu-list {
