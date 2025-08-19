@@ -76,7 +76,7 @@ watch(() => router.currentRoute.value, () => {
     <nav>
       <div class="nav-container">
         <div class="nav-brand">
-          <img class="nav-logo" src="/logo.png" alt="Eisenfaust Logo" />
+          <img class="nav-logo" src="/logo.webp" alt="Eisenfaust Logo" />
           <span class="nav-title">Eisenfaust</span>
         </div>
         
@@ -100,7 +100,7 @@ watch(() => router.currentRoute.value, () => {
     <Popover ref="op" appendTo="body" class="mobile-menu-panel">
       <div class="mobile-menu-content">
         <div class="mobile-menu-header">
-          <img class="mobile-menu-logo" src="/logo.png" alt="Eisenfaust Logo" loading="lazy" decoding="async" />
+          <img class="mobile-menu-logo" src="/logo.webp" alt="Eisenfaust Logo" loading="lazy" decoding="async" />
           <span class="mobile-menu-title">Eisenfaust</span>
         </div>
         <ul class="mobile-menu-list">
@@ -116,7 +116,7 @@ watch(() => router.currentRoute.value, () => {
     </div>
     <ParticleCanvas :spawn-offset-y="400" :particles="350" class="particle-canvas"></ParticleCanvas>
     <footer>
-      <div class="logo-wrapper"><img class="logo" src="/logo.png" alt="Eisenfaust Logo" loading="lazy" decoding="async" /></div>
+      <div class="logo-wrapper"><img class="logo" src="/logo.webp" alt="Eisenfaust Logo" loading="lazy" decoding="async" /></div>
       © 2025 Eisenfaust. Alle Rechte vorbehalten.
     </footer>
   </main>
@@ -149,7 +149,7 @@ footer {
   font-weight: 700;
   padding: clamp(0.5rem, 2vw, 1rem);
   padding-bottom: clamp(2rem, 5vw, 4rem);
-  color: rgb(167, 128, 106);
+  color: rgb(255, 115, 61);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,8 +161,6 @@ footer {
   display: block;
   width: clamp(3rem, 8vw, 5rem);
   height: clamp(3rem, 8vw, 5rem);
-  opacity: 0.5;
-  filter: brightness(1.0) contrast(2.5) saturate(0.4);
   margin-top: clamp(2rem, 5vw, 4rem);
 }
 
