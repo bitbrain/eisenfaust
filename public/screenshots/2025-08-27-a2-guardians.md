@@ -1,0 +1,1 @@
+We are the guardians of the anvils. These ancient lands already belonged to our ancestors.
