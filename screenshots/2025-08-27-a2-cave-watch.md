@@ -1,1 +1,1 @@
-Deep in the caverns of the anvils we are planning our next moves.
+Tief in den Hallen der Ambosse planen wir unsere nächsten Schritte.
