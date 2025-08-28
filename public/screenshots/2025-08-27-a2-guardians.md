@@ -1,1 +1,1 @@
-We are the guardians of the anvils. These ancient lands already belonged to our ancestors.
+Wir sind die Wächter der Ambosse. Diese uralten Lande wurden bereits von unseren Vorahnen beschützt.
