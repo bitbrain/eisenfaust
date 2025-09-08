@@ -24,8 +24,14 @@ const loadImages = async () => {
     isLoading.value = true;
     error.value = null;
     
-    // Load the thumbnails list - adjust the path based on your base URL
-    const response = await fetch('/thumbnails.json');
+    // Get the thumbnails filename that was injected at build time
+    const thumbnailsFilename = (window as any).__THUMBNAILS_FILENAME__;
+    if (!thumbnailsFilename) {
+      throw new Error('Thumbnails filename not found. Please rebuild the application.');
+    }
+    
+    // Load the thumbnails list using the injected filename
+    const response = await fetch(`/${thumbnailsFilename}`);
     const thumbnailData = await response.json();
     
     // Process the thumbnails and reverse the order

@@ -110,12 +110,18 @@ function imageProcessingPlugin() {
         const processedFiles = await Promise.all(processingPromises);
         
         // Generate JSON file with list of thumbnails and descriptions
-        const thumbnailsJsonPath = resolve(process.cwd(), 'public/thumbnails.json');
+        // Use a random filename to prevent browser caching
+        const randomId = Math.random().toString(36).substring(2, 15);
+        const thumbnailsJsonFilename = `thumbnails-${randomId}.json`;
+        const thumbnailsJsonPath = resolve(process.cwd(), 'public', thumbnailsJsonFilename);
         fs.writeFileSync(
           thumbnailsJsonPath,
           JSON.stringify(processedFiles)
         );
         console.log(`Generated thumbnails list at ${thumbnailsJsonPath}`);
+        
+        // Store the filename globally for the Vite plugin to inject
+        (globalThis as any).__THUMBNAILS_FILENAME__ = thumbnailsJsonFilename;
       } catch (error) {
         console.error('Error processing thumbnail images:', error);
       }
@@ -324,6 +330,26 @@ function generateSitemapPlugin() {
   };
 }
 
+// Plugin to inject thumbnails filename into the JS bundle
+function thumbnailsFilenamePlugin() {
+  return {
+    name: 'vite-plugin-thumbnails-filename',
+    transform(code: string, id: string) {
+      // Only process JavaScript/TypeScript files, not CSS or other assets
+      if ((id.endsWith('.ts') || id.endsWith('.js') || id.endsWith('.vue')) && 
+          (id.includes('src/main.ts') || id.includes('src/views/MediaView.vue'))) {
+        const filename = (globalThis as any).__THUMBNAILS_FILENAME__;
+        if (filename) {
+          // Inject the filename as a global constant, with proper SSR handling
+          const injection = `if (typeof window !== 'undefined') { window.__THUMBNAILS_FILENAME__ = "${filename}"; }`;
+          return injection + '\n' + code;
+        }
+      }
+      return code;
+    }
+  };
+}
+
 export default defineConfig({
   base: '/',
   plugins: [
@@ -354,6 +380,7 @@ export default defineConfig({
       }
     },
     imageProcessingPlugin(),
+    thumbnailsFilenamePlugin(),
     copyPostsPlugin(),
     generatePostRoutesPlugin(),
     generateSitemapPlugin()

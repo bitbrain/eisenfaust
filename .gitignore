@@ -32,5 +32,6 @@ components.d.ts
 public/thumbnails
 public/screenshots-webp
 public/thumbnails.json
+public/thumbnails-*.json
 
 src/routes/post-routes.ts
