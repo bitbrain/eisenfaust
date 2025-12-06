@@ -1,0 +1,1 @@
+Wir segeln gemeinsam mit unserer Flotte über den nördlichen Ozean, um die Handelsroute zu überwachen.

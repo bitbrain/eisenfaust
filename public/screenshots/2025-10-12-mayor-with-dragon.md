@@ -1,0 +1,1 @@
+Eine Verschnaufspause in der heißen Wüste im Süden muss sein.
