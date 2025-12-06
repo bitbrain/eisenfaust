@@ -1,0 +1,1 @@
+Unser Gildenleiter **Sier** späht die feindlichen Lande aus.
